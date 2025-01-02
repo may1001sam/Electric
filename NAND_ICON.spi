@@ -1,0 +1,29 @@
+*** SPICE deck for cell NAND_ICON{sch} from library NAND
+*** Created on Sat Nov 09, 2024 18:58:31
+*** Last revised on Thu Jan 02, 2025 22:41:01
+*** Written on Thu Jan 02, 2025 22:41:07 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+*** SUBCIRCUIT NAND__nand FROM CELL NAND:nand{sch}
+.SUBCKT NAND__nand A B out
+** GLOBAL gnd
+** GLOBAL vdd
+Mnmos@0 out A net@11 gnd N L=0.044U W=0.22U
+Mnmos@1 net@11 B gnd gnd N L=0.044U W=0.22U
+Mpmos@1 vdd A out vdd P L=0.044U W=0.44U
+Mpmos@2 vdd B out vdd P L=0.044U W=0.44U
+.ENDS NAND__nand
+
+.global gnd vdd
+
+*** TOP LEVEL CELL: NAND:NAND_ICON{sch}
+Xnand@0 A B out NAND__nand
+
+* Spice Code nodes in cell cell 'NAND:NAND_ICON{sch}'
+vdd vdd 0 DC 0.95
+va A 0 DC pwl 10n 0 20n 0.95 50n 0.95 60n 0 90n 0 100n 0.95 130n 0.95 140n 0 170n 0 180n 0.95
+vb B 0 DC pwl 10n 0 20n 0.95 100n 0.95 110n 0
+.tran 200n
+.include C:\Electric\22nm.txt
+.END

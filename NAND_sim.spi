@@ -1,27 +1,25 @@
 *** SPICE deck for cell NAND_sim{lay} from library NAND
 *** Created on Sat Nov 09, 2024 21:25:57
-*** Last revised on Thu Jan 02, 2025 14:41:37
-*** Written on Thu Jan 02, 2025 14:41:42 by Electric VLSI Design System, version 9.07
+*** Last revised on Thu Jan 02, 2025 22:42:24
+*** Written on Thu Jan 02, 2025 22:42:26 by Electric VLSI Design System, version 9.07
 *** Layout tech: mocmos, foundry MOSIS
 *** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
 
 *** SUBCIRCUIT NAND__nand FROM CELL NAND:nand{lay}
 .SUBCKT NAND__nand A B gnd out vdd
-Mnmos@0 gnd B net@45 gnd N L=0.6U W=3U AS=2.7P AD=19.8P PS=4.8U PD=31.2U
-Mnmos@1 net@45 A out gnd N L=0.6U W=3U AS=8.7P AD=2.7P PS=9.6U PD=4.8U
-Mpmos@0 vdd B out vdd P L=0.6U W=6U AS=8.7P AD=19.8P PS=9.6U PD=26.85U
-Mpmos@1 out A vdd vdd P L=0.6U W=6U AS=19.8P AD=8.7P PS=26.85U PD=9.6U
+Mnmos@0 gnd B net@45 gnd N L=0.044U W=0.22U AS=0.015P AD=0.106P PS=0.352U PD=2.288U
+Mnmos@1 net@45 A out gnd N L=0.044U W=0.22U AS=0.047P AD=0.015P PS=0.704U PD=0.352U
+Mpmos@0 vdd B out vdd P L=0.044U W=0.44U AS=0.047P AD=0.106P PS=0.704U PD=1.969U
+Mpmos@1 out A vdd vdd P L=0.044U W=0.44U AS=0.106P AD=0.047P PS=1.969U PD=0.704U
 .ENDS NAND__nand
 
 *** TOP LEVEL CELL: NAND:NAND_sim{lay}
 Xnand@0 A B gnd out vdd NAND__nand
 
 * Spice Code nodes in cell cell 'NAND:NAND_sim{lay}'
-vdd vdd 0 DC 5
-va A 0 DC pwl 10n 0 20n 5 50n 5 60n 0 90n 0 100n 5 130n 5 140n 0 170n 0 180n 5
-vb B 0 DC pwl 10n 0 20n 5 100n 5 110n 0
-.measure tran tf trig v(out) val=4.5 fall=1 td=4ns trag v(out) val=0.5 fall=1
-.measure tran tr trig v(out) val=0.5 rise=1 td=4ns trag v(out) val=4.5 rise=1
+vdd vdd 0 DC 0.95
+va A 0 DC pwl 10n 0 20n 0.95 50n 0.95 60n 0 90n 0 100n 0.95 130n 0.95 140n 0 170n 0 180n 0.95
+vb B 0 DC pwl 10n 0 20n 0.95 100n 0.95 110n 0
 .tran 200n
-.include C:\Electric\C5_models.txt
+.include C:\Electric\22nm.txt
 .END

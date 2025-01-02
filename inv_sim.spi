@@ -1,0 +1,25 @@
+*** SPICE deck for cell inv_sim{lay} from library inverter
+*** Created on Sat Nov 09, 2024 20:20:32
+*** Last revised on Thu Jan 02, 2025 22:25:27
+*** Written on Thu Jan 02, 2025 22:25:36 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+*** SUBCIRCUIT inverter__inv FROM CELL inverter:inv{lay}
+.SUBCKT inverter__inv gnd in out vdd
+Mnmos@0 gnd in out gnd N L=0.044U W=0.22U AS=0.058P AD=0.099P PS=1.012U PD=2.112U
+Mpmos@0 vdd in out vdd P L=0.044U W=0.44U AS=0.058P AD=0.15P PS=1.012U PD=2.596U
+.ENDS inverter__inv
+
+*** TOP LEVEL CELL: inverter:inv_sim{lay}
+Xinv@0 gnd in out vdd inverter__inv
+
+* Spice Code nodes in cell cell 'inverter:inv_sim{lay}'
+vdd vdd 0 DC 0.95
+vin in 0 DC pwl 10n 0 20n 0.95 50n 0.95 60n 0
+cload out 0 250fF
+.measure tran tf trig v(out) val=4.5 fall=1 td=8ns targ v(out) val=0.5 fall=1
+.measure tran tr trig v(out) val=0.5 rise=1 td=50ns targ v(out) val=4.5 rise=1
+.tran 0 100ns
+.include C:\Electric\22nm.txt
+.END

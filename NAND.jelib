@@ -7,36 +7,38 @@ Vlayout|lay
 Vschematic|sch
 
 # Technologies:
-Tmocmos|ScaleFORmocmos()D300.0|mocmosNumberOfMetalLayers()I3
+Tbicmos|ScaleFORbicmos()D22.0
+Tmocmos|ScaleFORmocmos()D22.0
 
 # Cell NAND_ICON;1{sch}
-CNAND_ICON;1{sch}||schematic|1731171511405|1731241826506|
+CNAND_ICON;1{sch}||schematic|1731171511405|1735850461956|
 Ngeneric:Facet-Center|art@0||0|0||||AV
 Inand;1{ic}|nand@0||-32.5|20.5|||D5G4;
-Ngeneric:Invisible-Pin|pin@0||-32.5|12.5|||||SIM_spice_card(D5G1;)S[vdd vdd 0 DC 5,va A 0 DC pwl 10n 0 20n 5 50n 5 60n 0 90n 0 100n 5 130n 5 140n 0 170n 0 180n 5,vb B 0 DC pwl 10n 0 20n 5 100n 5 110n 0,.measure tran tf trig v(out) val=4.5 fall=1 td=4ns trag v(out) val=0.5 fall=1,.measure tran tr trig v(out) val=0.5 rise=1 td=4ns trag v(out) val=4.5 rise=1,.tran 200n,".include C:\\Electric\\C5_models.txt"]
-NWire_Pin|pin@1||-40.5|22.5||||
-NWire_Pin|pin@2||-40.5|20||||
-NWire_Pin|pin@3||-23.5|21.5||||
-Awire|A|D5G1;||0|nand@0|A|-37.5|22.5|pin@1||-40.5|22.5
-Awire|B|D5G1;||0|nand@0|B|-37.5|20|pin@2||-40.5|20
-Awire|out|D5G1;||1800|nand@0|out|-27.5|21.5|pin@3||-23.5|21.5
+Ngeneric:Invisible-Pin|pin@4||-34|13|||||SIM_spice_card(D5G1;)S[vdd vdd 0 DC 0.95,va A 0 DC pwl 10n 0 20n 0.95 50n 0.95 60n 0 90n 0 100n 0.95 130n 0.95 140n 0 170n 0 180n 0.95,vb B 0 DC pwl 10n 0 20n 0.95 100n 0.95 110n 0,.tran 200n,".include C:\\Electric\\22nm.txt"]
+NWire_Pin|pin@5||-35.5|22.5||||
+NWire_Pin|pin@6||-35.5|20||||
+NWire_Pin|pin@7||-27.5|21.5||||
+Awire|A|D5G1;||0|nand@0|A|-35.5|22.5|pin@5||-35.5|22.5
+Awire|B|D5G1;||0|nand@0|B|-35.5|20|pin@6||-35.5|20
+Awire|out|D5G1;||1800|nand@0|out|-27.5|21.5|pin@7||-27.5|21.5
 X
 
 # Cell NAND_sim;1{lay}
-CNAND_sim;1{lay}||mocmos|1731180357009|1735829071213||DRC_last_good_drc_area_date()G1735821701494|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1735821701494
+CNAND_sim;1{lay}||mocmos|1731180357009|1735850544073||DRC_last_good_drc_area_date()G1735832446534|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1735832446534
 Ngeneric:Facet-Center|art@0||0|0||||AV
 Inand;1{lay}|nand@0||20|-4|||D5G4;
 NMetal-1-Pin|pin@0||0.5|34.5||||
-NMetal-1-Pin|pin@1||2|-5||||
+NMetal-1-Pin|pin@1||2|-6||||
 NMetal-1-Pin|pin@2||0|-29||||
-NMetal-1-Pin|pin@4||40.5|2.5||||
-Ngeneric:Invisible-Pin|pin@5||-36|6.5|||||SIM_spice_card(D5G1;)S[vdd vdd 0 DC 5,va A 0 DC pwl 10n 0 20n 5 50n 5 60n 0 90n 0 100n 5 130n 5 140n 0 170n 0 180n 5,vb B 0 DC pwl 10n 0 20n 5 100n 5 110n 0,.measure tran tf trig v(out) val=4.5 fall=1 td=4ns trag v(out) val=0.5 fall=1,.measure tran tr trig v(out) val=0.5 rise=1 td=4ns trag v(out) val=4.5 rise=1,.tran 200n,".include C:\\Electric\\C5_models.txt"]
-NMetal-1-Pin|pin@6||41|-4||||
+NMetal-1-Pin|pin@6||41|-5||||
+NMetal-1-Pin|pin@7||1.5|3||||
+Ngeneric:Invisible-Pin|pin@8||-47.5|9|||||SIM_spice_card(D5G2;)S[vdd vdd 0 DC 0.95,va A 0 DC pwl 10n 0 20n 0.95 50n 0.95 60n 0 90n 0 100n 0.95 130n 0.95 140n 0 170n 0 180n 0.95,vb B 0 DC pwl 10n 0 20n 0.95 100n 0.95 110n 0,.tran 200n,".include C:\\Electric\\22nm.txt"]
 AMetal-1|net@0||1|S0|nand@0|vdd|19.5|34.5|pin@0||0.5|34.5
-AMetal-1|net@1|||S0|nand@0|B|2.5|-5|pin@1||2|-5
+AMetal-1|net@1|||S0|nand@0|B|2.5|-6|pin@1||2|-6
 AMetal-1|net@2||1|S0|nand@0|gnd|20.5|-29|pin@2||0|-29
-AMetal-1|net@5||1|S1800|nand@0|out|41|-4|pin@6||41|-4
-EA||D5G2;|pin@4||U
+AMetal-1|net@5||1|S1800|nand@0|out|41|-5|pin@6||41|-5
+AMetal-1|net@6||1|S0|nand@0|A|1.5|3|pin@7||1.5|3
+EA||D5G2;|pin@7||U
 EB||D5G2;|pin@1||U
 Egnd||D5G2;|pin@2||U
 Eout||D5G2;|pin@6||U
@@ -44,28 +46,28 @@ Evdd||D5G2;|pin@0||U
 X
 
 # Cell nand;1{ic}
-Cnand;1{ic}||artwork|1731171398674|1731240369224|E
+Cnand;1{ic}||artwork|1731171398674|1735850406665|E
 Ngeneric:Facet-Center|art@0||0|0||||AV
 NOpened-Polygon|art@3||-0.75|0.75|4.5|5.5|||trace()V[2.25/-2.75,-2.25/-2.75,-2.25/2.75,2.25/2.75]
 NCircle|art@4||1.5|0.745|5.48|5.48|RRR||ART_degrees()F[0.0,3.1415927]
 NCircle|art@5||4.72|1|1|1||
-Nschematic:Bus_Pin|pin@0||-5|2||||
+Nschematic:Bus_Pin|pin@0||-3|2||||
 Nschematic:Wire_Pin|pin@1||-3|2||||
-Nschematic:Bus_Pin|pin@2||-5|-0.5||||
+Nschematic:Bus_Pin|pin@2||-3|-0.5||||
 Nschematic:Wire_Pin|pin@3||-3|-0.5||||
 Nschematic:Bus_Pin|pin@4||5|1||||
-Nschematic:Wire_Pin|pin@5||9.5|1||||
+Nschematic:Wire_Pin|pin@5||5|1||||
 Ngeneric:Invisible-Pin|pin@6||0|0.5|||||ART_message(D5G1;)SNAND
-Aschematic:wire|net@0|||0|pin@1||-3|2|pin@0||-5|2
-Aschematic:wire|net@1|||0|pin@3||-3|-0.5|pin@2||-5|-0.5
-Aschematic:wire|net@2|||0|pin@5||9.5|1|pin@4||5|1
+Aschematic:wire|net@0|||0|pin@1||-3|2|pin@0||-3|2
+Aschematic:wire|net@1|||0|pin@3||-3|-0.5|pin@2||-3|-0.5
+Aschematic:wire|net@2|||0|pin@5||5|1|pin@4||5|1
 EA||D5G2;|pin@0||U
 EB||D5G2;|pin@2||U
-Eout||D5G2;X2.5;Y0.5;|pin@4||U
+Eout||D5G2;|pin@4||U
 X
 
 # Cell nand;1{lay}
-Cnand;1{lay}||mocmos|1731177249778|1735829312897||DRC_last_good_drc_area_date()G1735829315713|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1735829315713
+Cnand;1{lay}||mocmos|1731177249778|1735850536936||DRC_last_good_drc_area_date()G1735850500041|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1735850500041
 Ngeneric:Facet-Center|art@0||0|0||||AV
 NMetal-1-P-Active-Con|contact@0||-11.5|21.5||15||
 NMetal-1-P-Active-Con|contact@1||13|21.5||15||
@@ -125,15 +127,15 @@ Evdd||D5G2;|well@0||U
 X
 
 # Cell nand;1{sch}
-Cnand;1{sch}||schematic|1731154949775|1734852490104|
+Cnand;1{sch}||schematic|1731154949775|1735850638262|
 Ngeneric:Facet-Center|art@0||0|0||||AV
 NOff-Page|conn@0||-34|11||||
 NOff-Page|conn@1||-40|3||||
 NOff-Page|conn@3||-16|11||||
 NGround|gnd@0||-24|-2||||
-Inand;1{ic}|nand@0||-53.5|13|||D5G4;
+Inand;1{ic}|nand@0||-59.5|17|||D5G4;
 NTransistor|nmos@0||-26|8|||R||ATTR_length(D5G0.5;X-0.5;Y-1;)D2.0|ATTR_width(D5G1;X0.5;Y-1;)D10.0|SIM_spice_model(D5G1;X-2;)SN
-NTransistor|nmos@1||-26|3|||R||ATTR_length(D5G0.5;X-0.5;Y-1;)D2.0|ATTR_width(D5G1;X0.5;Y-1;)D10.0|SIM_spice_model(D5G1;X-2;)SN
+NTransistor|nmos@1||-26|3|||R||ATTR_length(D5G0.5;X-0.5;Y-1;)S2.0|ATTR_width(D5G1;X0.5;Y-1;)S10|SIM_spice_model(D5G1;X-2;)SN
 NWire_Pin|pin@6||-24|13||||
 NWire_Pin|pin@7||-24|17||||
 NWire_Pin|pin@9||-31|8||||

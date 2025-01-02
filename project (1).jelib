@@ -13,10 +13,10 @@ Linverter|inverter
 
 # Technologies:
 Tbicmos|ScaleFORbicmos()D22.0
-Tmocmos|ScaleFORmocmos()D300.0
+Tmocmos|ScaleFORmocmos()D22.0
 
 # Cell carrycircuit4bit;1{sch}
-Ccarrycircuit4bit;1{sch}||schematic|1734702114657|1734956222027|
+Ccarrycircuit4bit;1{sch}||schematic|1734702114657|1735848989148|
 IFA_for_CLA:FA;1{ic}|FA@0||-88.5|1.5|||D5G4;
 IFA_for_CLA:FA;1{ic}|FA@1||-88.5|-9|||D5G4;
 IFA_for_CLA:FA;1{ic}|FA@2||-88.5|-23.5|||D5G4;
@@ -126,10 +126,10 @@ NWire_Pin|pin@258||16.5|4.5||||
 NWire_Pin|pin@259||40.5|12.5||||
 NWire_Pin|pin@260||51|12.5||||
 NWire_Pin|pin@263||-28.5|18.5||||
-NWire_Pin|pin@264||-29|-8||||
+NWire_Pin|pin@264||-29|-6||||
 NWire_Pin|pin@265||-76|-37||||
 NWire_Pin|pin@266||-89.5|-83.5||||
-NWire_Pin|pin@267||-99|-60.5||||
+NWire_Pin|pin@267||-99|-62.5||||
 NWire_Pin|pin@268||-96|-81.5||||
 NTransistor|pmos@0||-58|14.5|||R|2|ATTR_length(D5G0.5;X-0.5;Y-1;)S2|ATTR_width(D5G1;X0.5;Y-1;)S2|SIM_spice_model(D5G1;Y-2;)SP
 NTransistor|pmos@1||-52.5|22|||R|2|ATTR_length(D5G0.5;X-0.5;Y-1;)S2|ATTR_width(D5G1;X0.5;Y-1;)S2|SIM_spice_model(D5G1;)SP
@@ -198,9 +198,9 @@ Awire|net@394|||2700|pin@137||-77.5|-45.5|pin@186||-77.5|-23
 Awire|net@419|||900|nmos@8|s|-40|-8|pin@24||-40|-13.5
 Awire|net@426|||1800|pin@145||-10|-34.5|nmos@5|g|-8.5|-34.5
 Awire|net@453|||900|pin@36||-17|-13.5|pin@212||-17|-14.5
-Awire|net@460|||1800|inv@0|in|7.5|12.5|pin@214||10.5|12.5
-Awire|net@463|||2700|pin@212||-17|-14.5|inv@2|in|-17|-12.5
-Awire|net@464|||2700|pin@27||-29|-26.5|inv@1|in|-29|-24.5
+Awire|net@460|||1800|inv@0|in|9.5|12.5|pin@214||10.5|12.5
+Awire|net@463|||2700|pin@212||-17|-14.5|inv@2|in|-17|-10.5
+Awire|net@464|||2700|pin@27||-29|-26.5|inv@1|in|-29|-22.5
 Awire|net@468|||1800|pin@89||4.5|12.5|pin@214||10.5|12.5
 Awire|net@476|||0|nmos@2|g|-43|-32|FA@3|P|-86|-32
 Awire|net@479|||1800|conn@16|y|-114|-32|FA@3|A|-92.5|-32
@@ -231,7 +231,7 @@ Awire|net@545|||0|pin@252||-89.5|-1.5|pin@253||-107.5|-1.5
 Awire|net@548|||900|pin@253||-107.5|-1.5|conn@27|y|-107.5|-52.5
 Awire|net@555|||2700|pin@256||-81.5|-40|pin@257||-81.5|-29
 Awire|net@556|||0|pin@257||-81.5|-29|pin@223||-89.5|-29
-Awire|net@558|||900|inv@3|in|-5.5|1|pin@37||-5.5|-1
+Awire|net@558|||900|inv@3|in|-5.5|3|pin@37||-5.5|-1
 Awire|net@559|||1800|conn@5|y|-114|-40|pin@256||-81.5|-40
 Awire|net@562|||2700|pin@52||-40|42|pwr@0||-40|45.5
 Awire|net@563|||1800|FA@3|G|-86|-34.5|nmos@3|g|-32|-34.5
@@ -244,31 +244,31 @@ Awire|net@570|||0|nmos@8|g|-43|-6|FA@1|P|-86|-6
 Awire|net@571|||1800|FA@0|P|-86|4.5|nmos@9|g|-43|4.5
 Awire|net@572|||2700|conn@26|y|-102|-52.5|pin@249||-102|-12.5
 Awire|net@574|||1800|pin@256||-81.5|-40|nmos@1|g|-43|-40
-Awire|net@577|||0|inv@4|out|-16|34|inv@5|in|-18.5|34
-Awire|net@582|||0|inv@6|out|-28|26|inv@7|in|-30|26
-Awire|net@587|||0|pin@239||-5.5|34|inv@4|in|-7|34
+Awire|net@577|||0|inv@4|out|-16|34|inv@5|in|-20.5|34
+Awire|net@582|||0|inv@6|out|-28|26|inv@7|in|-32|26
+Awire|net@587|||0|pin@239||-5.5|34|inv@4|in|-9|34
 Awire|net@588|||0|inv@5|out|-27.5|34|pin@241||-89.5|34
-Awire|net@589|||0|pin@234||-17|26|inv@6|in|-19|26
+Awire|net@589|||0|pin@234||-17|26|inv@6|in|-21|26
 Awire|net@590|||0|inv@7|out|-39|26|pin@236||-81.5|26
-Awire|net@591|||1800|inv@8|out|29|4.5|inv@9|in|31.5|4.5
+Awire|net@591|||1800|inv@8|out|29|4.5|inv@9|in|33.5|4.5
 Awire|net@592|||900|inv@0|out|16.5|12.5|pin@258||16.5|4.5
-Awire|net@593|||0|inv@8|in|20|4.5|pin@258||16.5|4.5
+Awire|net@593|||0|inv@8|in|22|4.5|pin@258||16.5|4.5
 Awire|net@594|||2700|inv@9|out|40.5|4.5|pin@259||40.5|12.5
 Awire|net@595|||1800|pin@259||40.5|12.5|pin@260||51|12.5
 Awire|net@596|||900|conn@12|a|51|14.5|pin@260||51|12.5
-Awire|net@597|||2700|inv@10|out|-28.5|1|inv@11|in|-28.5|3.5
+Awire|net@597|||2700|inv@10|out|-28.5|1|inv@11|in|-28.5|5.5
 Awire|net@601|||2700|inv@11|out|-28.5|12.5|pin@263||-28.5|18.5
-Awire|net@602|||2700|inv@1|out|-29|-15.5|pin@264||-29|-8
-Awire|net@603|||0|inv@10|in|-28.5|-8|pin@264||-29|-8
+Awire|net@602|||2700|inv@1|out|-29|-15.5|pin@264||-29|-6
+Awire|net@603|||0|inv@10|in|-28.5|-6|pin@264||-29|-6
 Awire|net@604|||1800|pin@231||-77.5|18.5|pin@263||-28.5|18.5
-Awire|net@605|||900|inv@12|out|-76|-72|inv@13|in|-76|-74.5
-Awire|net@606|||900|inv@14|out|-101.5|-69.5|inv@15|in|-101.5|-72.5
+Awire|net@605|||900|inv@12|out|-76|-72|inv@13|in|-76|-76.5
+Awire|net@606|||900|inv@14|out|-101.5|-69.5|inv@15|in|-101.5|-74.5
 Awire|net@607|||1800|FA@3|Sum|-89.5|-37|pin@265||-76|-37
-Awire|net@608|||2700|inv@12|in|-76|-63|pin@265||-76|-37
+Awire|net@608|||2700|inv@12|in|-76|-65|pin@265||-76|-37
 Awire|net@609|||0|inv@13|out|-76|-83.5|pin@266||-89.5|-83.5
 Awire|net@610|||900|conn@24|y|-89.5|-52.5|pin@266||-89.5|-83.5
-Awire|net@611|||900|pin@246||-99|-26|pin@267||-99|-60.5
-Awire|net@612|||1800|inv@14|in|-101.5|-60.5|pin@267||-99|-60.5
+Awire|net@611|||900|pin@246||-99|-26|pin@267||-99|-62.5
+Awire|net@612|||1800|inv@14|in|-101.5|-62.5|pin@267||-99|-62.5
 Awire|net@613|||1800|inv@15|out|-101.5|-81.5|pin@268||-96|-81.5
 Awire|net@614|||900|conn@25|y|-96|-52.5|pin@268||-96|-81.5
 EA0||D5G2;X-2.5;|conn@16|y|U

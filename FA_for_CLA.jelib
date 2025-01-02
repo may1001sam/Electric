@@ -13,7 +13,8 @@ LNAND|NAND
 LXOR|XOR
 
 # Technologies:
-Tmocmos|ScaleFORmocmos()D300.0|mocmosNumberOfMetalLayers()I3
+Tbicmos|ScaleFORbicmos()D22.0
+Tmocmos|ScaleFORmocmos()D22.0
 
 # Cell FA;1{ic}
 CFA;1{ic}||artwork|1734863342153|1734864213880|E
@@ -47,8 +48,8 @@ ESum||D5G2;|pin@10||U
 X
 
 # Cell FA;1{lay}
-CFA;1{lay}||mocmos|1735821794974|1735829515652|
-IXOR:XOR;1{lay}|XOR@0||-145|27|||D5G4;
+CFA;1{lay}||mocmos|1735821794974|1735832061995|
+IXOR:XOR;1{lay}|XOR@0||-144|27|||D5G4;
 IXOR:XOR;1{lay}|XOR@1||-31|27|||D5G4;
 Ngeneric:Facet-Center|art@0||0|0||||AV
 NMetal-1-Metal-2-Con|contact@0||-103|75.5||||
@@ -57,7 +58,7 @@ NMetal-1-Metal-2-Con|contact@3||48|76.5||||
 NMetal-1-Metal-2-Con|contact@4||-103|-23||||
 NMetal-1-Metal-2-Con|contact@5||-66.5|-23||||
 NMetal-1-Metal-2-Con|contact@6||48|-23||||
-NMetal-1-Metal-2-Con|contact@7||-88.5|88.5||||
+NMetal-1-Metal-2-Con|contact@7||-87.5|88.5||||
 NMetal-1-Metal-2-Con|contact@8||82.5|88.5||||
 INAND:nand;1{lay}|nand@0||55|13.5|||D5G4;
 NMetal-2-Pin|pin@0||-103|-23||||
@@ -67,8 +68,9 @@ NMetal-1-Pin|pin@3||-196|19||||
 NMetal-2-Pin|pin@4||-76.5|28.5||||
 NMetal-1-Pin|pin@5||-76.5|19||||
 NMetal-1-Pin|pin@6||-76.5|97||||
-NMetal-1-Pin|pin@7||26.5|-30||||
 NMetal-1-Pin|pin@9||82|12.5||||
+NMetal-1-Pin|pin@10||30|28.5||||
+NMetal-1-Pin|pin@11||30|-29||||
 AMetal-1|net@0||1|S900|contact@0||-103|76.5|XOR@0|vdd|-103|67
 AMetal-1|net@2||1|S900|contact@2||-63|76.5|XOR@1|vdd|-63|67
 AMetal-2|net@7||1|S0|contact@2||-63|76.5|contact@0||-103|76.5
@@ -86,23 +88,24 @@ AMetal-2|net@21||1|S1800|XOR@0|out|-88.5|28.5|pin@4||-76.5|28.5
 AMetal-2|net@22||1|S2700|XOR@1|A|-76.5|27|pin@4||-76.5|28.5
 AMetal-1|net@23|||S0|XOR@1|B|-76|19|pin@5||-76.5|19
 AMetal-1|net@24|||S2700|pin@5||-76.5|19|pin@6||-76.5|97
-AMetal-1|net@25||1|S900|XOR@1|out|26.5|28.5|pin@7||26.5|-30
-AMetal-1|net@28||1|S2700|XOR@0|out|-88.5|28.5|contact@7||-88.5|88
+AMetal-1|net@28||1|S2700|XOR@0|out|-86.5|28.5|contact@7||-86.5|88
 AMetal-1|net@29||1|S900|contact@3||48|76.5|nand@0|vdd|48|51.5
 AMetal-2|net@32||1|S1800|contact@7||-88.5|88.5|contact@8||82.5|88.5
 AMetal-1|net@33||1|S1800|nand@0|out|76|12.5|pin@9||82|12.5
+AMetal-1|net@34||1|S1800|XOR@1|out|25.5|28.5|pin@10||30|28.5
+AMetal-1|net@35||1|S900|pin@10||30|28.5|pin@11||30|-29
 EA||D5G2;|pin@2||U
 EB||D5G2;|pin@3||U
 ECin||D5G2;|pin@6||U
 EG||D5G2;|pin@9||U
 EP||D5G2;|contact@8||U
-ESum||D5G2;|pin@7||U
+ESum||D5G2;|pin@11||U
 Egnd||D5G2;|XOR@0|gnd|U
 Evdd||D5G2;|XOR@0|vdd|U
 X
 
 # Cell FA;1{sch}
-CFA;1{sch}||schematic|1734862633877|1734863980042|
+CFA;1{sch}||schematic|1734862633877|1735850398822|
 IFA;1{ic}|FA@0||-2.5|4.5|||D5G4;
 IXOR:XOR;1{ic}|XOR@0||-41|9|||D5G4;
 IXOR:XOR;1{ic}|XOR@1||-25|3.5|||D5G4;
@@ -120,20 +123,20 @@ NWire_Pin|pin@6||-47.5|10.5||||
 NWire_Pin|pin@8||-47.5|-2||||
 NWire_Pin|pin@9||-49.5|7.5||||
 NWire_Pin|pin@10||-49.5|-4.5||||
-Awire|net@6|||0|XOR@1|A|-30|5|pin@2||-33|5
+Awire|net@6|||0|XOR@1|A|-28|5|pin@2||-33|5
 Awire|net@11|||2700|pin@2||-33|5|pin@5||-33|9
 Awire|net@12|||0|pin@5||-33|9|XOR@0|out|-38|9
 Awire|net@13|||1800|conn@0|y|-52|10.5|pin@6||-47.5|10.5
-Awire|net@14|||1800|pin@6||-47.5|10.5|XOR@0|A|-46|10.5
-Awire|net@17|||0|nand@0|A|-43|-2|pin@8||-47.5|-2
+Awire|net@14|||1800|pin@6||-47.5|10.5|XOR@0|A|-44|10.5
+Awire|net@17|||0|nand@0|A|-41|-2|pin@8||-47.5|-2
 Awire|net@18|||1800|conn@1|y|-52|7.5|pin@9||-49.5|7.5
-Awire|net@19|||1800|pin@9||-49.5|7.5|XOR@0|B|-46|7.5
+Awire|net@19|||1800|pin@9||-49.5|7.5|XOR@0|B|-44|7.5
 Awire|net@20|||900|pin@9||-49.5|7.5|pin@10||-49.5|-4.5
 Awire|net@27|||0|conn@3|a|-17|9|pin@5||-33|9
 Awire|net@32|||1800|XOR@1|out|-22|3.5|conn@5|a|-17|3.5
-Awire|net@33|||1800|conn@2|y|-52|2|XOR@1|B|-30|2
+Awire|net@33|||1800|conn@2|y|-52|2|XOR@1|B|-28|2
 Awire|net@34|||900|pin@6||-47.5|10.5|pin@8||-47.5|-2
-Awire|net@35|||1800|pin@10||-49.5|-4.5|nand@0|B|-43|-4.5
+Awire|net@35|||1800|pin@10||-49.5|-4.5|nand@0|B|-41|-4.5
 Awire|net@36|||1800|nand@0|out|-33|-3|conn@4|a|-17|-3
 EA||D5G2;X1;|conn@0|a|U
 EB||D5G2;X-3;|conn@1|y|U

@@ -8,48 +8,48 @@ Vschematic|sch
 
 # Technologies:
 Tbicmos|ScaleFORbicmos()D22.0
-Tmocmos|ScaleFORmocmos()D300.0
+Tmocmos|ScaleFORmocmos()D22.0
 
 # Cell INV_ICON;1{sch}
-CINV_ICON;1{sch}||schematic|1731170526296|1731691141599|
+CINV_ICON;1{sch}||schematic|1731170526296|1735848989148|
 Ngeneric:Facet-Center|art@0||0|0||||AV
 Iinv;1{ic}|inv@0||-37|7.5|||D5G4;
 Ngeneric:Invisible-Pin|pin@0||-36.5|0|||||SIM_spice_card(D5G1;)S[vdd vdd 0 DC 5,vin in 0 DC pwl 10n 0 20n 5 50n 5 60n 0,cload out 0 250fF,.measure tran tf trig v(out) val=4.5 fall=1 td=8ns targ v(out) val=0.5 fall=1,.measure tran tr trig v(out) val=0.5 rise=1 td=50ns targ v(out) val=4.5 rise=1,.tran 0 100ns,".include C:\\Electric\\C5_models.txt"]
 NWire_Pin|pin@2||-27.5|8.5||||
 NWire_Pin|pin@3||-45|8.5||||
-Awire|in|D5G1;||0|inv@0|in|-42|8.5|pin@3||-45|8.5
+Awire|in|D5G1;||0|inv@0|in|-40|8.5|pin@3||-45|8.5
 Awire|out|D5G1;||1800|inv@0|out|-33|8.5|pin@2||-27.5|8.5
 X
 
 # Cell inv;1{ic}
-Cinv;1{ic}||artwork|1731170248628|1731241543294|E
+Cinv;1{ic}||artwork|1731170248628|1735849026100|E
 Ngeneric:Facet-Center|art@0||0|0||||AV
 NTriangle|art@2||0|1|6|6|RRR|
 NCircle|art@3||3.5|1|1|1||
-Nschematic:Bus_Pin|pin@0||-5|1||||
+Nschematic:Bus_Pin|pin@0||-3|1||||
 Nschematic:Wire_Pin|pin@1||-3|1||||
 Nschematic:Bus_Pin|pin@2||4|1||||
-Nschematic:Wire_Pin|pin@3||7|1||||
+Nschematic:Wire_Pin|pin@3||4|1||||
 Ngeneric:Invisible-Pin|pin@4||-0.5|1|||||ART_message(D5G1;)SNOT
-Aschematic:wire|net@0|||0|pin@1||-3|1|pin@0||-5|1
-Aschematic:wire|net@1|||0|pin@3||7|1|pin@2||4|1
+Aschematic:wire|net@0|||0|pin@1||-3|1|pin@0||-3|1
+Aschematic:wire|net@1|||0|pin@3||4|1|pin@2||4|1
 Ein||D5G2;|pin@0||U
-Eout||D5G2;X2.5;|pin@2||U
+Eout||D5G2;|pin@2||U
 X
 
 # Cell inv;1{lay}
-Cinv;1{lay}||mocmos|1731173598937|1731243475683||DRC_last_good_drc_area_date()G1731243479933|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1731243479933
+Cinv;1{lay}||mocmos|1731173598937|1735849412017||DRC_last_good_drc_area_date()G1735849362963|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1735849420975
 Ngeneric:Facet-Center|art@0||0|0||||AV
 NMetal-1-P-Active-Con|contact@0||-6.5|17||15||
 NMetal-1-P-Active-Con|contact@1||6.5|17||15||
 NMetal-1-N-Active-Con|contact@2||-6.5|-13||5||
 NMetal-1-N-Active-Con|contact@3||6.5|-13||5||
-NMetal-1-Polysilicon-1-Con|contact@4||-17.5|-0.5||||
+NMetal-1-Polysilicon-1-Con|contact@4||-16|-0.5||||
+NMetal-1-Metal-2-Con|contact@5||6.5|-0.5||||
 NN-Transistor|nmos@0||0|-13|7||RRR||SIM_spice_model(D5G3;)SN
-NPolysilicon-1-Pin|pin@0||0|-0.5||||
-NPolysilicon-1-Pin|pin@1||-17.5|-0.5||||
-NMetal-1-Pin|pin@2||6.5|-0.5||||
-NMetal-1-Pin|pin@3||18|-0.5||||
+NPolysilicon-1-Pin|pin@5||0|-0.5||||
+NMetal-1-Pin|pin@7||6.5|-0.5||||
+NMetal-2-Pin|pin@8||16.5|-0.5||||
 NP-Transistor|pmos@0||0|17|17||RRR||SIM_spice_model(D5G3;)SP
 NMetal-1-P-Well-Con|substr@0||0|-27|20|||
 NMetal-1-N-Well-Con|well@1||0|34.5|20|1||
@@ -59,26 +59,26 @@ AN-Active|net@2|||S1800|nmos@0|diff-top|3.75|-13|contact@3||6.5|-13
 AN-Active|net@3|||S0|nmos@0|diff-bottom|-3.75|-13|contact@2||-6.5|-13
 AMetal-1|net@5||1|S900|well@1||-6.5|35|contact@0||-6.5|17
 AMetal-1|net@6||1|S2700|substr@0||-6.5|-27|contact@2||-6.5|-13
-APolysilicon-1|net@8|||S900|pmos@0|poly-right|0|5|pin@0||0|-0.5
-APolysilicon-1|net@9|||S900|pin@0||0|-0.5|nmos@0|poly-left|0|-6
-APolysilicon-1|net@10|||S0|pin@0||0|-0.5|pin@1||-17.5|-0.5
-AMetal-1|net@11||1|S900|contact@1||6.5|17|pin@2||6.5|-0.5
-AMetal-1|net@12||1|S900|pin@2||6.5|-0.5|contact@3||6.5|-13
-AMetal-1|net@13||1|S1800|pin@2||6.5|-0.5|pin@3||18|-0.5
-APolysilicon-1|net@14|||S1800|pin@1||-17.5|-0.5|contact@4||-17|-0.5
+APolysilicon-1|net@16|||S900|pmos@0|poly-right|0|5|pin@5||0|-0.5
+APolysilicon-1|net@17|||S900|pin@5||0|-0.5|nmos@0|poly-left|0|-6
+APolysilicon-1|net@18|||S0|pin@5||0|-0.5|contact@4||-15.5|-0.5
+AMetal-1|net@21||1|S900|contact@1||6.5|17|pin@7||6.5|-0.5
+AMetal-1|net@22||1|S900|pin@7||6.5|-0.5|contact@3||6.5|-13
+AMetal-1|net@23||1|S1800|pin@7||6.5|-0.5|contact@5||6.5|-0.5
+AMetal-2|net@24||1|S1800|contact@5||6.5|-0.5|pin@8||16.5|-0.5
 Egnd||D5G2;|substr@0||U
 Ein||D5G2;|contact@4||U
-Eout||D5G2;|pin@3||U
+Eout||D5G2;|pin@8||U
 Evdd||D5G2;|well@1||U
 X
 
 # Cell inv;1{sch}
-Cinv;1{sch}||schematic|1731151302847|1731225357396|
+Cinv;1{sch}||schematic|1731151302847|1735849336997|
 Ngeneric:Facet-Center|art@0||0|0||||AV
 NOff-Page|conn@0||-34|10||||
 NOff-Page|conn@1||-21|10||||
 NGround|gnd@0||-26|1||||
-Iinv;1{ic}|inv@0||-54.5|16|||D5G4;
+Iinv;1{ic}|inv@0||-42.5|14.5|||D5G4;
 NTransistor|nmos@0||-28|6|||R||ATTR_length(D5G0.5;X-0.5;Y-1;)D2.0|ATTR_width(D5G1;X0.5;Y-1;)D10.0|SIM_spice_model(D5G1;Y-3;)SN
 NWire_Pin|pin@4||-26|10||||
 NWire_Pin|pin@5||-30|6||||
@@ -217,22 +217,22 @@ Evdd||D5G2;|pin@5||U
 X
 
 # Cell inv_sim;1{lay}
-Cinv_sim;1{lay}||mocmos|1731176432755|1731243475683||DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1731223361176
+Cinv_sim;1{lay}||mocmos|1731176432755|1735849527187||DRC_last_good_drc_area_date()G1735849533074|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1735849533074
 Ngeneric:Facet-Center|art@0||0|0||||AV
 Iinv;1{lay}|inv@0||-6.5|-3|||D5G4;
-Ngeneric:Invisible-Pin|pin@0||-76|14|||||SIM_spice_card(D5G2;)S[vdd vdd 0 DC 5,vin in 0 DC pwl 10n 0 20n 5 50n 5 60n 0,cload out 0 250fF,.measure tran tf trig v(out) val=4.5 fall=1 td=8ns targ v(out) val=0.5 fall=1,.measure tran tf trig v(out) val=0.5 rise=1 td=50ns targ v(out) val=4.5 rise=1,.tran 0 100ns,".include C:\\Electric\\C5_models.txt"]
-NMetal-1-Pin|pin@1||-57|31.5||||
-NMetal-1-Pin|pin@2||-56.5|-3.5||||
-NMetal-1-Pin|pin@3||-57|-30||||
-NMetal-1-Pin|pin@4||36.5|-3.5||||
-AMetal-1|net@0||1|S0|inv@0|vdd|-6.5|31.5|pin@1||-57|31.5
-AMetal-1|net@1||1|S0|inv@0|in|-23.5|-3.5|pin@2||-56.5|-3.5
-AMetal-1|net@2||1|S0|inv@0|gnd|-6.5|-30|pin@3||-57|-30
-AMetal-1|net@3||1|S1800|inv@0|out|11.5|-3.5|pin@4||36.5|-3.5
-Egnd||D5G2;|pin@3||U
-Ein||D5G2;|pin@2||U
-Eout||D5G2;|pin@4||U
-Evdd||D5G2;|pin@1||U
+Ngeneric:Invisible-Pin|pin@9||-64|2|||||SIM_spice_card(D5G2;)S[vdd vdd 0 DC 0.95,vin in 0 DC pwl 10n 0 20n 0.95 50n 0.95 60n 0,cload out 0 250fF,.measure tran tf trig v(out) val=4.5 fall=1 td=8ns targ v(out) val=0.5 fall=1,.measure tran tr trig v(out) val=0.5 rise=1 td=50ns targ v(out) val=4.5 rise=1,.tran 0 100ns,".include C:\\Electric\\22nm.txt"]
+NMetal-1-Pin|pin@10||-22.5|-3.5||||
+NMetal-2-Pin|pin@11||10|-3.5||||
+NMetal-1-Pin|pin@12||-24|31.5||||
+NMetal-1-Pin|pin@13||-24|-30||||
+AMetal-1|net@7||1|S0|inv@0|in|-22.5|-3.5|pin@10||-22.5|-3.5
+AMetal-2|net@8||1|S0|inv@0|out|10|-3.5|pin@11||10|-3.5
+AMetal-1|net@9||1|S0|inv@0|vdd|-6.5|31.5|pin@12||-24|31.5
+AMetal-1|net@10||1|S0|inv@0|gnd|-6.5|-30|pin@13||-24|-30
+Egnd||D5G2;|pin@13||U
+Ein||D5G2;|pin@10||U
+Eout||D5G2;|pin@11||U
+Evdd||D5G2;|pin@12||U
 X
 
 # Cell inv_sized;1{sch}
