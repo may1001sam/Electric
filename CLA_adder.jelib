@@ -1,0 +1,18 @@
+# header information:
+HCLA_adder|9.07
+
+# Views:
+Vicon|ic
+
+# Technologies:
+Tmocmos|ScaleFORmocmos()D300.0|mocmosNumberOfMetalLayers()I3
+
+# Cell inv;1{ic}
+Cinv;1{ic}||artwork|1734859546979|1734859546989|E|IO_dummy_object()Sinv;1{ic}|IO_true_library()Sproject
+Ngeneric:Facet-Center|art@0||0|0||||AV
+Ngeneric:Invisible-Pin|pin@0||0|0||||
+Ngeneric:Universal-Pin|pin@1||-5|1|-1|-1||
+Ngeneric:Universal-Pin|pin@2||4|1|-1|-1||
+Ein||D5G2;|pin@1||U
+Eout||D5G2;|pin@2||U
+X
