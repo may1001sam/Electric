@@ -1,0 +1,17 @@
+# header information:
+Htesting|9.07
+
+# Views:
+Vschematic|sch
+
+# Technologies:
+Tmocmos|ScaleFORmocmos()D300.0|mocmosNumberOfMetalLayers()I3
+
+# Cell buffer;1{sch}
+Cbuffer;1{sch}||schematic|1735816145778|1735816162425|
+Ngeneric:Facet-Center|art@0||0|0||||AV
+NTransistor|nmos@0||-37|7.5|||R||ATTR_length(D5G0.5;X-0.5;Y-1;)S2|ATTR_width(D5G1;X0.5;Y-1;)S2
+NTransistor|nmos@1||-28.5|8|||R||ATTR_length(D5G0.5;X-0.5;Y-1;)S2|ATTR_width(D5G1;X0.5;Y-1;)S2
+NTransistor|pmos@0||-37.5|18.5|||R|2|ATTR_length(D5G0.5;X-0.5;Y-1;)S2|ATTR_width(D5G1;X0.5;Y-1;)S2
+NTransistor|pmos@1||-28.5|17.5|||R|2|ATTR_length(D5G0.5;X-0.5;Y-1;)S2|ATTR_width(D5G1;X0.5;Y-1;)S2
+X
