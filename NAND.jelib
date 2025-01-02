@@ -23,23 +23,24 @@ Awire|out|D5G1;||1800|nand@0|out|-27.5|21.5|pin@3||-23.5|21.5
 X
 
 # Cell NAND_sim;1{lay}
-CNAND_sim;1{lay}||mocmos|1731180357009|1734869552451|
+CNAND_sim;1{lay}||mocmos|1731180357009|1735821697332||DRC_last_good_drc_area_date()G1735821701494|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1735821701494
 Ngeneric:Facet-Center|art@0||0|0||||AV
-Inand;1{lay}|nand@0||20|-1|||D5G4;
-NMetal-1-Pin|pin@0||-3|37.5||||
-NMetal-1-Pin|pin@1||2|1||||
-NMetal-1-Pin|pin@2||-3.5|-26||||
-NMetal-1-Pin|pin@3||41|1||||
-NMetal-1-Pin|pin@4||40.5|13.5||||
-AMetal-1|net@0||1|S0|nand@0|vdd|19.5|37.5|pin@0||-3|37.5
-AMetal-1|net@1|||S0|nand@0|B|2.5|1|pin@1||2|1
-AMetal-1|net@2||1|S0|nand@0|gnd|20.5|-26|pin@2||-3.5|-26
-AMetal-1|net@3||1|S1800|nand@0|out|41|1|pin@3||41|1
-AMetal-1|net@4||1|S0|nand@0|A|41|13.5|pin@4||40.5|13.5
+Inand;1{lay}|nand@0||20|-4|||D5G4;
+NMetal-1-Pin|pin@0||0.5|34.5||||
+NMetal-1-Pin|pin@1||2|-2||||
+NMetal-1-Pin|pin@2||0|-29||||
+NMetal-1-Pin|pin@4||40.5|10.5||||
+Ngeneric:Invisible-Pin|pin@5||-36|6.5|||||SIM_spice_card(D5G1;)S[vdd vdd 0 DC 5,va A 0 DC pwl 10n 0 20n 5 50n 5 60n 0 90n 0 100n 5 130n 5 140n 0 170n 0 180n 5,vb B 0 DC pwl 10n 0 20n 5 100n 5 110n 0,.measure tran tf trig v(out) val=4.5 fall=1 td=4ns trag v(out) val=0.5 fall=1,.measure tran tr trig v(out) val=0.5 rise=1 td=4ns trag v(out) val=4.5 rise=1,.tran 200n,".include C:\\Electric\\C5_models.txt"]
+NMetal-1-Pin|pin@6||41|-1.5||||
+AMetal-1|net@0||1|S0|nand@0|vdd|19.5|34.5|pin@0||0.5|34.5
+AMetal-1|net@1|||S0|nand@0|B|2.5|-2|pin@1||2|-2
+AMetal-1|net@2||1|S0|nand@0|gnd|20.5|-29|pin@2||0|-29
+AMetal-1|net@4||1|S0|nand@0|A|41|10.5|pin@4||40.5|10.5
+AMetal-1|net@5||1|S1800|nand@0|out|41|-1.5|pin@6||41|-1.5
 EA||D5G2;|pin@4||U
 EB||D5G2;|pin@1||U
 Egnd||D5G2;|pin@2||U
-Eout||D5G2;|pin@3||U
+Eout||D5G2;|pin@6||U
 Evdd||D5G2;|pin@0||U
 X
 
@@ -65,22 +66,22 @@ Eout||D5G2;X2.5;Y0.5;|pin@4||U
 X
 
 # Cell nand;1{lay}
-Cnand;1{lay}||mocmos|1731177249778|1734869521021||DRC_last_good_drc_area_date()G1734869485685|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1734869485685
+Cnand;1{lay}||mocmos|1731177249778|1735821675106||DRC_last_good_drc_area_date()G1735821650617|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1735821701494
 Ngeneric:Facet-Center|art@0||0|0||||AV
 NMetal-1-P-Active-Con|contact@0||-11.5|21.5||15||
 NMetal-1-P-Active-Con|contact@1||13|21.5||15||
 NMetal-1-P-Active-Con|contact@2||0.5|21.5||15||
 NMetal-1-N-Active-Con|contact@3||-9|-10.5||5||
 NMetal-1-N-Active-Con|contact@4||10|-10.5||5||
-NMetal-1-Metal-2-Con|contact@6||21|2||||
 NMetal-1-Metal-2-Con|contact@7||-18|2||||
 NMetal-1-Polysilicon-1-Con|contact@14||-18|2||||
 NMetal-1-Polysilicon-1-Con|contact@15||20.5|14.5||||
+NMetal-1-Metal-2-Con|contact@16||0.5|2.5||||
+NMetal-1-Metal-2-Con|contact@17||10|2.5||||
+NMetal-1-Metal-2-Con|contact@18||21|2.5||||
 NN-Transistor|nmos@0||-3.5|-10.5|7||RRR||SIM_spice_model(D5G2;)SN
 NN-Transistor|nmos@1||4.5|-10.5|7||RRR||SIM_spice_model(D5G2;)SN
 NPolysilicon-1-Pin|pin@2||-3.5|9.5||||
-NMetal-1-Pin|pin@4||0.5|2||||
-NMetal-1-Pin|pin@5||10|2||||
 NPolysilicon-1-Pin|pin@10||-3.5|2||||
 NPolysilicon-1-Pin|pin@12||4.5|7||||
 NPolysilicon-1-Pin|pin@14||20.5|7||||
@@ -98,11 +99,7 @@ AN-Active|net@5|||S1800|nmos@1|diff-top|8.25|-11|contact@4||10|-11
 APolysilicon-1|net@11|||S1800|pmos@0|poly-right|-6|9.5|pin@2||-3.5|9.5
 AMetal-1|net@14||1|S2700|contact@0||-11.5|21.5|well@0||-11.5|38.5
 AMetal-1|net@15||1|S2700|contact@1||13|21.5|well@0||13|38.5
-AMetal-1|net@16||1|S900|contact@2||0.5|21|pin@4||0.5|2
-AMetal-1|net@17||1|S1800|pin@4||0.5|2|pin@5||10|2
-AMetal-1|net@18||1|S2700|contact@4||10|-10.5|pin@5||10|2
 AMetal-1|net@19||1|S900|contact@3||-9|-10.5|substr@0||-9|-24.5
-AMetal-1|net@20||1|S1800|pin@5||10|2|contact@6||21|2
 APolysilicon-1|net@36|||S2700|nmos@0|poly-left|-3.5|-3.5|pin@10||-3.5|2
 APolysilicon-1|net@37|||S2700|pin@10||-3.5|2|pin@2||-3.5|9.5
 AMetal-1|net@43||-1|S1800|contact@7||-19|2|contact@14||-18.5|2
@@ -113,10 +110,14 @@ APolysilicon-1|net@52|||S1800|pin@12||4.5|7|pin@15||7|7
 APolysilicon-1|net@54|||S900|pmos@1|poly-right|7|9.5|pin@15||7|7
 APolysilicon-1|net@55|||S900|contact@15||20.5|14.5|pin@14||20.5|7
 APolysilicon-1|net@56|||S0|pin@14||20.5|7|pin@15||7|7
+AMetal-1|net@59||1|S900|contact@2||0.5|21.5|contact@16||0.5|3.5
+AMetal-2|net@63||1|S1800|contact@16||0.5|2.5|contact@17||10|2.5
+AMetal-1|net@66||1|S2700|contact@4||10|-10.5|contact@17||10|2.5
+AMetal-2|net@69||1|S1800|contact@17||10|2.5|contact@18||21|2.5
 EA||D5G2;|contact@15||U
 EB||D5G2;|contact@7||U
 Egnd||D5G2;|substr@0||U
-Eout||D5G2;|contact@6||U
+Eout||D5G2;|contact@18||U
 Evdd||D5G2;|well@0||U
 X
 
