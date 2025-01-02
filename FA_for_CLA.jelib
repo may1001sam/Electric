@@ -48,7 +48,7 @@ ESum||D5G2;|pin@10||U
 X
 
 # Cell FA;1{lay}
-CFA;1{lay}||mocmos|1735821794974|1735856672903||DRC_last_good_drc_area_date()G1735856682969|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1735856682969
+CFA;1{lay}||mocmos|1735821794974|1735856861175||DRC_last_good_drc_area_date()G1735856682969|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1735856682969
 IXOR:XOR;1{lay}|XOR@0||-144|28.5|||D5G4;
 IXOR:XOR;1{lay}|XOR@1||-28|27|||D5G4;
 Ngeneric:Facet-Center|art@0||0|0||||AV
@@ -92,7 +92,6 @@ NMetal-3-Pin|pin@34||42.5|97.5||||
 NMetal-3-Pin|pin@36||42.5|126.5||||
 NMetal-1-Pin|pin@37||-198|28.5||||
 NMetal-2-Pin|pin@39||-174|118||||
-Ngeneric:Invisible-Pin|pin@40||-272.5|74.5|||||SIM_spice_card(D5G3;)S[vdd vdd 0 DC 0.95,va A 0 DC pwl 10n 0 20n 0.95 50n 0.95 60n 0 90n 0 100n 0.95 130n 0.95 140n 0 170n 0 180n 0.95,vb B 0 DC pwl 10n 0 20n 0.95 100n 0.95 110n 0,vc Cin 0 DC pwl 10n 0 20n 0.95 100n 0.95 110n 0,cload Sum 0 250fF,.measure tran tf trig v(out) val=4.5 fall=1 td=4ns targ v(out) val=0.5 fall=1,.measure tran tr trig v(out) val=0.5 rise=1 td=4ns targ v(out) val=4.5 rise=1,.tran 200n,".include C:\\Electric\\22nm.txt"]
 NMetal-2-Pin|pin@41||-185.5|-36.5||||
 NMetal-4-Pin|pin@42||-78.5|-37||||
 NMetal-4-Pin|pin@43||44.5|-37||||
@@ -219,7 +218,8 @@ Awire|Sum|D5G1;||2700|FA@0|Sum|-10.5|7|pin@10||-10.5|7.5
 X
 
 # Cell FA_sim;1{lay}
-CFA_sim;1{lay}||mocmos|1735856793278|1735856797021|
+CFA_sim;1{lay}||mocmos|1735856793278|1735856866188|
 IFA;1{lay}|FA@0||79.5|-43.5|||D5G4;
 Ngeneric:Facet-Center|art@0||0|0||||AV
+Ngeneric:Invisible-Pin|pin@0||-191.5|26|||||SIM_spice_card(D5G3;)S[vdd vdd 0 DC 0.95,va A 0 DC pwl 10n 0 20n 0.95 50n 0.95 60n 0 90n 0 100n 0.95 130n 0.95 140n 0 170n 0 180n 0.95,vb B 0 DC pwl 10n 0 20n 0.95 100n 0.95 110n 0,vc Cin 0 DC pwl 10n 0 20n 0.95 100n 0.95 110n 0,cload Sum 0 250fF,.measure tran tf trig v(out) val=4.5 fall=1 td=4ns targ v(out) val=0.5 fall=1,.measure tran tr trig v(out) val=0.5 rise=1 td=4ns targ v(out) val=4.5 rise=1,.tran 200n,".include C:\\Electric\\22nm.txt"]
 X
