@@ -1,11 +1,12 @@
-*** SPICE deck for cell XOR{lay} from library XOR
-*** Created on Sat Nov 09, 2024 22:13:58
-*** Last revised on Thu Jan 02, 2025 23:54:45
-*** Written on Thu Jan 02, 2025 23:54:50 by Electric VLSI Design System, version 9.07
+*** SPICE deck for cell FA{lay} from library FA_for_CLA
+*** Created on Thu Jan 02, 2025 14:43:14
+*** Last revised on Fri Jan 03, 2025 00:24:32
+*** Written on Fri Jan 03, 2025 00:24:50 by Electric VLSI Design System, version 9.07
 *** Layout tech: mocmos, foundry MOSIS
 *** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
 
-*** TOP LEVEL CELL: XOR:XOR{lay}
+*** SUBCIRCUIT XOR__XOR FROM CELL XOR:XOR{lay}
+.SUBCKT XOR__XOR A B gnd out vdd
 Mnmos@0 net@3 A out gnd N L=0.044U W=0.44U AS=0.09P AD=0.047P PS=1.078U PD=0.875U
 Mnmos@1 out net@256 net@3 gnd N L=0.044U W=0.44U AS=0.047P AD=0.09P PS=0.875U PD=1.078U
 Mnmos@4 net@3 net@191 gnd gnd N L=0.044U W=0.44U AS=0.165P AD=0.047P PS=2.04U PD=0.875U
@@ -18,11 +19,29 @@ Mpmos@4 out net@191 net@474 vdd P L=0.044U W=1.32U AS=0.08P AD=0.09P PS=1.441U P
 Mpmos@5 net@474 B vdd vdd P L=0.044U W=1.32U AS=0.3P AD=0.08P PS=4.076U PD=1.441U
 Mpmos@6 vdd A net@191 vdd P L=0.044U W=1.32U AS=0.116P AD=0.3P PS=2.024U PD=4.076U
 Mpmos@7 net@256 B vdd vdd P L=0.044U W=1.32U AS=0.3P AD=0.116P PS=4.076U PD=2.024U
+.ENDS XOR__XOR
 
-* Spice Code nodes in cell cell 'XOR:XOR{lay}'
+*** SUBCIRCUIT NAND__nand FROM CELL NAND:nand{lay}
+.SUBCKT NAND__nand A B gnd out vdd
+Mnmos@0 gnd B net@45 gnd N L=0.044U W=0.22U AS=0.015P AD=0.106P PS=0.352U PD=2.288U
+Mnmos@1 net@45 A out gnd N L=0.044U W=0.22U AS=0.047P AD=0.015P PS=0.704U PD=0.352U
+Mpmos@0 vdd B out vdd P L=0.044U W=0.44U AS=0.047P AD=0.106P PS=0.704U PD=1.969U
+Mpmos@1 out A vdd vdd P L=0.044U W=0.44U AS=0.106P AD=0.047P PS=1.969U PD=0.704U
+.ENDS NAND__nand
+
+*** TOP LEVEL CELL: FA_for_CLA:FA{lay}
+XXOR@0 A B gnd P vdd XOR__XOR
+XXOR@1 P Cin gnd Sum vdd XOR__XOR
+Xnand@0 A B gnd G vdd NAND__nand
+
+* Spice Code nodes in cell cell 'FA_for_CLA:FA{lay}'
 vdd vdd 0 DC 0.95
 va A 0 DC pwl 10n 0 20n 0.95 50n 0.95 60n 0 90n 0 100n 0.95 130n 0.95 140n 0 170n 0 180n 0.95
 vb B 0 DC pwl 10n 0 20n 0.95 100n 0.95 110n 0
+vc Cin 0 DC pwl 10n 0 20n 0.95 100n 0.95 110n 0
+cload Sum 0 250fF
+.measure tran tf trig v(out) val=4.5 fall=1 td=4ns targ v(out) val=0.5 fall=1
+.measure tran tr trig v(out) val=0.5 rise=1 td=4ns targ v(out) val=4.5 rise=1
 .tran 200n
 .include C:\Electric\22nm.txt
 .END

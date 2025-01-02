@@ -1,0 +1,66 @@
+*** SPICE deck for cell FA_icon{sch} from library FA_for_CLA
+*** Created on Sun Dec 22, 2024 12:38:23
+*** Last revised on Thu Jan 02, 2025 22:49:48
+*** Written on Thu Jan 02, 2025 23:13:19 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+*** SUBCIRCUIT inverter__inv FROM CELL inverter:inv{sch}
+.SUBCKT inverter__inv in out
+** GLOBAL gnd
+** GLOBAL vdd
+Mnmos@0 out in gnd gnd N L=0.044U W=0.22U
+Mpmos@0 vdd in out vdd P L=0.044U W=0.44U
+.ENDS inverter__inv
+
+*** SUBCIRCUIT XOR__XOR FROM CELL XOR:XOR{sch}
+.SUBCKT XOR__XOR A B out
+** GLOBAL gnd
+** GLOBAL vdd
+Mnmos@8 out A net@13 gnd N L=0.044U W=0.44U
+Mnmos@9 out net@57 net@13 gnd N L=0.044U W=0.44U
+Mnmos@10 net@13 B gnd gnd N L=0.044U W=0.44U
+Mnmos@11 net@13 net@56 gnd gnd N L=0.044U W=0.44U
+Mpmos@8 vdd A net@1 vdd P L=0.044U W=1.1U
+Mpmos@9 net@1 net@57 out vdd P L=0.044U W=1.1U
+Mpmos@10 vdd B net@2 vdd P L=0.044U W=1.1U
+Mpmos@11 net@2 net@56 out vdd P L=0.044U W=1.1U
+Xinv@0 A net@56 inverter__inv
+Xinv@1 B net@57 inverter__inv
+.ENDS XOR__XOR
+
+*** SUBCIRCUIT NAND__nand FROM CELL NAND:nand{sch}
+.SUBCKT NAND__nand A B out
+** GLOBAL gnd
+** GLOBAL vdd
+Mnmos@0 out A net@11 gnd N L=0.044U W=0.22U
+Mnmos@1 net@11 B gnd gnd N L=0.044U W=0.22U
+Mpmos@1 vdd A out vdd P L=0.044U W=0.44U
+Mpmos@2 vdd B out vdd P L=0.044U W=0.44U
+.ENDS NAND__nand
+
+*** SUBCIRCUIT FA_for_CLA__FA FROM CELL FA_for_CLA:FA{sch}
+.SUBCKT FA_for_CLA__FA A B Cin G P Sum
+** GLOBAL gnd
+** GLOBAL vdd
+XXOR@0 A B P XOR__XOR
+XXOR@1 P Cin Sum XOR__XOR
+Xnand@0 A B G NAND__nand
+.ENDS FA_for_CLA__FA
+
+.global gnd vdd
+
+*** TOP LEVEL CELL: FA_for_CLA:FA_icon{sch}
+XFA@0 A B Cin G P Sum FA_for_CLA__FA
+
+* Spice Code nodes in cell cell 'FA_for_CLA:FA_icon{sch}'
+vdd vdd 0 DC 0.95
+va A 0 DC pwl 10n 0 20n 0.95 50n 0.95 60n 0 90n 0 100n 0.95 130n 0.95 140n 0 170n 0 180n 0.95
+vb B 0 DC pwl 10n 0 20n 0.95 100n 0.95 110n 0
+vc Cin 0 DC pwl 10n 0 20n 0.95 100n 0.95 110n 0
+cload Sum 0 250fF
+.measure tran tf trig v(out) val=4.5 fall=1 td=4ns targ v(out) val=0.5 fall=1
+.measure tran tr trig v(out) val=0.5 rise=1 td=4ns targ v(out) val=4.5 rise=1
+.tran 200n
+.include C:\Electric\22nm.txt
+.END

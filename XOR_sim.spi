@@ -1,24 +1,24 @@
 *** SPICE deck for cell XOR_sim{lay} from library XOR
 *** Created on Sun Nov 10, 2024 12:25:45
-*** Last revised on Thu Jan 02, 2025 22:36:44
-*** Written on Thu Jan 02, 2025 22:38:32 by Electric VLSI Design System, version 9.07
+*** Last revised on Thu Jan 02, 2025 23:55:43
+*** Written on Thu Jan 02, 2025 23:55:55 by Electric VLSI Design System, version 9.07
 *** Layout tech: mocmos, foundry MOSIS
 *** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
 
 *** SUBCIRCUIT XOR__XOR FROM CELL XOR:XOR{lay}
 .SUBCKT XOR__XOR A B gnd out vdd
-Mnmos@0 net@3 A out gnd N L=0.044U W=0.22U AS=0.036P AD=0.025P PS=0.534U PD=0.561U
-Mnmos@1 out net@202 net@3 gnd N L=0.044U W=0.22U AS=0.025P AD=0.036P PS=0.561U PD=0.534U
-Mnmos@4 net@3 net@191 gnd gnd N L=0.044U W=0.22U AS=0.14P AD=0.025P PS=1.711U PD=0.561U
-Mnmos@5 gnd B net@3 gnd N L=0.044U W=0.22U AS=0.025P AD=0.14P PS=0.561U PD=1.711U
-Mnmos@7 gnd A net@191 gnd N L=0.044U W=0.22U AS=0.045P AD=0.14P PS=0.935U PD=1.711U
-Mnmos@9 net@202 B gnd gnd N L=0.044U W=0.22U AS=0.14P AD=0.044P PS=1.711U PD=0.924U
-Mpmos@0 vdd A net@236 vdd P L=0.044U W=0.44U AS=0.024P AD=0.182P PS=0.55U PD=2.338U
-Mpmos@1 net@236 net@202 out vdd P L=0.044U W=0.44U AS=0.036P AD=0.024P PS=0.534U PD=0.55U
-Mpmos@4 out net@191 net@240 vdd P L=0.044U W=0.44U AS=0.029P AD=0.036P PS=0.572U PD=0.534U
-Mpmos@5 net@240 B vdd vdd P L=0.044U W=0.44U AS=0.182P AD=0.029P PS=2.338U PD=0.572U
-Mpmos@6 vdd A net@191 vdd P L=0.044U W=0.44U AS=0.045P AD=0.182P PS=0.935U PD=2.338U
-Mpmos@7 net@202 B vdd vdd P L=0.044U W=0.44U AS=0.182P AD=0.044P PS=2.338U PD=0.924U
+Mnmos@0 net@3 A out gnd N L=0.044U W=0.44U AS=0.09P AD=0.047P PS=1.078U PD=0.875U
+Mnmos@1 out net@256 net@3 gnd N L=0.044U W=0.44U AS=0.047P AD=0.09P PS=0.875U PD=1.078U
+Mnmos@4 net@3 net@191 gnd gnd N L=0.044U W=0.44U AS=0.165P AD=0.047P PS=2.04U PD=0.875U
+Mnmos@5 gnd B net@3 gnd N L=0.044U W=0.44U AS=0.047P AD=0.165P PS=0.875U PD=2.04U
+Mnmos@7 gnd A net@191 gnd N L=0.044U W=0.44U AS=0.116P AD=0.165P PS=2.024U PD=2.04U
+Mnmos@9 net@256 B gnd gnd N L=0.044U W=0.44U AS=0.165P AD=0.116P PS=2.04U PD=2.024U
+Mpmos@0 vdd A net@477 vdd P L=0.044U W=1.32U AS=0.08P AD=0.3P PS=1.441U PD=4.076U
+Mpmos@1 net@477 net@256 out vdd P L=0.044U W=1.32U AS=0.09P AD=0.08P PS=1.078U PD=1.441U
+Mpmos@4 out net@191 net@474 vdd P L=0.044U W=1.32U AS=0.08P AD=0.09P PS=1.441U PD=1.078U
+Mpmos@5 net@474 B vdd vdd P L=0.044U W=1.32U AS=0.3P AD=0.08P PS=4.076U PD=1.441U
+Mpmos@6 vdd A net@191 vdd P L=0.044U W=1.32U AS=0.116P AD=0.3P PS=2.024U PD=4.076U
+Mpmos@7 net@256 B vdd vdd P L=0.044U W=1.32U AS=0.3P AD=0.116P PS=4.076U PD=2.024U
 .ENDS XOR__XOR
 
 *** TOP LEVEL CELL: XOR:XOR_sim{lay}
