@@ -1,0 +1,44 @@
+# header information:
+Hhalf_adder|9.07
+
+# Views:
+Vicon|ic
+Vschematic|sch
+
+# External Libraries:
+
+LNAND|NAND
+
+LXOR|XOR
+
+# Technologies:
+Tmocmos|ScaleFORmocmos()D300.0|mocmosNumberOfMetalLayers()I3
+
+# Cell half_adder;1{sch}
+Chalf_adder;1{sch}||schematic|1734860750113|1734860983652|
+IXOR:XOR;1{ic}|XOR@0||-35.5|16|||D5G4;
+Ngeneric:Facet-Center|art@0||0|0||||AV
+NOff-Page|conn@0||-52|17.5||||
+NOff-Page|conn@1||-52|14.5||||
+NOff-Page|conn@4||-24|16||||
+NOff-Page|conn@5||-24|6||||
+INAND:nand;1{ic}|nand@0||-36|5|||D5G4;
+NWire_Pin|pin@1||-43|17.5||||
+NWire_Pin|pin@2||-43|7||||
+NWire_Pin|pin@3||-45|14.5||||
+NWire_Pin|pin@4||-45|4.5||||
+Awire|net@4|||1800|conn@0|y|-50|17.5|pin@1||-43|17.5
+Awire|net@5|||1800|pin@1||-43|17.5|XOR@0|A|-40.5|17.5
+Awire|net@6|||900|pin@1||-43|17.5|pin@2||-43|7
+Awire|net@7|||1800|pin@2||-43|7|nand@0|A|-41|7
+Awire|net@8|||1800|conn@1|y|-50|14.5|pin@3||-45|14.5
+Awire|net@9|||1800|pin@3||-45|14.5|XOR@0|B|-40.5|14.5
+Awire|net@10|||900|pin@3||-45|14.5|pin@4||-45|4.5
+Awire|net@11|||1800|pin@4||-45|4.5|nand@0|B|-41|4.5
+Awire|net@12|||1800|XOR@0|out|-32.5|16|conn@4|a|-26|16
+Awire|net@13|||1800|nand@0|out|-31|6|conn@5|a|-26|6
+EA||D5G2;X-3;|conn@0|y|U
+EB||D5G2;X1;|conn@1|a|U
+EG||D5G2;X1;|conn@5|a|U
+ESum|P|D5G2;X1;|conn@4|a|U
+X
