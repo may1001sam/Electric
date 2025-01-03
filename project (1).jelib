@@ -18,7 +18,7 @@ Tbicmos|ScaleFORbicmos()D22.0
 Tmocmos|ScaleFORmocmos()D22.0
 
 # Cell carrycircuit4bit;1{sch}
-Ccarrycircuit4bit;1{sch}||schematic|1734702114657|1735924145116|
+Ccarrycircuit4bit;1{sch}||schematic|1734702114657|1735930359078|
 IFA_for_CLA:FA;1{ic}|FA@0||-88.5|1.5|||D5G4;
 IFA_for_CLA:FA;1{ic}|FA@1||-88.5|-9|||D5G4;
 IFA_for_CLA:FA;1{ic}|FA@2||-88.5|-23.5|||D5G4;
@@ -38,10 +38,10 @@ NOff-Page|conn@20||-116|-8.5||||
 NOff-Page|conn@21||-116|-6||||
 NOff-Page|conn@22||-116|2||||
 NOff-Page|conn@23||-116|4.5||||
-NOff-Page|conn@24||-89.5|-54.5|||R|
-NOff-Page|conn@25||-96|-54.5|||R|
-NOff-Page|conn@26||-102|-54.5|||R|
-NOff-Page|conn@27||-107.5|-54.5|||R|
+NOff-Page|conn@24||-90|-44.5|||YR|
+NOff-Page|conn@25||-95.5|-44.5|||YR|
+NOff-Page|conn@26||-99.5|-44.5|||YR|
+NOff-Page|conn@27||-103.5|-44.5|||YR|
 NGround|gnd@0||-40|-66||||
 Iinverter:inv;1{ic}|inv@1||-29|-19.5|R||D5G4;
 Iinverter:inv;1{ic}|inv@2||-16|-7.5|R||D5G4;
@@ -89,7 +89,7 @@ NWire_Pin|pin@141||-73.5|-48.5||||
 NWire_Pin|pin@142||-10|-48.5||||
 NWire_Pin|pin@145||-10|-34.5||||
 NWire_Pin|pin@148||-69|-51.5||||
-Ngeneric:Invisible-Pin|pin@151||-35|-93|||||SIM_spice_card(D5G2;)S[* 4-bit Carry Look-Ahead Adder Simulation,* Power supply,vdd vdd 0 DC 0.95,* 4-bit input A,va0 A0 0 PWL(10n 0 20n 0.95 50n 0.95 60n 0 90n 0 100n 0.95 130n 0.95 140n 0 170n 0 180n 0.95),va1 A1 0 PWL(10n 0 90n 0 100n 0.95),va2 A2 0 PWL(10n 0 20n 0.95 50n 0.95 60n 0 90n 0 100n 0.95 130n 0.95 140n 0 170n 0 180n 0.95),va3 A3 0 PWL(10n 0.95 90n 0.95 100n 0),* 4-bit input B,vb0 B0 0 PWL(10n 0 90n 0 100n 0.95),vb1 B1 0 PWL(10n 0 20n 0.95 50n 0.95 60n 0 90n 0 100n 0.95 130n 0.95 140n 0 170n 0 180n 0.95),vb2 B2 0 PWL(10n 0.95 90n 0.95 100n 0),vb3 B3 0 PWL(10n 0 20n 0.95 50n 0.95 60n 0 90n 0 100n 0.95 130n 0.95 140n 0 170n 0 180n 0.95),* Initial carry-in C0,vc0 C0 0 DC 0.95,* Clock signal,vclk clk 0 PWL(0n 0 3n 0 5n 0.95 15n 0.95 17n 0 32n 0 34n 0.95 49n 0.95 51n 0 66n 0 68n 0.95 83n 0.95 85n 0 100n 0 102n 0.95 117n 0.95 119n 0 134n 0  136n 0.95 151n 0.95 153n 0 168n 0 170n 0.95 185n 0.95 187n 0 202n 0 204n 0.95 219n 0.95 221n 0 236n 0 238n 0.95 253n 0.95 255n 0 270n 0),* Transient analysis,.tran 0 400n,* Include model file,".include D:\\ICelectric\\22nm.txt",* End of Netlist]
+Ngeneric:Invisible-Pin|pin@151||-22.5|-93.5|||||SIM_spice_card(D5G2;)S[* 4-bit Carry Look-Ahead Adder Simulation,* Power supply,vdd vdd 0 DC 0.95,* 4-bit input A,va0 A0 0 DC 0,va1 A1 0 DC 0.95,va2 A2 0 PWL(10n 0 20n 0.95 50n 0.95 60n 0 90n 0 100n 0.95 130n 0.95 140n 0 170n 0 180n 0.95),va3 A3 0 PWL(10n 0.95 90n 0.95 100n 0),* 4-bit input B,vb0 B0 0 DC 0.95,vb1 B1 0 DC 0.95,vb2 B2 0 PWL(10n 0.95 90n 0.95 100n 0),vb3 B3 0 PWL(10n 0 20n 0.95 50n 0.95 60n 0 90n 0 100n 0.95 130n 0.95 140n 0 170n 0 180n 0.95),* Initial carry-in C0,vc0 C0 0 DC 0.95,* Clock signal,vclk clk 0 PWL(0n 0 3n 0 5n 0.95 10n 0.95 12n 0 22n 0 24n 0.95 34n 0.95 36n 0 46n 0 48n 0.95 58n 0.95 60n 0 70n 0 72n 0.95 82n 0.95 84n 0 94n 0  96n 0.95 106n 0.95 108n 0 118n 0 120n 0.95 130n 0.95 132n 0 142n 0 144n 0.95 154n 0.95 156n 0 166n 0 168n 0.95 178n 0.95 180n 0 190n 0 192n 0.95 ),* Transient analysis,.tran 0 260n,* Include model file,".include D:\\ICelectric\\22nm.txt",* End of Netlist]
 NWire_Pin|pin@183||-40|-54.5||||
 NWire_Pin|pin@184||0|-34.5||||
 NWire_Pin|pin@185||0|-51.5||||
@@ -108,15 +108,18 @@ NWire_Pin|pin@239||-5.5|34||||
 NWire_Pin|pin@241||-89.5|34||||
 NWire_Pin|pin@245||-89.5|-26||||
 NWire_Pin|pin@248||-89.5|-12.5||||
-NWire_Pin|pin@249||-102|-12.5||||
+NWire_Pin|pin@249||-99.5|-12.5||||
 NWire_Pin|pin@252||-89.5|-1.5||||
-NWire_Pin|pin@253||-107.5|-1.5||||
+NWire_Pin|pin@253||-103.5|-1.5||||
 NWire_Pin|pin@256||-81.5|-40||||
 NWire_Pin|pin@257||-81.5|-29||||
-NWire_Pin|pin@277||-96|-26||||
+NWire_Pin|pin@277||-95.5|-26||||
 NWire_Pin|pin@278||-64|-60.5||||
 NWire_Pin|pin@279||-52|-60||||
 NWire_Pin|pin@282||-30|18.5||||
+NWire_Pin|pin@283||-90|-37||||
+NWire_Pin|pin@284||-103.5|-42.5||||
+NWire_Pin|pin@285||-99.5|-42.5||||
 NTransistor|pmos@0||-58|14.5|||R|2|ATTR_length(D5G0.5;X-0.5;Y-1;)S2|ATTR_width(D5G1;X0.5;Y-1;)S20|SIM_spice_model(D5G1;Y-2;)SP
 NTransistor|pmos@1||-52.5|22|||R|2|ATTR_length(D5G0.5;X-0.5;Y-1;)S2|ATTR_width(D5G1;X0.5;Y-1;)S20|SIM_spice_model(D5G1;)SP
 NTransistor|pmos@2||-47|30|||R|2|ATTR_length(D5G0.5;X-0.5;Y-1;)S2|ATTR_width(D5G1;X0.5;Y-1;)S20|SIM_spice_model(D5G1;)SP
@@ -206,10 +209,9 @@ Awire|net@523|||2700|inv@3|out|-5.5|10|pin@239||-5.5|34
 Awire|net@526|||2700|FA@0|Cin|-89.5|6.5|pin@241||-89.5|34
 Awire|net@535|||900|FA@2|Sum|-89.5|-25.5|pin@245||-89.5|-26
 Awire|net@539|||900|FA@1|Sum|-89.5|-11|pin@248||-89.5|-12.5
-Awire|net@540|||0|pin@248||-89.5|-12.5|pin@249||-102|-12.5
+Awire|net@540|||0|pin@248||-89.5|-12.5|pin@249||-99.5|-12.5
 Awire|net@544|||900|FA@0|Sum|-89.5|-0.5|pin@252||-89.5|-1.5
-Awire|net@545|||0|pin@252||-89.5|-1.5|pin@253||-107.5|-1.5
-Awire|net@548|||900|pin@253||-107.5|-1.5|conn@27|y|-107.5|-52.5
+Awire|net@545|||0|pin@252||-89.5|-1.5|pin@253||-103.5|-1.5
 Awire|net@555|||2700|pin@256||-81.5|-40|pin@257||-81.5|-29
 Awire|net@556|||0|pin@257||-81.5|-29|pin@223||-89.5|-29
 Awire|net@558|||900|inv@3|in|-5.5|3|pin@37||-5.5|-1
@@ -223,12 +225,9 @@ Awire|net@567|||1800|conn@22|y|-114|2|FA@0|B|-93|2
 Awire|net@569|||900|conn@0|y|-64|43.5|pin@49||-64|38
 Awire|net@570|||0|nmos@8|g|-43|-6|FA@1|P|-86|-6
 Awire|net@571|||1800|FA@0|P|-86|4.5|nmos@9|g|-43|4.5
-Awire|net@572|||2700|conn@26|y|-102|-52.5|pin@249||-102|-12.5
 Awire|net@574|||1800|pin@256||-81.5|-40|nmos@1|g|-43|-40
 Awire|net@617|||1800|pin@236||-81.5|26|pin@234||-17|26
-Awire|net@630|||0|pin@245||-89.5|-26|pin@277||-96|-26
-Awire|net@631|||900|pin@277||-96|-26|conn@25|y|-96|-52.5
-Awire|net@633|||900|FA@3|Sum|-89.5|-37|conn@24|y|-89.5|-52.5
+Awire|net@630|||0|pin@245||-89.5|-26|pin@277||-95.5|-26
 Awire|net@641|||1800|pin@241||-89.5|34|Repeater@1|out|-24.5|34
 Awire|net@642|||0|pin@239||-5.5|34|Repeater@1|in|-18.5|34
 Awire|net@660|||1800|Repeater@0|out|23|12.5|inv@4|in|26.5|12.5
@@ -241,6 +240,13 @@ Awire|net@669|||900|pin@17||-64|22|pin@278||-64|-60.5
 Awire|net@676|||1800|pin@231||-78.5|18.5|pin@282||-30|18.5
 Awire|net@680|||900|inv@5|in|-30|-9|inv@1|out|-30|-15.5
 Awire|net@681|||900|pin@282||-30|18.5|inv@5|out|-30|-2
+Awire|net@683|||0|FA@3|Sum|-89.5|-37|pin@283||-90|-37
+Awire|net@684|||2700|conn@25|a|-95.5|-42.5|pin@277||-95.5|-26
+Awire|net@685|||2700|conn@24|a|-90|-42.5|pin@283||-90|-37
+Awire|net@686|||0|conn@27|a|-103.5|-42.5|pin@284||-103.5|-42.5
+Awire|net@687|||900|pin@253||-103.5|-1.5|pin@284||-103.5|-42.5
+Awire|net@688|||0|conn@26|a|-99.5|-42.5|pin@285||-99.5|-42.5
+Awire|net@689|||900|pin@249||-99.5|-12.5|pin@285||-99.5|-42.5
 EA0||D5G2;X-2.5;|conn@16|y|U
 EA1||D5G2;X1.5;|conn@19|a|U
 EA2||D5G2;X1.5;|conn@21|a|U

@@ -1,7 +1,7 @@
 *** SPICE deck for cell carrycircuit4bit{sch} from library project-(1)
 *** Created on Fri Dec 20, 2024 15:41:54
-*** Last revised on Fri Jan 03, 2025 19:09:05
-*** Written on Fri Jan 03, 2025 19:09:09 by Electric VLSI Design System, version 9.07
+*** Last revised on Fri Jan 03, 2025 20:39:28
+*** Written on Fri Jan 03, 2025 20:39:37 by Electric VLSI Design System, version 9.07
 *** Layout tech: mocmos, foundry MOSIS
 *** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
 
@@ -91,21 +91,21 @@ Xinv@5 net@680 net@513 inverter__inv
 * Power supply
 vdd vdd 0 DC 0.95
 * 4-bit input A
-va0 A0 0 PWL(10n 0 20n 0.95 50n 0.95 60n 0 90n 0 100n 0.95 130n 0.95 140n 0 170n 0 180n 0.95)
-va1 A1 0 PWL(10n 0 90n 0 100n 0.95)
+va0 A0 0 DC 0
+va1 A1 0 DC 0.95
 va2 A2 0 PWL(10n 0 20n 0.95 50n 0.95 60n 0 90n 0 100n 0.95 130n 0.95 140n 0 170n 0 180n 0.95)
 va3 A3 0 PWL(10n 0.95 90n 0.95 100n 0)
 * 4-bit input B
-vb0 B0 0 PWL(10n 0 90n 0 100n 0.95)
-vb1 B1 0 PWL(10n 0 20n 0.95 50n 0.95 60n 0 90n 0 100n 0.95 130n 0.95 140n 0 170n 0 180n 0.95)
+vb0 B0 0 DC 0.95
+vb1 B1 0 DC 0.95
 vb2 B2 0 PWL(10n 0.95 90n 0.95 100n 0)
 vb3 B3 0 PWL(10n 0 20n 0.95 50n 0.95 60n 0 90n 0 100n 0.95 130n 0.95 140n 0 170n 0 180n 0.95)
 * Initial carry-in C0
 vc0 C0 0 DC 0.95
 * Clock signal
-vclk clk 0 PWL(0n 0 3n 0 5n 0.95 15n 0.95 17n 0 32n 0 34n 0.95 49n 0.95 51n 0 66n 0 68n 0.95 83n 0.95 85n 0 100n 0 102n 0.95 117n 0.95 119n 0 134n 0  136n 0.95 151n 0.95 153n 0 168n 0 170n 0.95 185n 0.95 187n 0 202n 0 204n 0.95 219n 0.95 221n 0 236n 0 238n 0.95 253n 0.95 255n 0 270n 0)
+vclk clk 0 PWL(0n 0 3n 0 5n 0.95 10n 0.95 12n 0 22n 0 24n 0.95 34n 0.95 36n 0 46n 0 48n 0.95 58n 0.95 60n 0 70n 0 72n 0.95 82n 0.95 84n 0 94n 0  96n 0.95 106n 0.95 108n 0 118n 0 120n 0.95 130n 0.95 132n 0 142n 0 144n 0.95 154n 0.95 156n 0 166n 0 168n 0.95 178n 0.95 180n 0 190n 0 192n 0.95 )
 * Transient analysis
-.tran 0 400n
+.tran 0 260n
 * Include model file
 .include D:\ICelectric\22nm.txt
 * End of Netlist

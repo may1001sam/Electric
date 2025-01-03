@@ -44,10 +44,10 @@ Eout||D5G2;X-2.5;|conn@1|y|U
 X
 
 # Cell Repeater_icon;1{sch}
-CRepeater_icon;1{sch}||schematic|1735906242123|1735906284566|
+CRepeater_icon;1{sch}||schematic|1735906242123|1735929146958|
 IRepeater;1{ic}|Repeater@0||-24.5|11|||D5G4;
 Ngeneric:Facet-Center|art@0||0|0||||AV
-Ngeneric:Invisible-Pin|pin@0||-23.5|2|||||SIM_spice_card(D5G1;)S[vdd vdd 0 DC 0.95,vin in 0 DC pwl 10n 0 20n 0.95 50n 0.95 60n 0,cload out 0 250fF,.measure tran tf trig v(out) val=4.5 fall=1 td=8ns targ v(out) val=0.5 fall=1,.measure tran tr trig v(out) val=0.5 rise=1 td=50ns targ v(out) val=4.5 rise=1,.tran 0 100ns,".include C:\\Electric\\22nm.txt"]
+Ngeneric:Invisible-Pin|pin@0||-23.5|2|||||SIM_spice_card(D5G1;)S[vdd vdd 0 DC 0.95,vin in 0 DC pwl 10n 0 20n 0.95 50n 0.95 60n 0,cload out 0 250fF,.measure tran tf trig v(out) val=4.5 fall=1 td=8ns targ v(out) val=0.5 fall=1,.measure tran tr trig v(out) val=0.5 rise=1 td=50ns targ v(out) val=4.5 rise=1,.tran 0 100ns,".include D:\\ICelectric\\22nm.txt"]
 NWire_Pin|pin@1||-27|10.5||||
 NWire_Pin|pin@2||-21|10.5||||
 Awire|in|D5G1;||0|Repeater@0|in|-27|10.5|pin@1||-27|10.5

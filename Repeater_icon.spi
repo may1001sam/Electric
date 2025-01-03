@@ -1,7 +1,7 @@
 *** SPICE deck for cell Repeater_icon{sch} from library Repeater
 *** Created on Fri Jan 03, 2025 14:10:42
-*** Last revised on Fri Jan 03, 2025 14:11:24
-*** Written on Fri Jan 03, 2025 14:11:45 by Electric VLSI Design System, version 9.07
+*** Last revised on Fri Jan 03, 2025 20:32:26
+*** Written on Fri Jan 03, 2025 20:32:39 by Electric VLSI Design System, version 9.07
 *** Layout tech: mocmos, foundry MOSIS
 *** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
 
@@ -9,11 +9,11 @@
 .SUBCKT inverter__inv in out
 ** GLOBAL gnd
 ** GLOBAL vdd
-Mnmos@0 out in gnd gnd N L=0.044U W=0.22U
-Mpmos@0 vdd in out vdd P L=0.044U W=0.44U
+Mnmos@0 out in gnd gnd N L=0.044U W=2.2U
+Mpmos@0 vdd in out vdd P L=0.044U W=4.62U
 .ENDS inverter__inv
 
-*** SUBCIRCUIT Repeater__Repeater FROM CELL Repeater{sch}
+*** SUBCIRCUIT Repeater__Repeater FROM CELL Repeater:Repeater{sch}
 .SUBCKT Repeater__Repeater in out
 ** GLOBAL gnd
 ** GLOBAL vdd
@@ -23,15 +23,15 @@ Xinv@1 net@1 out inverter__inv
 
 .global gnd vdd
 
-*** TOP LEVEL CELL: Repeater_icon{sch}
+*** TOP LEVEL CELL: Repeater:Repeater_icon{sch}
 XRepeater@0 in out Repeater__Repeater
 
-* Spice Code nodes in cell cell 'Repeater_icon{sch}'
+* Spice Code nodes in cell cell 'Repeater:Repeater_icon{sch}'
 vdd vdd 0 DC 0.95
 vin in 0 DC pwl 10n 0 20n 0.95 50n 0.95 60n 0
 cload out 0 250fF
 .measure tran tf trig v(out) val=4.5 fall=1 td=8ns targ v(out) val=0.5 fall=1
 .measure tran tr trig v(out) val=0.5 rise=1 td=50ns targ v(out) val=4.5 rise=1
 .tran 0 100ns
-.include C:\Electric\22nm.txt
+.include D:\ICelectric\22nm.txt
 .END
