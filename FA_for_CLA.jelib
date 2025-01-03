@@ -48,7 +48,7 @@ ESum||D5G2;|pin@10||U
 X
 
 # Cell FA;1{lay}
-CFA;1{lay}||mocmos|1735821794974|1735856861175||DRC_last_good_drc_area_date()G1735856682969|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1735856682969
+CFA;1{lay}||mocmos|1735821794974|1735899270616||DRC_last_good_drc_area_date()G1735856682969|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1735899275783
 IXOR:XOR;1{lay}|XOR@0||-144|28.5|||D5G4;
 IXOR:XOR;1{lay}|XOR@1||-28|27|||D5G4;
 Ngeneric:Facet-Center|art@0||0|0||||AV
@@ -59,7 +59,7 @@ NMetal-1-Metal-2-Con|contact@4||-103|-23||||
 NMetal-1-Metal-2-Con|contact@5||-60|-47||||
 NMetal-1-Metal-2-Con|contact@6||53|-47||||
 NMetal-1-Metal-2-Con|contact@7||-87.5|116.5||||
-NMetal-1-Metal-2-Con|contact@8||82.5|116.5||||
+NMetal-1-Metal-2-Con|contact@8||89.5|116.5||||
 NMetal-2-Metal-3-Con|contact@9||-80.5|19||||
 NMetal-2-Metal-3-Con|contact@11||-174|117.5||||
 NMetal-3-Metal-4-Con|contact@12||-174.5|126.5||||
@@ -78,7 +78,7 @@ INAND:nand;1{lay}|nand@0||63|13.5|||D5G4;
 NMetal-1-Pin|pin@2||-203|28.5||||
 NMetal-1-Pin|pin@3||-203|19.5||||
 NMetal-2-Pin|pin@4||-75.5|28||||
-NMetal-1-Pin|pin@9||88.5|12.5||||
+NMetal-1-Pin|pin@9||89.5|12.5||||
 NMetal-1-Pin|pin@10||36.5|28.5||||
 NMetal-1-Pin|pin@11||36.5|-53.5||||
 NMetal-2-Pin|pin@15||59.5|135.5||||
@@ -99,8 +99,8 @@ NMetal-3-Pin|pin@45||43.5|-37||||
 AMetal-1|net@12||1|S900|contact@4||-103|-23|XOR@0|gnd|-103|-24
 AMetal-2|net@22||1|S2700|XOR@1|A|-75.5|27|pin@4||-75.5|28
 AMetal-1|net@28||1|S2700|XOR@0|out|-87.5|30|contact@7||-87.5|116
-AMetal-2|net@32||1|S1800|contact@7||-88.5|116.5|contact@8||82.5|116.5
-AMetal-1|net@33||1|S1800|nand@0|out|83|12.5|pin@9||88.5|12.5
+AMetal-2|net@32||1|S1800|contact@7||-88.5|116.5|contact@8||89.5|116.5
+AMetal-1|net@33||1|S1800|nand@0|out|83|12.5|pin@9||89.5|12.5
 AMetal-1|net@34||1|S1800|XOR@1|out|27.5|28.5|pin@10||36.5|28.5
 AMetal-1|net@35||1|S900|pin@10||36.5|28.5|pin@11||36.5|-53.5
 AMetal-1|net@41||1|S900|contact@3||59.5|134.5|nand@0|vdd|59.5|51.5
@@ -218,8 +218,32 @@ Awire|Sum|D5G1;||2700|FA@0|Sum|-10.5|7|pin@10||-10.5|7.5
 X
 
 # Cell FA_sim;1{lay}
-CFA_sim;1{lay}||mocmos|1735856793278|1735856866188|
-IFA;1{lay}|FA@0||79.5|-43.5|||D5G4;
+CFA_sim;1{lay}||mocmos|1735856793278|1735899453140||DRC_last_good_drc_area_date()G1735899462096|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1735899462096
+IFA;1{lay}|FA@0||79.5|-43|||D5G4;
 Ngeneric:Facet-Center|art@0||0|0||||AV
 Ngeneric:Invisible-Pin|pin@0||-191.5|26|||||SIM_spice_card(D5G3;)S[vdd vdd 0 DC 0.95,va A 0 DC pwl 10n 0 20n 0.95 50n 0.95 60n 0 90n 0 100n 0.95 130n 0.95 140n 0 170n 0 180n 0.95,vb B 0 DC pwl 10n 0 20n 0.95 100n 0.95 110n 0,vc Cin 0 DC pwl 10n 0 20n 0.95 100n 0.95 110n 0,cload Sum 0 250fF,.measure tran tf trig v(out) val=4.5 fall=1 td=4ns targ v(out) val=0.5 fall=1,.measure tran tr trig v(out) val=0.5 rise=1 td=4ns targ v(out) val=4.5 rise=1,.tran 200n,".include C:\\Electric\\22nm.txt"]
+NMetal-1-Pin|pin@1||-105.5|65||||
+NMetal-1-Pin|pin@2||-123.5|-14.5||||
+NMetal-1-Pin|pin@3||-124|-23.5||||
+NMetal-1-Pin|pin@4||-105.5|-66.5||||
+NMetal-1-Pin|pin@5||116|-97.5||||
+NMetal-1-Pin|pin@6||169|-30.5||||
+NMetal-1-Pin|pin@7||169.5|73||||
+NMetal-3-Pin|pin@8||-1|98||||
+AMetal-1|net@0||1|S0|FA@0|vdd|-60|65|pin@1||-105.5|65
+AMetal-1|net@1|||S0|FA@0|A|-123.5|-14.5|pin@2||-123.5|-14.5
+AMetal-1|net@2|||S0|FA@0|B|-123.5|-23.5|pin@3||-124|-23.5
+AMetal-1|net@3||1|S0|FA@0|gnd|-61|-66.5|pin@4||-105.5|-66.5
+AMetal-1|net@4||1|S900|FA@0|Sum|116|-96.5|pin@5||116|-97.5
+AMetal-1|net@5||1|S1800|FA@0|G|169|-30.5|pin@6||169|-30.5
+AMetal-1|net@6||1|S1800|FA@0|P|169|73|pin@7||169.5|73
+AMetal-3|net@7||1|S2700|FA@0|Cin|-1|98|pin@8||-1|98
+EA||D5G2;|pin@2||U
+EB||D5G2;|pin@3||U
+ECin||D5G2;|pin@8||U
+EG||D5G2;|pin@6||U
+EP||D5G2;|pin@7||U
+ESum||D5G2;|pin@5||U
+Egnd||D5G2;|pin@4||U
+Evdd||D5G2;|pin@1||U
 X
