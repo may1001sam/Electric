@@ -1,7 +1,7 @@
 *** SPICE deck for cell carrycircuit4bit{sch} from library project-(1)
 *** Created on Fri Dec 20, 2024 15:41:54
-*** Last revised on Fri Jan 03, 2025 17:27:42
-*** Written on Fri Jan 03, 2025 17:27:52 by Electric VLSI Design System, version 9.07
+*** Last revised on Fri Jan 03, 2025 19:09:05
+*** Written on Fri Jan 03, 2025 19:09:09 by Electric VLSI Design System, version 9.07
 *** Layout tech: mocmos, foundry MOSIS
 *** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
 
@@ -103,9 +103,9 @@ vb3 B3 0 PWL(10n 0 20n 0.95 50n 0.95 60n 0 90n 0 100n 0.95 130n 0.95 140n 0 170n
 * Initial carry-in C0
 vc0 C0 0 DC 0.95
 * Clock signal
-vclk clk 0 PWL(0n 0 5n 0 10n 0.95 50n 0.95 75n 0.95 80n 0.95 85n 0 90n 0 100n 0 125n 0 155n 0 160n 0.95 175n 0.95 200n 0.95 230n 0.95 235n 0 250n 0)
+vclk clk 0 PWL(0n 0 3n 0 5n 0.95 15n 0.95 17n 0 32n 0 34n 0.95 49n 0.95 51n 0 66n 0 68n 0.95 83n 0.95 85n 0 100n 0 102n 0.95 117n 0.95 119n 0 134n 0  136n 0.95 151n 0.95 153n 0 168n 0 170n 0.95 185n 0.95 187n 0 202n 0 204n 0.95 219n 0.95 221n 0 236n 0 238n 0.95 253n 0.95 255n 0 270n 0)
 * Transient analysis
-.tran 0 300n
+.tran 0 400n
 * Include model file
 .include D:\ICelectric\22nm.txt
 * End of Netlist

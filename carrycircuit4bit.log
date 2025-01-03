@@ -1,8 +1,5 @@
 Circuit: *** SPICE deck for cell carrycircuit4bit{sch} from library project-(1)
 
-Vclk: Removing PWL point (5e-008,0.95)
-Vclk: Removing PWL point (9e-008,0)
-Vclk: Removing PWL point (1.75e-007,0.95)
 Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
 Starting Gmin stepping
 Gmin = 10
@@ -24,21 +21,21 @@ Gmin = 0
 Gmin stepping succeeded in finding the operating point.
 
 
-Date: Fri Jan 03 17:27:55 2025
-Total elapsed time: 2.154 seconds.
+Date: Fri Jan 03 19:09:12 2025
+Total elapsed time: 2.839 seconds.
 
 tnom = 27
 temp = 27
 method = modified trap
-totiter = 4669
-traniter = 4173
-tranpoints = 1403
-accept = 1284
-rejected = 119
+totiter = 7759
+traniter = 7263
+tranpoints = 2151
+accept = 1801
+rejected = 350
 matrix size = 687
 fillins = 54
 solver = Normal
-Thread vector: 342.0/52.9[8] 40.8/24.6[8] 78.3/17.4[8] 13.7/10.0[5]  2592/500
-Matrix Compiler1: 106.06 KB object code size  42.7/22.1/[8.4]
-Matrix Compiler2: 88.45 KB object code size  158.1/174.7/[46.8]
+Thread vector: 418.2/76.3[8] 54.2/13.7[8] 81.8/45.4[8] 13.6/16.1[1]  2592/500
+Matrix Compiler1: 106.06 KB object code size  52.3/28.0/[12.6]
+Matrix Compiler2: 88.45 KB object code size  85.7/195.5/[38.6]
 

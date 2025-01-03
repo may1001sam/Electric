@@ -18,7 +18,7 @@ Tbicmos|ScaleFORbicmos()D22.0
 Tmocmos|ScaleFORmocmos()D22.0
 
 # Cell carrycircuit4bit;1{sch}
-Ccarrycircuit4bit;1{sch}||schematic|1734702114657|1735918062685|
+Ccarrycircuit4bit;1{sch}||schematic|1734702114657|1735924145116|
 IFA_for_CLA:FA;1{ic}|FA@0||-88.5|1.5|||D5G4;
 IFA_for_CLA:FA;1{ic}|FA@1||-88.5|-9|||D5G4;
 IFA_for_CLA:FA;1{ic}|FA@2||-88.5|-23.5|||D5G4;
@@ -89,7 +89,7 @@ NWire_Pin|pin@141||-73.5|-48.5||||
 NWire_Pin|pin@142||-10|-48.5||||
 NWire_Pin|pin@145||-10|-34.5||||
 NWire_Pin|pin@148||-69|-51.5||||
-Ngeneric:Invisible-Pin|pin@151||-150|28.5|||||SIM_spice_card(D5G2;)S[* 4-bit Carry Look-Ahead Adder Simulation,* Power supply,vdd vdd 0 DC 0.95,* 4-bit input A,va0 A0 0 PWL(10n 0 20n 0.95 50n 0.95 60n 0 90n 0 100n 0.95 130n 0.95 140n 0 170n 0 180n 0.95),va1 A1 0 PWL(10n 0 90n 0 100n 0.95),va2 A2 0 PWL(10n 0 20n 0.95 50n 0.95 60n 0 90n 0 100n 0.95 130n 0.95 140n 0 170n 0 180n 0.95),va3 A3 0 PWL(10n 0.95 90n 0.95 100n 0),* 4-bit input B,vb0 B0 0 PWL(10n 0 90n 0 100n 0.95),vb1 B1 0 PWL(10n 0 20n 0.95 50n 0.95 60n 0 90n 0 100n 0.95 130n 0.95 140n 0 170n 0 180n 0.95),vb2 B2 0 PWL(10n 0.95 90n 0.95 100n 0),vb3 B3 0 PWL(10n 0 20n 0.95 50n 0.95 60n 0 90n 0 100n 0.95 130n 0.95 140n 0 170n 0 180n 0.95),* Initial carry-in C0,vc0 C0 0 DC 0.95,* Clock signal,vclk clk 0 PWL(0n 0 5n 0 10n 0.95 50n 0.95 75n 0.95 80n 0.95 85n 0 90n 0 100n 0 125n 0 155n 0 160n 0.95 175n 0.95 200n 0.95 230n 0.95 235n 0 250n 0),* Transient analysis,.tran 0 300n,* Include model file,".include D:\\ICelectric\\22nm.txt",* End of Netlist]
+Ngeneric:Invisible-Pin|pin@151||-35|-93|||||SIM_spice_card(D5G2;)S[* 4-bit Carry Look-Ahead Adder Simulation,* Power supply,vdd vdd 0 DC 0.95,* 4-bit input A,va0 A0 0 PWL(10n 0 20n 0.95 50n 0.95 60n 0 90n 0 100n 0.95 130n 0.95 140n 0 170n 0 180n 0.95),va1 A1 0 PWL(10n 0 90n 0 100n 0.95),va2 A2 0 PWL(10n 0 20n 0.95 50n 0.95 60n 0 90n 0 100n 0.95 130n 0.95 140n 0 170n 0 180n 0.95),va3 A3 0 PWL(10n 0.95 90n 0.95 100n 0),* 4-bit input B,vb0 B0 0 PWL(10n 0 90n 0 100n 0.95),vb1 B1 0 PWL(10n 0 20n 0.95 50n 0.95 60n 0 90n 0 100n 0.95 130n 0.95 140n 0 170n 0 180n 0.95),vb2 B2 0 PWL(10n 0.95 90n 0.95 100n 0),vb3 B3 0 PWL(10n 0 20n 0.95 50n 0.95 60n 0 90n 0 100n 0.95 130n 0.95 140n 0 170n 0 180n 0.95),* Initial carry-in C0,vc0 C0 0 DC 0.95,* Clock signal,vclk clk 0 PWL(0n 0 3n 0 5n 0.95 15n 0.95 17n 0 32n 0 34n 0.95 49n 0.95 51n 0 66n 0 68n 0.95 83n 0.95 85n 0 100n 0 102n 0.95 117n 0.95 119n 0 134n 0  136n 0.95 151n 0.95 153n 0 168n 0 170n 0.95 185n 0.95 187n 0 202n 0 204n 0.95 219n 0.95 221n 0 236n 0 238n 0.95 253n 0.95 255n 0 270n 0),* Transient analysis,.tran 0 400n,* Include model file,".include D:\\ICelectric\\22nm.txt",* End of Netlist]
 NWire_Pin|pin@183||-40|-54.5||||
 NWire_Pin|pin@184||0|-34.5||||
 NWire_Pin|pin@185||0|-51.5||||
