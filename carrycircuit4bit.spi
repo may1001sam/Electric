@@ -1,0 +1,112 @@
+*** SPICE deck for cell carrycircuit4bit{sch} from library project-(1)
+*** Created on Fri Dec 20, 2024 15:41:54
+*** Last revised on Fri Jan 03, 2025 17:27:42
+*** Written on Fri Jan 03, 2025 17:27:52 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+*** SUBCIRCUIT inverter__inv FROM CELL inverter:inv{sch}
+.SUBCKT inverter__inv in out
+** GLOBAL gnd
+** GLOBAL vdd
+Mnmos@0 out in gnd gnd N L=0.044U W=2.2U
+Mpmos@0 vdd in out vdd P L=0.044U W=4.62U
+.ENDS inverter__inv
+
+*** SUBCIRCUIT XOR__XOR FROM CELL XOR:XOR{sch}
+.SUBCKT XOR__XOR A B out
+** GLOBAL gnd
+** GLOBAL vdd
+Mnmos@8 out A net@13 gnd N L=0.044U W=0.44U
+Mnmos@9 out net@57 net@13 gnd N L=0.044U W=0.44U
+Mnmos@10 net@13 B gnd gnd N L=0.044U W=0.44U
+Mnmos@11 net@13 net@56 gnd gnd N L=0.044U W=0.44U
+Mpmos@8 vdd A net@1 vdd P L=0.044U W=1.32U
+Mpmos@9 net@1 net@57 out vdd P L=0.044U W=1.32U
+Mpmos@10 vdd B net@2 vdd P L=0.044U W=1.32U
+Mpmos@11 net@2 net@56 out vdd P L=0.044U W=1.32U
+Xinv@0 A net@56 inverter__inv
+Xinv@1 B net@57 inverter__inv
+.ENDS XOR__XOR
+
+*** SUBCIRCUIT NAND__nand FROM CELL NAND:nand{sch}
+.SUBCKT NAND__nand A B out
+** GLOBAL gnd
+** GLOBAL vdd
+Mnmos@0 out A net@11 gnd N L=0.044U W=0.22U
+Mnmos@1 net@11 B gnd gnd N L=0.044U W=0.22U
+Mpmos@1 vdd A out vdd P L=0.044U W=0.44U
+Mpmos@2 vdd B out vdd P L=0.044U W=0.44U
+.ENDS NAND__nand
+
+*** SUBCIRCUIT FA_for_CLA__FA FROM CELL FA_for_CLA:FA{sch}
+.SUBCKT FA_for_CLA__FA A B Cin G P Sum
+** GLOBAL gnd
+** GLOBAL vdd
+XXOR@0 A B P XOR__XOR
+XXOR@1 P Cin Sum XOR__XOR
+Xnand@0 A B G NAND__nand
+.ENDS FA_for_CLA__FA
+
+*** SUBCIRCUIT Repeater__Repeater FROM CELL Repeater:Repeater{sch}
+.SUBCKT Repeater__Repeater in out
+** GLOBAL gnd
+** GLOBAL vdd
+Xinv@0 in net@1 inverter__inv
+Xinv@1 net@1 out inverter__inv
+.ENDS Repeater__Repeater
+
+.global gnd vdd
+
+*** TOP LEVEL CELL: carrycircuit4bit{sch}
+Mnmos@0 net@6 net@667 gnd gnd N L=0.044U W=1.76U
+Mnmos@1 net@222 c0 net@6 gnd N L=0.044U W=4.4U
+Mnmos@2 net@16 net@476 net@222 gnd N L=0.044U W=4.4U
+Mnmos@3 net@16 net@563 net@6 gnd N L=0.044U W=4.4U
+Mnmos@4 net@37 net@291 net@6 gnd N L=0.044U W=4.4U
+Mnmos@5 net@46 net@295 net@6 gnd N L=0.044U W=4.4U
+Mnmos@6 net@61 net@387 net@6 gnd N L=0.044U W=4.4U
+Mnmos@7 net@37 net@489 net@16 gnd N L=0.044U W=4.4U
+Mnmos@8 net@46 net@570 net@37 gnd N L=0.044U W=4.4U
+Mnmos@9 net@61 net@571 net@46 gnd N L=0.044U W=4.4U
+Mpmos@0 vdd clk net@16 vdd P L=0.044U W=0.44U
+Mpmos@1 vdd clk net@37 vdd P L=0.044U W=0.44U
+Mpmos@2 vdd clk net@46 vdd P L=0.044U W=0.44U
+Mpmos@3 vdd clk net@61 vdd P L=0.044U W=0.44U
+XFA@0 A3 B3 net@526 net@387 net@571 S3 FA_for_CLA__FA
+XFA@1 A2 B2 net@516 net@295 net@570 S2 FA_for_CLA__FA
+XFA@2 A1 B1 net@513 net@291 net@489 S1 FA_for_CLA__FA
+XFA@3 A0 B0 c0 net@563 net@476 S0 FA_for_CLA__FA
+XRepeater@0 net@61 net@660 Repeater__Repeater
+XRepeater@1 net@523 net@526 Repeater__Repeater
+XRepeater@2 clk net@667 Repeater__Repeater
+Xinv@1 net@16 net@680 inverter__inv
+Xinv@2 net@37 net@516 inverter__inv
+Xinv@3 net@46 net@523 inverter__inv
+Xinv@4 net@660 C4 inverter__inv
+Xinv@5 net@680 net@513 inverter__inv
+
+* Spice Code nodes in cell cell 'carrycircuit4bit{sch}'
+* 4-bit Carry Look-Ahead Adder Simulation
+* Power supply
+vdd vdd 0 DC 0.95
+* 4-bit input A
+va0 A0 0 PWL(10n 0 20n 0.95 50n 0.95 60n 0 90n 0 100n 0.95 130n 0.95 140n 0 170n 0 180n 0.95)
+va1 A1 0 PWL(10n 0 90n 0 100n 0.95)
+va2 A2 0 PWL(10n 0 20n 0.95 50n 0.95 60n 0 90n 0 100n 0.95 130n 0.95 140n 0 170n 0 180n 0.95)
+va3 A3 0 PWL(10n 0.95 90n 0.95 100n 0)
+* 4-bit input B
+vb0 B0 0 PWL(10n 0 90n 0 100n 0.95)
+vb1 B1 0 PWL(10n 0 20n 0.95 50n 0.95 60n 0 90n 0 100n 0.95 130n 0.95 140n 0 170n 0 180n 0.95)
+vb2 B2 0 PWL(10n 0.95 90n 0.95 100n 0)
+vb3 B3 0 PWL(10n 0 20n 0.95 50n 0.95 60n 0 90n 0 100n 0.95 130n 0.95 140n 0 170n 0 180n 0.95)
+* Initial carry-in C0
+vc0 C0 0 DC 0.95
+* Clock signal
+vclk clk 0 PWL(0n 0 5n 0 10n 0.95 50n 0.95 75n 0.95 80n 0.95 85n 0 90n 0 100n 0 125n 0 155n 0 160n 0.95 175n 0.95 200n 0.95 230n 0.95 235n 0 250n 0)
+* Transient analysis
+.tran 0 300n
+* Include model file
+.include D:\ICelectric\22nm.txt
+* End of Netlist
+.END

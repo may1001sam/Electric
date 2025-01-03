@@ -228,10 +228,10 @@ ESum||D5G2;X2;|conn@5|a|U
 X
 
 # Cell FA_icon;1{sch}
-CFA_icon;1{sch}||schematic|1734863903434|1735850988998|
+CFA_icon;1{sch}||schematic|1734863903434|1735915795016|
 IFA;1{ic}|FA@0||-9.5|9|||D5G4;
 Ngeneric:Facet-Center|art@0||0|0||||AV
-Ngeneric:Invisible-Pin|pin@6||-25.5|10.5|||||SIM_spice_card(D5G0.5;)S[vdd vdd 0 DC 0.95,va A 0 DC pwl 10n 0 20n 0.95 50n 0.95 60n 0 90n 0 100n 0.95 130n 0.95 140n 0 170n 0 180n 0.95,vb B 0 DC pwl 10n 0 20n 0.95 100n 0.95 110n 0,vc Cin 0 DC pwl 10n 0 20n 0.95 100n 0.95 110n 0,cload Sum 0 250fF,.measure tran tf trig v(out) val=4.5 fall=1 td=4ns targ v(out) val=0.5 fall=1,.measure tran tr trig v(out) val=0.5 rise=1 td=4ns targ v(out) val=4.5 rise=1,.tran 200n,".include C:\\Electric\\22nm.txt"]
+Ngeneric:Invisible-Pin|pin@6||-25.5|10.5|||||SIM_spice_card(D5G0.5;)S[vdd vdd 0 DC 0.95,va A 0 DC pwl 10n 0 20n 0.95 50n 0.95 60n 0 90n 0 100n 0.95 130n 0.95 140n 0 170n 0 180n 0.95,vb B 0 DC pwl 10n 0 20n 0.95 100n 0.95 110n 0,vc Cin 0 DC pwl 10n 0 20n 0.95 100n 0.95 110n 0,cload Sum 0 250fF,.measure tran tf trig v(out) val=4.5 fall=1 td=4ns targ v(out) val=0.5 fall=1,.measure tran tr trig v(out) val=0.5 rise=1 td=4ns targ v(out) val=4.5 rise=1,.tran 200n,".include D:\\ICelectric\\22nm.txt"]
 NWire_Pin|pin@8||-13.5|12||||
 NWire_Pin|pin@9||-13.5|9.5||||
 NWire_Pin|pin@10||-10.5|7.5||||

@@ -73,18 +73,18 @@ Evdd||D5G2;|well@1||U
 X
 
 # Cell inv;1{sch}
-Cinv;1{sch}||schematic|1731151302847|1735851987095|
+Cinv;1{sch}||schematic|1731151302847|1735916777754|
 Ngeneric:Facet-Center|art@0||0|0||||AV
 NOff-Page|conn@0||-34|10||||
 NOff-Page|conn@1||-21|10||||
 NGround|gnd@0||-26|1||||
 Iinv;1{ic}|inv@0||-42.5|14.5|||D5G4;
-NTransistor|nmos@0||-28|6|||R||ATTR_length(D5G0.5;X-0.5;Y-1;)D2.0|ATTR_width(D5G1;X0.5;Y-1;)D10.0|SIM_spice_model(D5G1;Y-3;)SN
+NTransistor|nmos@0||-28|6|||R||ATTR_length(D5G0.5;X-0.5;Y-1;)D2.0|ATTR_width(D5G1;X0.5;Y-1;)S100|SIM_spice_model(D5G1;Y-3;)SN
 NWire_Pin|pin@4||-26|10||||
 NWire_Pin|pin@5||-30|6||||
 NWire_Pin|pin@6||-30|14||||
 NWire_Pin|pin@7||-30|10||||
-NTransistor|pmos@0||-28|14|||R|2|ATTR_length(D5G0.5;X-0.5;Y-1;)S2.0|ATTR_width(D5G1;X0.5;Y-1;)S20|SIM_spice_model(D5G1;Y-3;)SP
+NTransistor|pmos@0||-28|14|||R|2|ATTR_length(D5G0.5;X-0.5;Y-1;)S2.0|ATTR_width(D5G1;X0.5;Y-1;)S210|SIM_spice_model(D5G1;Y-3;)SP
 NPower|pwr@0||-26|19||||
 Awire|net@12|||2700|pmos@0|d|-26|16|pwr@0||-26|19
 Awire|net@14|||900|nmos@0|s|-26|4|gnd@0||-26|3

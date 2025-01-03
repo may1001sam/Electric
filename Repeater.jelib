@@ -29,7 +29,7 @@ Eout||D5G2;|pin@2||U
 X
 
 # Cell Repeater;1{sch}
-CRepeater;1{sch}||schematic|1735905978485|1735906301526|
+CRepeater;1{sch}||schematic|1735905978485|1735915194569|
 IRepeater;1{ic}|Repeater@0||-2|-3|||D5G4;
 Ngeneric:Facet-Center|art@0||0|0||||AV
 NOff-Page|conn@0||-48|1.5||||

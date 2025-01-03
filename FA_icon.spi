@@ -1,7 +1,7 @@
 *** SPICE deck for cell FA_icon{sch} from library FA_for_CLA
 *** Created on Sun Dec 22, 2024 12:38:23
-*** Last revised on Thu Jan 02, 2025 22:49:48
-*** Written on Thu Jan 02, 2025 23:13:19 by Electric VLSI Design System, version 9.07
+*** Last revised on Fri Jan 03, 2025 16:49:55
+*** Written on Fri Jan 03, 2025 16:50:02 by Electric VLSI Design System, version 9.07
 *** Layout tech: mocmos, foundry MOSIS
 *** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
 
@@ -21,10 +21,10 @@ Mnmos@8 out A net@13 gnd N L=0.044U W=0.44U
 Mnmos@9 out net@57 net@13 gnd N L=0.044U W=0.44U
 Mnmos@10 net@13 B gnd gnd N L=0.044U W=0.44U
 Mnmos@11 net@13 net@56 gnd gnd N L=0.044U W=0.44U
-Mpmos@8 vdd A net@1 vdd P L=0.044U W=1.1U
-Mpmos@9 net@1 net@57 out vdd P L=0.044U W=1.1U
-Mpmos@10 vdd B net@2 vdd P L=0.044U W=1.1U
-Mpmos@11 net@2 net@56 out vdd P L=0.044U W=1.1U
+Mpmos@8 vdd A net@1 vdd P L=0.044U W=1.32U
+Mpmos@9 net@1 net@57 out vdd P L=0.044U W=1.32U
+Mpmos@10 vdd B net@2 vdd P L=0.044U W=1.32U
+Mpmos@11 net@2 net@56 out vdd P L=0.044U W=1.32U
 Xinv@0 A net@56 inverter__inv
 Xinv@1 B net@57 inverter__inv
 .ENDS XOR__XOR
@@ -62,5 +62,5 @@ cload Sum 0 250fF
 .measure tran tf trig v(out) val=4.5 fall=1 td=4ns targ v(out) val=0.5 fall=1
 .measure tran tr trig v(out) val=0.5 rise=1 td=4ns targ v(out) val=4.5 rise=1
 .tran 200n
-.include C:\Electric\22nm.txt
+.include D:\ICelectric\22nm.txt
 .END
