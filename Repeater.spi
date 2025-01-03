@@ -1,0 +1,30 @@
+*** SPICE deck for cell Repeater{sch} from library Repeater
+*** Created on Fri Jan 03, 2025 14:06:18
+*** Last revised on Fri Jan 03, 2025 14:08:16
+*** Written on Fri Jan 03, 2025 14:08:41 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+*** SUBCIRCUIT inverter__inv FROM CELL inverter:inv{sch}
+.SUBCKT inverter__inv in out
+** GLOBAL gnd
+** GLOBAL vdd
+Mnmos@0 out in gnd gnd N L=0.044U W=0.22U
+Mpmos@0 vdd in out vdd P L=0.044U W=0.44U
+.ENDS inverter__inv
+
+.global gnd vdd
+
+*** TOP LEVEL CELL: Repeater{sch}
+Xinv@0 in net@1 inverter__inv
+Xinv@1 net@1 out inverter__inv
+
+* Spice Code nodes in cell cell 'Repeater{sch}'
+vdd vdd 0 DC 0.95
+vin in 0 DC pwl 10n 0 20n 0.95 50n 0.95 60n 0
+cload out 0 250fF
+.measure tran tf trig v(out) val=4.5 fall=1 td=8ns targ v(out) val=0.5 fall=1
+.measure tran tr trig v(out) val=0.5 rise=1 td=50ns targ v(out) val=4.5 rise=1
+.tran 0 100ns
+.include C:\Electric\22nm.txt
+.END

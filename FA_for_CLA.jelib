@@ -16,6 +16,43 @@ LXOR|XOR
 Tbicmos|ScaleFORbicmos()D22.0
 Tmocmos|ScaleFORmocmos()D22.0
 
+# Cell 4bit_FA;1{sch}
+C4bit_FA;1{sch}||schematic|1735907911518|1735908241372|
+IFA;1{ic}|FA@0||-67|17|||D5G4;
+IFA;1{ic}|FA@1||-67|3.5|||D5G4;
+IFA;1{ic}|FA@2||-67|-10|||D5G4;
+IFA;1{ic}|FA@3||-67|-22.5|||D5G4;
+Ngeneric:Facet-Center|art@0||0|0||||AV
+NOff-Page|conn@0||-86|17.5||||
+NOff-Page|conn@1||-86|20||||
+NOff-Page|conn@2||-86|4||||
+NOff-Page|conn@3||-86|6.5||||
+NOff-Page|conn@4||-86|-9.5||||
+NOff-Page|conn@5||-86|-7||||
+NOff-Page|conn@6||-86|-22||||
+NOff-Page|conn@7||-86|-19.5||||
+NWire_Pin|pin@0||-71.5|-22||||
+NWire_Pin|pin@1||-71.5|-9.5||||
+Awire|net@0|||1800|conn@7|y|-84|-19.5|FA@3|A|-71|-19.5
+Awire|net@1|||1800|conn@6|y|-84|-22|pin@0||-71.5|-22
+Awire|net@2|||900|FA@3|B|-71.5|-22|pin@0||-71.5|-22
+Awire|net@3|||1800|conn@5|y|-84|-7|FA@2|A|-71|-7
+Awire|net@4|||1800|conn@4|y|-84|-9.5|pin@1||-71.5|-9.5
+Awire|net@5|||2700|FA@2|B|-71.5|-9.5|pin@1||-71.5|-9.5
+Awire|net@6|||1800|conn@3|y|-84|6.5|FA@1|A|-71|6.5
+Awire|net@7|||1800|conn@2|y|-84|4|FA@1|B|-71.5|4
+Awire|net@8|||1800|conn@1|y|-84|20|FA@0|A|-71|20
+Awire|net@9|||1800|conn@0|y|-84|17.5|FA@0|B|-71.5|17.5
+EA0||D5G2;X1.5;|conn@7|a|U
+EA1||D5G2;X1.5;|conn@5|a|U
+EA2||D5G2;X1.5;|conn@3|a|U
+EA3||D5G2;X1.5;|conn@1|a|U
+EB0||D5G2;X-2.5;|conn@6|y|U
+EB1||D5G2;X-2.5;|conn@4|y|U
+EB2||D5G2;X-2.5;|conn@2|y|U
+EB3||D5G2;X-2.5;|conn@0|y|U
+X
+
 # Cell FA;1{ic}
 CFA;1{ic}||artwork|1734863342153|1734864213880|E
 Ngeneric:Facet-Center|art@0||0|0||||AV
@@ -48,7 +85,7 @@ ESum||D5G2;|pin@10||U
 X
 
 # Cell FA;1{lay}
-CFA;1{lay}||mocmos|1735821794974|1735899270616||DRC_last_good_drc_area_date()G1735856682969|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1735899275783
+CFA;1{lay}||mocmos|1735821794974|1735906111190||DRC_last_good_drc_area_date()G1735856682969|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1735899275783
 IXOR:XOR;1{lay}|XOR@0||-144|28.5|||D5G4;
 IXOR:XOR;1{lay}|XOR@1||-28|27|||D5G4;
 Ngeneric:Facet-Center|art@0||0|0||||AV
@@ -83,18 +120,14 @@ NMetal-1-Pin|pin@10||36.5|28.5||||
 NMetal-1-Pin|pin@11||36.5|-53.5||||
 NMetal-2-Pin|pin@15||59.5|135.5||||
 NMetal-2-Pin|pin@16||-87.5|27||||
-NMetal-3-Pin|pin@18||-80.5|38||||
 NMetal-3-Pin|pin@19||-80.5|141||||
 NMetal-3-Pin|pin@25||-174.5|118||||
 NMetal-3-Pin|pin@27||-174.5|122.5||||
 NMetal-1-Pin|pin@30||-199|19.5||||
-NMetal-3-Pin|pin@34||42.5|97.5||||
 NMetal-3-Pin|pin@36||42.5|126.5||||
 NMetal-1-Pin|pin@37||-198|28.5||||
 NMetal-2-Pin|pin@39||-174|118||||
 NMetal-2-Pin|pin@41||-185.5|-36.5||||
-NMetal-4-Pin|pin@42||-78.5|-37||||
-NMetal-4-Pin|pin@43||44.5|-37||||
 NMetal-3-Pin|pin@45||43.5|-37||||
 AMetal-1|net@12||1|S900|contact@4||-103|-23|XOR@0|gnd|-103|-24
 AMetal-2|net@22||1|S2700|XOR@1|A|-75.5|27|pin@4||-75.5|28
@@ -111,8 +144,6 @@ AMetal-2|net@46||1|S2700|contact@3||59.5|135|pin@15||59.5|135.5
 AMetal-2|net@47||1|S900|XOR@0|out|-87.5|30|pin@16||-87.5|27
 AMetal-2|net@48||1|S0|XOR@1|A|-75.5|27|pin@16||-87.5|27
 AMetal-2|net@50||1|S0|XOR@1|B|-74|19|contact@9||-81|19
-AMetal-3|net@51||1|S2700|contact@9||-80.5|19|pin@18||-80.5|38
-AMetal-3|net@52||1|S2700|pin@18||-80.5|38|pin@19||-80.5|141
 AMetal-3|net@62||1|S0|contact@11||-174|118|pin@25||-174.5|118
 AMetal-3|net@65||1|S2700|pin@25||-174.5|118|contact@12||-174.5|126.5
 AMetal-3|net@66||1|S900|contact@12||-174.5|126.5|pin@27||-174.5|122.5
@@ -128,8 +159,6 @@ AMetal-1|net@93||1|S2700|contact@6||53|-47|nand@0|gnd|53|-11
 AMetal-2|net@99||1|S0|nand@0|B|45|11.5|contact@19||43.5|11.5
 AMetal-3|net@102|||S0|contact@13||42.5|126.5|contact@20||42.5|126.5
 AMetal-4|net@103||1|S1800|contact@12||-174.5|126.5|contact@20||42.5|126.5
-AMetal-3|net@108||1|S2700|contact@15||42.5|20.5|pin@34||42.5|97.5
-AMetal-3|net@111||1|S2700|pin@34||42.5|97.5|pin@36||42.5|126.5
 AMetal-3|net@112|||S1800|contact@13||42.5|126.5|pin@36||42.5|126.5
 AMetal-1|net@113|||S0|XOR@0|A|-191.5|28.5|pin@37||-198|28.5
 AMetal-1|net@114|||S0|pin@37||-198|28.5|pin@2||-203|28.5
@@ -140,12 +169,12 @@ AMetal-1|net@120||1|S2700|XOR@1|vdd|-53|107|contact@2||-53|135.5
 AMetal-2|net@121||1|S1800|contact@16||-198|-36.5|pin@41||-185.5|-36.5
 AMetal-2|net@122||1|S2700|contact@22||-185.5|-37|pin@41||-185.5|-36.5
 AMetal-3|net@123||1|S900|contact@22||-185.5|-37|contact@23||-185.5|-37
-AMetal-4|net@124||1|S1800|contact@23||-185.5|-37|pin@42||-78.5|-37
-AMetal-4|net@125||1|S1800|pin@42||-78.5|-37|pin@43||44.5|-37
-AMetal-4|net@126||1|S900|pin@43||44.5|-37|contact@24||44.5|-37
 AMetal-3|net@127||1|S1800|contact@18||44|-37|contact@24||44|-37
 AMetal-3|net@130||1|S0|contact@18||44|-37|pin@45||43.5|-37
 AMetal-3|net@131||1|S900|contact@19||43.5|11.5|pin@45||43.5|-37
+AMetal-3|net@132||1|S2700|contact@9||-80.5|19|pin@19||-80.5|141
+AMetal-3|net@133||1|S2700|contact@15||42.5|20.5|pin@36||42.5|126.5
+AMetal-4|net@135||1|S0|contact@24||44.5|-37|contact@23||-185.5|-37
 EA||D5G2;|pin@2||U
 EB||D5G2;|pin@3||U
 ECin||D5G2;|pin@19||U
