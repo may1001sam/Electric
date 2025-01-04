@@ -3,6 +3,7 @@ HRepeater|9.07
 
 # Views:
 Vicon|ic
+Vlayout|lay
 Vschematic|sch
 
 # External Libraries:
@@ -26,6 +27,26 @@ Aschematic:wire|net@0|||0|pin@1||-2.5|-0.5|pin@0||-2.5|-0.5
 Aschematic:wire|net@1|||1800|pin@3||3.5|-0.5|pin@2||3.5|-0.5
 Ein||D5G2;|pin@0||U
 Eout||D5G2;|pin@2||U
+X
+
+# Cell Repeater;1{lay}
+CRepeater;1{lay}||mocmos|1736017712419|1736018087159||DRC_last_good_drc_area_date()G1736017981083|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1736018097604
+Ngeneric:Facet-Center|art@0||0|0||||AV
+NMetal-1-Metal-2-Con|contact@0||-19|-2.5||||
+Iinverter:inv;1{lay}|inv@1||-40|-2|||D5G4;
+Iinverter:inv;1{lay}|inv@2||-3|-2|||D5G4;
+NMetal-1-Pin|pin@1||-56|-3||||
+NMetal-2-Pin|pin@2||13|-2.5||||
+AMetal-1|net@3||1|S0|inv@1|in|-56|-3|pin@1||-56|-3
+AMetal-2|net@4||1|S0|inv@2|out|13.5|-2.5|pin@2||13|-2.5
+AMetal-1|net@6||1|S1800|inv@1|gnd|-40|-29|inv@2|gnd|4|-29
+AMetal-2|net@7||1|S1800|inv@1|out|-23.5|-2.5|contact@0||-19|-2.5
+AMetal-1|net@8|||S1800|inv@2|in|-19|-2.5|contact@0||-19|-2.5
+AMetal-1|net@9||2|S1800|inv@1|vdd|-40|33|inv@2|vdd|-1|33
+Egnd||D5G2;|inv@1|gnd|U
+Ein||D5G2;|pin@1||U
+Eout||D5G2;|pin@2||U
+Evdd||D5G2;|inv@1|vdd|U
 X
 
 # Cell Repeater;1{sch}
@@ -52,4 +73,23 @@ NWire_Pin|pin@1||-27|10.5||||
 NWire_Pin|pin@2||-21|10.5||||
 Awire|in|D5G1;||0|Repeater@0|in|-27|10.5|pin@1||-27|10.5
 Awire|out|D5G1;||1800|Repeater@0|out|-21|10.5|pin@2||-21|10.5
+X
+
+# Cell Repeater_sim;1{lay}
+CRepeater_sim;1{lay}||mocmos|1736018015943|1736018093092||DRC_last_good_drc_area_date()G1736018097604|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1736018097604
+IRepeater;1{lay}|Repeater@0||25|0|||D5G4;
+Ngeneric:Facet-Center|art@0||0|0||||AV
+NMetal-1-Pin|pin@0||-24|33||||
+NMetal-1-Pin|pin@1||-31|-3||||
+NMetal-2-Pin|pin@2||39|-2.5||||
+NMetal-1-Pin|pin@3||-25|-29||||
+Ngeneric:Invisible-Pin|pin@4||-56.5|12|||||SIM_spice_card(D5G1;)S[vdd vdd 0 DC 0.95,vin in 0 DC pwl 10n 0 20n 0.95 50n 0.95 60n 0,cload out 0 250fF,.measure tran tf trig v(out) val=4.5 fall=1 td=8ns targ v(out) val=0.5 fall=1,.measure tran tr trig v(out) val=0.5 rise=1 td=50ns targ v(out) val=4.5 rise=1,.tran 0 100ns,".include C:\\Electric\\22nm.txt"]
+AMetal-1|net@0||2|S0|Repeater@0|vdd|-15|33|pin@0||-24|33
+AMetal-1|net@1||1|S0|Repeater@0|in|-31|-3|pin@1||-31|-3
+AMetal-2|net@2||1|S1800|Repeater@0|out|38|-2.5|pin@2||39|-2.5
+AMetal-1|net@3||1|S0|Repeater@0|gnd|-15|-29|pin@3||-25|-29
+Egnd||D5G2;|pin@3||U
+Ein||D5G2;|pin@1||U
+Eout||D5G2;|pin@2||U
+Evdd||D5G2;|pin@0||U
 X
