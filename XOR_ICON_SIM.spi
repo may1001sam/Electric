@@ -1,7 +1,7 @@
 *** SPICE deck for cell XOR_ICON_SIM{sch} from library XOR
 *** Created on Sat Nov 09, 2024 19:25:16
-*** Last revised on Thu Jan 02, 2025 22:37:47
-*** Written on Thu Jan 02, 2025 22:37:50 by Electric VLSI Design System, version 9.07
+*** Last revised on Sat Jan 04, 2025 23:54:38
+*** Written on Sat Jan 04, 2025 23:54:42 by Electric VLSI Design System, version 9.07
 *** Layout tech: mocmos, foundry MOSIS
 *** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
 
@@ -17,14 +17,14 @@ Mpmos@0 vdd in out vdd P L=0.044U W=0.44U
 .SUBCKT XOR__XOR A B out
 ** GLOBAL gnd
 ** GLOBAL vdd
-Mnmos@8 out A net@13 gnd N L=0.044U W=0.22U
-Mnmos@9 out net@57 net@13 gnd N L=0.044U W=0.22U
-Mnmos@10 net@13 B gnd gnd N L=0.044U W=0.22U
-Mnmos@11 net@13 net@56 gnd gnd N L=0.044U W=0.22U
-Mpmos@8 vdd A net@1 vdd P L=0.044U W=0.44U
-Mpmos@9 net@1 net@57 out vdd P L=0.044U W=0.44U
-Mpmos@10 vdd B net@2 vdd P L=0.044U W=0.44U
-Mpmos@11 net@2 net@56 out vdd P L=0.044U W=0.44U
+Mnmos@8 out A net@13 gnd N L=0.044U W=0.44U
+Mnmos@9 out net@57 net@13 gnd N L=0.044U W=0.44U
+Mnmos@10 net@13 B gnd gnd N L=0.044U W=0.44U
+Mnmos@11 net@13 net@56 gnd gnd N L=0.044U W=0.44U
+Mpmos@8 vdd A net@1 vdd P L=0.044U W=1.32U
+Mpmos@9 net@1 net@57 out vdd P L=0.044U W=1.32U
+Mpmos@10 vdd B net@2 vdd P L=0.044U W=1.32U
+Mpmos@11 net@2 net@56 out vdd P L=0.044U W=1.32U
 Xinv@0 A net@56 inverter__inv
 Xinv@1 B net@57 inverter__inv
 .ENDS XOR__XOR
@@ -36,8 +36,9 @@ XXOR@0 A B out XOR__XOR
 
 * Spice Code nodes in cell cell 'XOR:XOR_ICON_SIM{sch}'
 vdd vdd 0 DC 0.95
+cload out 0 50fF
 va A 0 DC pwl 10n 0 20n 0.95 50n 0.95 60n 0 90n 0 100n 0.95 130n 0.95 140n 0 170n 0 180n 0.95
-vb B 0 DC pwl 10n 0 20n 0.95 100n 0.95 110n 0
+vb B 0 DC pwl 10n 0 20n 0.95 115n 0.95 120n 0
 .tran 200n
 .include C:\Electric\22nm.txt
 .END
