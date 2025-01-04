@@ -1,7 +1,7 @@
 *** SPICE deck for cell carrycircuit4bit{sch} from library project-(1)
 *** Created on Fri Dec 20, 2024 15:41:54
-*** Last revised on Sat Jan 04, 2025 20:53:14
-*** Written on Sat Jan 04, 2025 20:53:23 by Electric VLSI Design System, version 9.07
+*** Last revised on Sat Jan 04, 2025 21:05:46
+*** Written on Sat Jan 04, 2025 21:05:55 by Electric VLSI Design System, version 9.07
 *** Layout tech: mocmos, foundry MOSIS
 *** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
 
@@ -60,7 +60,7 @@ Xinv@1 net@1 out inverter__inv
 
 *** TOP LEVEL CELL: carrycircuit4bit{sch}
 Mnmos@0 net@6 net@667 gnd gnd N L=0.044U W=1.76U
-Mnmos@1 net@222 c0 net@6 gnd N L=0.044U W=4.4U
+Mnmos@1 net@222 c-1 net@6 gnd N L=0.044U W=4.4U
 Mnmos@2 net@16 net@476 net@222 gnd N L=0.044U W=4.4U
 Mnmos@3 net@16 net@563 net@6 gnd N L=0.044U W=4.4U
 Mnmos@4 net@37 net@291 net@6 gnd N L=0.044U W=4.4U
@@ -76,7 +76,7 @@ Mpmos@3 vdd clk net@61 vdd P L=0.044U W=0.44U
 XFA@0 A3 B3 net@526 net@387 net@571 S3 FA_for_CLA__FA
 XFA@1 A2 B2 net@519 net@295 net@570 S2 FA_for_CLA__FA
 XFA@2 A1 B1 net@513 net@291 net@489 S1 FA_for_CLA__FA
-XFA@3 A0 B0 c0 net@563 net@476 S0 FA_for_CLA__FA
+XFA@3 A0 B0 c-1 net@563 net@476 S0 FA_for_CLA__FA
 XRepeater@0 net@61 C4 Repeater__Repeater
 XRepeater@1 net@642 net@526 Repeater__Repeater
 XRepeater@2 clk net@667 Repeater__Repeater
@@ -102,7 +102,7 @@ vb1 B1 0 PWL(0n 0.95 95n 0.95 97n 0)
 vb2 B2 0 PWL(0n 0 95n 0 97n 0.95)
 vb3 B3 0 PWL(0n 0.95 95n 0.95 97n 0)
 * Initial carry-in C0
-vc0 C0 0 DC 0
+vc-1 C-1 0 DC 0
 * Clock signal
 vclk clk 0 PWL(0n 0 20n 0 22n 0.95 42n 0.95 44n 0 64n 0 66n 0.95 86n 0.95 88n 0 108n 0 110n 0.95 130n 0.95 132n 0 152n 0 154n 0.95 174n 0.95 176n 0 196n 0 198n 0.95)
 * Transient analysis
