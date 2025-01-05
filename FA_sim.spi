@@ -1,24 +1,24 @@
 *** SPICE deck for cell FA_sim{lay} from library FA_for_CLA
 *** Created on Fri Jan 03, 2025 00:26:33
-*** Last revised on Fri Jan 03, 2025 12:17:33
-*** Written on Fri Jan 03, 2025 12:17:44 by Electric VLSI Design System, version 9.07
+*** Last revised on Sun Jan 05, 2025 17:56:40
+*** Written on Sun Jan 05, 2025 17:56:57 by Electric VLSI Design System, version 9.07
 *** Layout tech: mocmos, foundry MOSIS
 *** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
 
 *** SUBCIRCUIT XOR__XOR FROM CELL XOR:XOR{lay}
 .SUBCKT XOR__XOR A B gnd out vdd
-Mnmos@0 net@3 A out gnd N L=0.044U W=0.44U AS=0.09P AD=0.047P PS=1.078U PD=0.875U
-Mnmos@1 out net@256 net@3 gnd N L=0.044U W=0.44U AS=0.047P AD=0.09P PS=0.875U PD=1.078U
-Mnmos@4 net@3 net@191 gnd gnd N L=0.044U W=0.44U AS=0.165P AD=0.047P PS=2.04U PD=0.875U
+Mnmos@0 net@3 A out gnd N L=0.044U W=0.44U AS=0.067P AD=0.047P PS=0.858U PD=0.875U
+Mnmos@1 out net@256 net@3 gnd N L=0.044U W=0.44U AS=0.047P AD=0.067P PS=0.875U PD=0.858U
+Mnmos@4 net@3 net@199 gnd gnd N L=0.044U W=0.44U AS=0.165P AD=0.047P PS=2.04U PD=0.875U
 Mnmos@5 gnd B net@3 gnd N L=0.044U W=0.44U AS=0.047P AD=0.165P PS=0.875U PD=2.04U
-Mnmos@7 gnd A net@191 gnd N L=0.044U W=0.44U AS=0.116P AD=0.165P PS=2.024U PD=2.04U
-Mnmos@9 net@256 B gnd gnd N L=0.044U W=0.44U AS=0.165P AD=0.116P PS=2.04U PD=2.024U
-Mpmos@0 vdd A net@477 vdd P L=0.044U W=1.32U AS=0.08P AD=0.3P PS=1.441U PD=4.076U
-Mpmos@1 net@477 net@256 out vdd P L=0.044U W=1.32U AS=0.09P AD=0.08P PS=1.078U PD=1.441U
-Mpmos@4 out net@191 net@474 vdd P L=0.044U W=1.32U AS=0.08P AD=0.09P PS=1.441U PD=1.078U
-Mpmos@5 net@474 B vdd vdd P L=0.044U W=1.32U AS=0.3P AD=0.08P PS=4.076U PD=1.441U
-Mpmos@6 vdd A net@191 vdd P L=0.044U W=1.32U AS=0.116P AD=0.3P PS=2.024U PD=4.076U
-Mpmos@7 net@256 B vdd vdd P L=0.044U W=1.32U AS=0.3P AD=0.116P PS=4.076U PD=2.024U
+Mnmos@7 gnd A net@199 gnd N L=0.044U W=0.44U AS=0.087P AD=0.165P PS=1.584U PD=2.04U
+Mnmos@9 net@256 B gnd gnd N L=0.044U W=0.44U AS=0.165P AD=0.087P PS=2.04U PD=1.584U
+Mpmos@0 vdd A net@477 vdd P L=0.044U W=0.88U AS=0.053P AD=0.238P PS=1.001U PD=3.196U
+Mpmos@1 net@477 net@256 out vdd P L=0.044U W=0.88U AS=0.067P AD=0.053P PS=0.858U PD=1.001U
+Mpmos@4 out net@199 net@497 vdd P L=0.044U W=0.88U AS=0.053P AD=0.067P PS=1.001U PD=0.858U
+Mpmos@5 net@497 B vdd vdd P L=0.044U W=0.88U AS=0.238P AD=0.053P PS=3.196U PD=1.001U
+Mpmos@6 vdd A net@199 vdd P L=0.044U W=0.88U AS=0.087P AD=0.238P PS=1.584U PD=3.196U
+Mpmos@7 net@256 B vdd vdd P L=0.044U W=0.88U AS=0.238P AD=0.087P PS=3.196U PD=1.584U
 .ENDS XOR__XOR
 
 *** SUBCIRCUIT NAND__nand FROM CELL NAND:nand{lay}
