@@ -17,7 +17,7 @@ Tbicmos|ScaleFORbicmos()D22.0
 Tmocmos|ScaleFORmocmos()D22.0
 
 # Cell 4bit_FA;1{sch}
-C4bit_FA;1{sch}||schematic|1735907911518|1736025500247|
+C4bit_FA;1{sch}||schematic|1735907911518|1736088987469|
 IFA;1{ic}|FA@0||-67|17|||D5G4;
 IFA;1{ic}|FA@1||-67|3.5|||D5G4;
 IFA;1{ic}|FA@2||-67|-10|||D5G4;
@@ -46,7 +46,7 @@ NOff-Page|conn@19||-77.5|-32.5|||RRR|
 NOff-Page|conn@20||-81|-33|||RRR|
 NOff-Page|conn@21||-46.5|-3|||RR|
 NOff-Page|conn@22||-47|10|||RR|
-NOff-Page|conn@23||-48|24|||RR|
+NOff-Page|conn@23||-47|24|||RR|
 NWire_Pin|pin@7||-68|-14||||
 NWire_Pin|pin@8||-73.5|-14||||
 NWire_Pin|pin@10||-68|-0.5||||
@@ -84,7 +84,7 @@ Awire|net@38|||0|conn@16|y|-48|-15.5|pin@16||-68|-15.5
 Awire|net@41|||0|conn@21|y|-48.5|-3|pin@18||-68|-3
 Awire|net@42|||900|pin@18||-68|-3|FA@2|Cin|-68|-5
 Awire|net@43|||0|conn@22|y|-49|10|pin@19||-68|10
-Awire|net@46|||0|conn@23|y|-50|24|pin@21||-68|24
+Awire|net@46|||0|conn@23|y|-49|24|pin@21||-68|24
 Awire|net@49|||1800|conn@6|y|-85.5|-22|FA@3|B|-71.5|-22
 Awire|net@50|||1800|conn@4|y|-85.5|-9.5|FA@2|B|-71.5|-9.5
 Awire|net@51|||1800|FA@0|P|-64.5|20|conn@8|a|-55.5|20
@@ -101,10 +101,10 @@ EB0||D5G2;X-2.5;|conn@6|y|U
 EB1||D5G2;X-2.5;|conn@4|y|U
 EB2||D5G2;X-2.5;|conn@2|y|U
 EB3||D5G2;X-2.5;|conn@0|y|U
-EC0||D5G2;X-2.5;|conn@16|y|U
-EC1||D5G2;X1.5;|conn@21|a|U
-EC2||D5G2;X-2.5;|conn@22|y|U
-EC3||D5G2;X1.5;|conn@23|a|U
+EC1|C0|D5G2;X1.5;|conn@21|a|U
+EC2|C1|D5G2;X-2.5;|conn@22|y|U
+EC3|C2|D5G2;X1.5;|conn@23|a|U
+EC0|C-1|D5G2;X-2.5;|conn@16|y|U
 EG0||D5G2;X-2.5;|conn@15|y|U
 EG1||D5G2;X-2.5;|conn@13|y|U
 EG2||D5G2;X-2.5;|conn@11|y|U

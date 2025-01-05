@@ -1,7 +1,7 @@
 *** SPICE deck for cell carrycircuit4bit{sch} from library project-(1)
 *** Created on Fri Dec 20, 2024 15:41:54
-*** Last revised on Sat Jan 04, 2025 23:50:33
-*** Written on Sat Jan 04, 2025 23:50:50 by Electric VLSI Design System, version 9.07
+*** Last revised on Sun Jan 05, 2025 14:35:07
+*** Written on Sun Jan 05, 2025 14:35:13 by Electric VLSI Design System, version 9.07
 *** Layout tech: mocmos, foundry MOSIS
 *** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
 
@@ -72,7 +72,6 @@ Mnmos@9 net@61 net@571 net@46 gnd N L=0.044U W=1.98U
 Mpmos@0 vdd clk net@16 vdd P L=0.044U W=0.88U
 Mpmos@1 vdd clk net@37 vdd P L=0.044U W=0.88U
 Mpmos@2 vdd clk net@46 vdd P L=0.044U W=0.88U
-Mpmos@3 vdd clk net@61 vdd P L=0.044U W=0.88U
 XFA@0 A3 B3 net@46 net@387 net@571 S3 FA_for_CLA__FA
 XFA@1 A2 B2 net@37 net@295 net@570 S2 FA_for_CLA__FA
 XFA@2 A1 B1 net@16 net@291 net@489 S1 FA_for_CLA__FA
@@ -98,7 +97,7 @@ va3 A3 0 PWL(0n 0.95 10n 0.95 12n 0 51n 0 53n 0.95 95n 0.95 97n 0 140n 0 142n 0.
 vb0 B0 0 PWL(0n 0 95n 0 97n 0.95)
 vb1 B1 0 PWL(0n 0.95 95n 0.95 97n 0)
 vb2 B2 0 PWL(0n 0 95n 0 97n 0.95)
-vb3 B3 0 PWL(0n 0.95 95n 0.95 97n 0)
+vb3 B3 0 PWL(0n 0.95 95n 0.95 97n 0.95)
 * Initial carry-in C0
 vc-1 C-1 0 DC 0
 * Clock signal
