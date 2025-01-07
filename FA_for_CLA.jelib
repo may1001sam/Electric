@@ -17,7 +17,7 @@ Tbicmos|ScaleFORbicmos()D22.0
 Tmocmos|ScaleFORmocmos()D22.0
 
 # Cell 4bit_FA;1{lay}
-C4bit_FA;1{lay}||mocmos|1736261756719|1736264889002||DRC_last_good_drc_area_date()G1736264753798|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1736264753798
+C4bit_FA;1{lay}||mocmos|1736261756719|1736264889002||DRC_last_good_drc_area_date()G1736264753798|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1736265073538
 IFA;1{lay}|FA@0||-208|61|||D5G4;
 IFA;1{lay}|FA@1||97|61|||D5G4;
 IFA;1{lay}|FA@2||401|61|||D5G4;
@@ -264,6 +264,17 @@ ES0|s0|D5G2;X1;|conn@17|a|U
 ES1|s1|D5G2;X1;|conn@18|a|U
 ES2|s2|D5G2;X1;|conn@19|a|U
 ES3|s3|D5G2;X1;|conn@20|a|U
+X
+
+# Cell 4bit_FA_block;1{lay}
+C4bit_FA_block;1{lay}||mocmos|1736264974251|1736265064021||DRC_last_good_drc_area_date()G1736265073538|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1736265073538
+I4bit_FA;1{lay}|4bit_FA@0||-197|-84|||D5G4;
+Ngeneric:Facet-Center|art@0||0|0||||AV
+EA0||D5G2;|4bit_FA@0|A0|U
+EA1||D5G2;|4bit_FA@0|A1|U
+EB0||D5G2;|4bit_FA@0|B0|U
+EB1||D5G2;|4bit_FA@0|B1|U
+Ec-1||D5G2;|4bit_FA@0|c-1|U
 X
 
 # Cell FA;1{ic}
