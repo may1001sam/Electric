@@ -27,8 +27,8 @@ Measurement "tf" FAIL'ed
 Measurement "tr" FAIL'ed
 
 
-Date: Sun Jan 05 17:56:58 2025
-Total elapsed time: 0.249 seconds.
+Date: Tue Jan 07 17:00:58 2025
+Total elapsed time: 0.538 seconds.
 
 tnom = 27
 temp = 27
@@ -41,7 +41,7 @@ rejected = 10
 matrix size = 134
 fillins = 4
 solver = Normal
-Thread vector: 30.9/18.3[2] 13.6/6.3[2] 2.2/1.4[2] 0.6/1.1[1]  2592/500
-Matrix Compiler1: 19.02 KB object code size  15.6/4.4/[1.6]
-Matrix Compiler2: 16.97 KB object code size  2.7/1.6/[0.7]
+Thread vector: 62.0/52.3[2] 8.7/5.7[2] 3.8/2.6[2] 1.0/2.5[1]  2592/500
+Matrix Compiler1: 19.02 KB object code size  7.9/3.2/[1.5]
+Matrix Compiler2: 16.97 KB object code size  5.5/3.3/[1.1]
 

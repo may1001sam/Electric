@@ -1,24 +1,21 @@
 *** SPICE deck for cell Repeater{lay} from library Repeater
 *** Created on Sat Jan 04, 2025 21:08:32
-*** Last revised on Sat Jan 04, 2025 21:12:58
-*** Written on Sat Jan 04, 2025 21:13:04 by Electric VLSI Design System, version 9.07
+*** Last revised on Mon Jan 06, 2025 20:28:42
+*** Written on Mon Jan 06, 2025 20:28:49 by Electric VLSI Design System, version 9.07
 *** Layout tech: mocmos, foundry MOSIS
 *** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
 
-*** SUBCIRCUIT inverter__inv FROM CELL inverter:inv{lay}
-.SUBCKT inverter__inv gnd in out vdd
-Mnmos@0 gnd in out gnd N L=0.044U W=0.22U AS=0.058P AD=0.099P PS=1.012U PD=2.112U
-Mpmos@0 vdd in out vdd P L=0.044U W=0.44U AS=0.058P AD=0.15P PS=1.012U PD=2.596U
-.ENDS inverter__inv
+*** TOP LEVEL CELL: Repeater{lay}
+Mnmos@0 gnd in net@4 gnd N L=0.044U W=0.22U AS=0.031P AD=0.048P PS=0.726U PD=0.99U
+Mnmos@1 out net@4 gnd gnd N L=0.044U W=0.22U AS=0.048P AD=0.036P PS=0.99U PD=0.77U
+Mpmos@2 net@0 in net@4 vdd P L=0.044U W=0.22U AS=0.031P AD=0.015P PS=0.726U PD=0.352U
+Mpmos@3 vdd in net@0 vdd P L=0.044U W=0.22U AS=0.015P AD=0.044P PS=0.352U PD=0.946U
+Mpmos@4 net@3 net@4 vdd vdd P L=0.044U W=0.22U AS=0.044P AD=0.015P PS=0.946U PD=0.352U
+Mpmos@5 out net@4 net@3 vdd P L=0.044U W=0.22U AS=0.015P AD=0.036P PS=0.352U PD=0.77U
 
-*** TOP LEVEL CELL: Repeater:Repeater{lay}
-Xinv@1 gnd in net@7 vdd inverter__inv
-Xinv@2 gnd net@7 out vdd inverter__inv
-
-* Spice Code nodes in cell cell 'Repeater:Repeater{lay}'
+* Spice Code nodes in cell cell 'Repeater{lay}'
 vdd vdd 0 DC 0.95
 vin in 0 DC pwl 10n 0 20n 0.95 50n 0.95 60n 0
-cload out 0 250fF
 .measure tran tf trig v(out) val=4.5 fall=1 td=8ns targ v(out) val=0.5 fall=1
 .measure tran tr trig v(out) val=0.5 rise=1 td=50ns targ v(out) val=4.5 rise=1
 .tran 0 100ns
