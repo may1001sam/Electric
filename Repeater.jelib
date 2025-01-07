@@ -30,10 +30,10 @@ Eout||D5G2;|pin@2||U
 X
 
 # Cell Repeater;1{lay}
-CRepeater;1{lay}||mocmos|1736017712419|1736246064920||DRC_last_good_drc_area_date()G1736245847235|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1736245847235
+CRepeater;1{lay}||mocmos|1736017712419|1736275061155||DRC_last_good_drc_area_date()G1736275068494|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1736275068494
 Ngeneric:Facet-Center|art@0||0|0||||AV
 NMetal-1-P-Active-Con|contact@0||-109|12||5||
-NMetal-1-Polysilicon-1-Con|contact@1||-134|-1||||
+NMetal-1-Polysilicon-1-Con|contact@1||-135|-1||||
 NMetal-1-P-Active-Con|contact@2||-127|12||5||
 NMetal-1-N-Active-Con|contact@3||-127|-13||5||
 NMetal-1-N-Active-Con|contact@4||-104|-13||5||
@@ -67,7 +67,7 @@ AP-Active|net@9|||S1800|contact@0||-109|12|pmos@4|diff-top|-107.75|12
 AMetal-1|net@10||1|S2700|contact@0||-109|12|well@0||-109|26
 APolysilicon-1|net@15|||S2700|nmos@0|poly-right|-122|-6|pin@3||-122|-1
 APolysilicon-1|net@16|||S2700|pin@3||-122|-1|pmos@2|poly-left|-122|5
-APolysilicon-1|net@17|||S0|pin@3||-122|-1|contact@1||-134|-1
+APolysilicon-1|net@17|||S0|pin@3||-122|-1|contact@1||-135.5|-1
 AP-Active|net@18|||S1800|contact@2||-127|12|pmos@2|diff-top|-125.75|12
 AN-Active|net@19|||S1800|contact@3||-127|-13|nmos@0|diff-top|-125.75|-13
 APolysilicon-1|net@21|||S900|pmos@4|poly-left|-104|5|pin@4||-104|-1
@@ -90,7 +90,7 @@ AMetal-2|net@54||1|S1800|contact@11||-90|-2|contact@10||-83|-2
 AMetal-1|net@55||1|S2700|contact@12||-90|-10|contact@11||-90|-2
 AMetal-2|net@58||1|S0|contact@12||-90|-11|contact@13||-104|-11
 Egnd||D5G2;|substr@0||U
-Ein||D5G2;|contact@1||U
+Ein||D5G2;X-0.5;|contact@1||U
 Eout||D5G2;|contact@10||U
 Evdd||D5G2;|well@0||U
 X
@@ -145,7 +145,7 @@ Awire|out|D5G1;||1800|Repeater@0|out|-21|10.5|pin@2||-21|10.5
 X
 
 # Cell Repeater_sim;1{lay}
-CRepeater_sim;1{lay}||mocmos|1736018015943|1736245843323||DRC_last_good_drc_area_date()G1736189196703|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1736189196703
+CRepeater_sim;1{lay}||mocmos|1736018015943|1736275044129||DRC_last_good_drc_area_date()G1736189196703|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1736189196703
 IRepeater;1{lay}|Repeater@0||25|0|||D5G4;
 Ngeneric:Facet-Center|art@0||0|0||||AV
 Ngeneric:Invisible-Pin|pin@5||-132.5|10|||||SIM_spice_card(D5G1;)S[vdd vdd 0 DC 0.95,vin in 0 DC pwl 10n 0 20n 0.95 50n 0.95 60n 0,.measure tran tf trig v(out) val=4.5 fall=1 td=8ns targ v(out) val=0.5 fall=1,.measure tran tr trig v(out) val=0.5 rise=1 td=50ns targ v(out) val=4.5 rise=1,.tran 0 100ns,".include C:\\Electric\\22nm.txt"]
@@ -154,7 +154,7 @@ NMetal-1-Pin|pin@7||-109|-1||||
 NMetal-1-Pin|pin@8||-98|-27||||
 NMetal-1-Pin|pin@10||-58|-2||||
 AMetal-1|net@4||1|S0|Repeater@0|vdd|-84|26|pin@6||-91|26
-AMetal-1|net@5||1|S0|Repeater@0|in|-109|-1|pin@7||-109|-1
+AMetal-1|net@5||1|S1800|Repeater@0|in|-110.5|-1|pin@7||-109|-1
 AMetal-1|net@6||1|S0|Repeater@0|gnd|-90|-27|pin@8||-98|-27
 AMetal-1|net@8||1|S1800|Repeater@0|out|-58|-2|pin@10||-58|-2
 Egnd||D5G2;|pin@8||U
