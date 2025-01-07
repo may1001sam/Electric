@@ -17,7 +17,7 @@ Tbicmos|ScaleFORbicmos()D22.0
 Tmocmos|ScaleFORmocmos()D22.0
 
 # Cell carryblock;1{lay}
-Ccarryblock;1{lay}||mocmos|1736175506782|1736265467179||DRC_last_good_drc_area_date()G1736265447537|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1736265447537
+Ccarryblock;1{lay}||mocmos|1736175506782|1736265916036||DRC_last_good_drc_area_date()G1736265921013|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1736265921013
 Ngeneric:Facet-Center|art@0||0|0||||AV
 NMetal-1-N-Active-Con|contact@0||12.5|-86.5||35||
 NMetal-1-N-Active-Con|contact@1||20.5|-86.5||35||
@@ -99,7 +99,7 @@ NP-Transistor|pmos@2||-32|-52|7||RRR||SIM_spice_model(D5G1;)SP
 NP-Transistor|pmos@3||-32|-68|7||RRR||SIM_spice_model(D5G1;)SP
 NP-Transistor|pmos@4||-32|-85|7||RRR||SIM_spice_model(D5G1;)SP
 NP-Transistor|pmos@5||-32|-102|7||RRR||SIM_spice_model(D5G1;)SP
-NMetal-1-P-Well-Con|substr@0||4|-117.5|10|||
+NMetal-1-P-Well-Con|substr@0||4|-117|10|||
 NMetal-1-N-Well-Con|well@0||-32|-36.5|10|||
 APolysilicon-1|net@0|||S900|pmos@2|poly-right|-32|-59|pmos@3|poly-left|-32|-61
 APolysilicon-1|net@1|||S900|pmos@3|poly-right|-32|-75|pmos@4|poly-left|-32|-78
@@ -192,7 +192,7 @@ APolysilicon-1|net@161|||S0|pin@48||-0.5|-112|pin@49||-31.5|-112
 APolysilicon-1|net@162|||S0|pin@49||-31.5|-112|pin@50||-32|-112
 APolysilicon-1|net@163|||S900|pmos@5|poly-right|-32|-109|pin@50||-32|-112
 APolysilicon-1|net@164|||S2700|pin@48||-0.5|-112|contact@50||-0.5|-111
-AMetal-1|net@167||1|S2700|substr@0||-1|-117.5|contact@50||-1|-111
+AMetal-1|net@167||1|S2700|substr@0||-1|-116.5|contact@50||-1|-111
 Ec2@271048977|c2|D5G2;|pin@18||U
 Ec3||D5G2;|pin@19||U
 Egnd||D5G2;|substr@0||U
