@@ -1,0 +1,66 @@
+# header information:
+HNEW-ADDER|9.07
+
+# Views:
+Vicon|ic
+Vschematic|sch
+
+# External Libraries:
+
+LNAND|NAND
+
+LXOR_dynamic|XOR_dynamic
+
+# Technologies:
+Tbicmos|ScaleFORbicmos()D22.0
+Tmocmos|ScaleFORmocmos()D22.0
+
+# Cell adder;1{sch}
+Cadder;1{sch}||schematic|1736275724910|1736276277185|
+IXOR_dynamic:XOR_dynamic;1{ic}|XOR_dyna@2||-30|8|||D5G4;
+IXOR_dynamic:XOR_dynamic;1{ic}|XOR_dyna@3||-14|3|||D5G4;
+Ngeneric:Facet-Center|art@0||0|0||||AV
+NOff-Page|conn@0||-46|9.5||||
+NOff-Page|conn@1||-46|6.5||||
+NOff-Page|conn@2||-46|1||||
+NOff-Page|conn@3||-7|8||||
+NOff-Page|conn@4||-7|-4||||
+NOff-Page|conn@5||-7|2.5||||
+INAND:nand;1{ic}|nand@1||-30|-5|||D5G4;
+NWire_Pin|pin@0||-25|4||||
+NWire_Pin|pin@1||-25|8||||
+NWire_Pin|pin@2||-39.5|9.5||||
+NWire_Pin|pin@3||-39.5|-3||||
+NWire_Pin|pin@4||-41.5|6.5||||
+NWire_Pin|pin@5||-41.5|-5.5||||
+NWire_Pin|pin@14||-39.5|7||||
+NWire_Pin|pin@15||-39.5|9||||
+NWire_Pin|pin@16||-9|3||||
+NWire_Pin|pin@17||-18|1||||
+Ngeneric:Invisible-Pin|pin@18||-60.5|2.5|||||SIM_spice_card(D5G0.5;)S[vdd vdd 0 DC 0.95,va A 0 DC pwl 10n 0 20n 0.95 50n 0.95 60n 0 90n 0 100n 0.95 130n 0.95 140n 0 170n 0 180n 0.95,vb B 0 DC pwl 10n 0 20n 0.95 100n 0.95 110n 0,vc Cin 0 DC pwl 10n 0 20n 0.95 100n 0.95 110n 0,cload Sum 0 250fF,.measure tran tf trig v(out) val=4.5 fall=1 td=4ns targ v(out) val=0.5 fall=1,.measure tran tr trig v(out) val=0.5 rise=1 td=4ns targ v(out) val=4.5 rise=1,.tran 200n,".include C:\\Electric\\22nm.txt"]
+Awire|net@0|||2700|pin@0||-25|4|pin@1||-25|8
+Awire|net@3|||1800|pin@5||-41.5|-5.5|nand@1|B|-33|-5.5
+Awire|net@4|||1800|nand@1|out|-25|-4|conn@4|a|-9|-4
+Awire|net@7|||1800|conn@0|y|-44|9.5|pin@2||-39.5|9.5
+Awire|net@9|||0|nand@1|A|-33|-3|pin@3||-39.5|-3
+Awire|net@10|||1800|conn@1|y|-44|6.5|pin@4||-41.5|6.5
+Awire|net@12|||900|pin@4||-41.5|6.5|pin@5||-41.5|-5.5
+Awire|net@13|||0|conn@3|a|-9|8|pin@1||-25|8
+Awire|net@21|||0|pin@1||-25|8|XOR_dyna@2|out|-28|8
+Awire|net@27|||900|pin@14||-39.5|7|pin@3||-39.5|-3
+Awire|net@28|||0|XOR_dyna@2|B|-34|7|pin@14||-39.5|7
+Awire|net@29|||900|pin@2||-39.5|9.5|pin@15||-39.5|9
+Awire|net@30|||900|pin@15||-39.5|9|pin@14||-39.5|7
+Awire|net@31|||0|XOR_dyna@2|A|-34|9|pin@15||-39.5|9
+Awire|net@32|||1800|XOR_dyna@3|out|-12|3|pin@16||-9|3
+Awire|net@33|||2700|conn@5|a|-9|2.5|pin@16||-9|3
+Awire|net@34|||1800|pin@0||-25|4|XOR_dyna@3|A|-18|4
+Awire|net@36|||900|XOR_dyna@3|B|-18|2|pin@17||-18|1
+Awire|net@38|||1800|conn@2|y|-44|1|pin@17||-18|1
+EA||D5G2;X-3;|conn@0|y|U
+EB||D5G2;X1;|conn@1|a|U
+Ecin|Cin|D5G2;X2;|conn@2|a|U
+EG||D5G2;X1;|conn@4|a|U
+EP||D5G2;X1;|conn@3|a|U
+ESum||D5G2;X2;|conn@5|a|U
+X

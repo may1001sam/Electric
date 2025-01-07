@@ -1,0 +1,31 @@
+*** SPICE deck for cell XOR_icon{sch} from library XOR_dynamic
+*** Created on Tue Jan 07, 2025 20:43:10
+*** Last revised on Tue Jan 07, 2025 20:46:16
+*** Written on Tue Jan 07, 2025 20:46:31 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+*** SUBCIRCUIT XOR_dynamic__XOR_dynamic FROM CELL XOR_dynamic{sch}
+.SUBCKT XOR_dynamic__XOR_dynamic A B out
+** GLOBAL gnd
+** GLOBAL vdd
+Mnmos@0 net@30 A gnd gnd N L=0.044U W=0.22U
+Mnmos@1 out B net@30 gnd N L=0.044U W=0.22U
+Mnmos@2 out net@30 B gnd N L=0.044U W=0.22U
+Mpmos@0 vdd A net@30 vdd P L=0.044U W=0.44U
+Mpmos@1 A B out vdd P L=0.044U W=0.44U
+Mpmos@2 B A out vdd P L=0.044U W=0.44U
+.ENDS XOR_dynamic__XOR_dynamic
+
+.global gnd vdd
+
+*** TOP LEVEL CELL: XOR_icon{sch}
+XXOR_dyna@0 A B out XOR_dynamic__XOR_dynamic
+
+* Spice Code nodes in cell cell 'XOR_icon{sch}'
+vdd vdd 0 DC 0.95
+va A 0 DC pwl 10n 0 20n 0.95 50n 0.95 60n 0 90n 0 100n 0.95 130n 0.95 140n 0 170n 0 180n 0.95
+vb B 0 DC pwl 10n 0 25n 0 30n 0.95 115n 0.95 120n 0
+.tran 200n
+.include C:\Electric\22nm.txt
+.END

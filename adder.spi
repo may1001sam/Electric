@@ -1,0 +1,47 @@
+*** SPICE deck for cell adder{sch} from library NEW-ADDER
+*** Created on Tue Jan 07, 2025 20:48:44
+*** Last revised on Tue Jan 07, 2025 20:57:57
+*** Written on Tue Jan 07, 2025 20:58:07 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+*** SUBCIRCUIT XOR_dynamic__XOR_dynamic FROM CELL XOR_dynamic:XOR_dynamic{sch}
+.SUBCKT XOR_dynamic__XOR_dynamic A B out
+** GLOBAL gnd
+** GLOBAL vdd
+Mnmos@0 net@30 A gnd gnd N L=0.044U W=0.22U
+Mnmos@1 out B net@30 gnd N L=0.044U W=0.22U
+Mnmos@2 out net@30 B gnd N L=0.044U W=0.22U
+Mpmos@0 vdd A net@30 vdd P L=0.044U W=0.44U
+Mpmos@1 A B out vdd P L=0.044U W=0.44U
+Mpmos@2 B A out vdd P L=0.044U W=0.44U
+.ENDS XOR_dynamic__XOR_dynamic
+
+*** SUBCIRCUIT NAND__nand FROM CELL NAND:nand{sch}
+.SUBCKT NAND__nand A B out
+** GLOBAL gnd
+** GLOBAL vdd
+Mnmos@0 out A net@11 gnd N L=0.044U W=0.22U
+Mnmos@1 net@11 B gnd gnd N L=0.044U W=0.22U
+Mpmos@1 vdd A out vdd P L=0.044U W=0.44U
+Mpmos@2 vdd B out vdd P L=0.044U W=0.44U
+.ENDS NAND__nand
+
+.global gnd vdd
+
+*** TOP LEVEL CELL: adder{sch}
+XXOR_dyna@2 A A P XOR_dynamic__XOR_dynamic
+XXOR_dyna@3 P Cin Sum XOR_dynamic__XOR_dynamic
+Xnand@1 A B G NAND__nand
+
+* Spice Code nodes in cell cell 'adder{sch}'
+vdd vdd 0 DC 0.95
+va A 0 DC pwl 10n 0 20n 0.95 50n 0.95 60n 0 90n 0 100n 0.95 130n 0.95 140n 0 170n 0 180n 0.95
+vb B 0 DC pwl 10n 0 20n 0.95 100n 0.95 110n 0
+vc Cin 0 DC pwl 10n 0 20n 0.95 100n 0.95 110n 0
+cload Sum 0 250fF
+.measure tran tf trig v(out) val=4.5 fall=1 td=4ns targ v(out) val=0.5 fall=1
+.measure tran tr trig v(out) val=0.5 rise=1 td=4ns targ v(out) val=4.5 rise=1
+.tran 200n
+.include C:\Electric\22nm.txt
+.END
