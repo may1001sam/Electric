@@ -1,0 +1,108 @@
+*** SPICE deck for cell carryblock{lay} from library project-(1)
+*** Created on Mon Jan 06, 2025 16:58:26
+*** Last revised on Fri Jan 10, 2025 00:15:55
+*** Written on Fri Jan 10, 2025 00:15:59 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+*** SUBCIRCUIT XOR__XOR FROM CELL XOR:XOR{lay}
+.SUBCKT XOR__XOR A B gnd out vdd
+Mnmos@0 net@3 A out gnd N L=0.044U W=0.44U AS=0.067P AD=0.047P PS=0.858U PD=0.875U
+Mnmos@1 out net@256 net@3 gnd N L=0.044U W=0.44U AS=0.047P AD=0.067P PS=0.875U PD=0.858U
+Mnmos@4 net@3 net@199 gnd gnd N L=0.044U W=0.44U AS=0.165P AD=0.047P PS=2.04U PD=0.875U
+Mnmos@5 gnd B net@3 gnd N L=0.044U W=0.44U AS=0.047P AD=0.165P PS=0.875U PD=2.04U
+Mnmos@7 gnd A net@199 gnd N L=0.044U W=0.44U AS=0.087P AD=0.165P PS=1.584U PD=2.04U
+Mnmos@9 net@256 B gnd gnd N L=0.044U W=0.44U AS=0.165P AD=0.087P PS=2.04U PD=1.584U
+Mpmos@0 vdd A net@477 vdd P L=0.044U W=0.88U AS=0.053P AD=0.238P PS=1.001U PD=3.196U
+Mpmos@1 net@477 net@256 out vdd P L=0.044U W=0.88U AS=0.067P AD=0.053P PS=0.858U PD=1.001U
+Mpmos@4 out net@199 net@497 vdd P L=0.044U W=0.88U AS=0.053P AD=0.067P PS=1.001U PD=0.858U
+Mpmos@5 net@497 B vdd vdd P L=0.044U W=0.88U AS=0.238P AD=0.053P PS=3.196U PD=1.001U
+Mpmos@6 vdd A net@199 vdd P L=0.044U W=0.88U AS=0.087P AD=0.238P PS=1.584U PD=3.196U
+Mpmos@7 net@256 B vdd vdd P L=0.044U W=0.88U AS=0.238P AD=0.087P PS=3.196U PD=1.584U
+.ENDS XOR__XOR
+
+*** SUBCIRCUIT NAND__nand FROM CELL NAND:nand{lay}
+.SUBCKT NAND__nand A B gnd out vdd
+Mnmos@0 gnd B net@45 gnd N L=0.044U W=0.22U AS=0.015P AD=0.106P PS=0.352U PD=2.288U
+Mnmos@1 net@45 A out gnd N L=0.044U W=0.22U AS=0.047P AD=0.015P PS=0.704U PD=0.352U
+Mpmos@0 vdd B out vdd P L=0.044U W=0.44U AS=0.047P AD=0.106P PS=0.704U PD=1.969U
+Mpmos@1 out A vdd vdd P L=0.044U W=0.44U AS=0.106P AD=0.047P PS=1.969U PD=0.704U
+.ENDS NAND__nand
+
+*** SUBCIRCUIT FA_for_CLA__FA FROM CELL FA_for_CLA:FA{lay}
+.SUBCKT FA_for_CLA__FA A B Cin G gnd P Sum vdd
+XXOR@0 A B gnd P vdd XOR__XOR
+XXOR@1 P Cin gnd Sum vdd XOR__XOR
+Xnand@0 A B gnd G vdd NAND__nand
+.ENDS FA_for_CLA__FA
+
+*** SUBCIRCUIT FA_for_CLA__4bit_FA FROM CELL FA_for_CLA:4bit_FA{lay}
+.SUBCKT FA_for_CLA__4bit_FA A0 A1 A2 A3 B0 B1 B2 B3 c-1 c0 c1 c2 G0 G1 G2 G3 gnd P0 P1 P2 P3 s0 s1 s2 s3 vdd
+XFA@0 A0 B0 c-1 G0 gnd P0 s0 vdd FA_for_CLA__FA
+XFA@1 A1 B1 c0 G1 gnd P1 s1 vdd FA_for_CLA__FA
+XFA@2 A2 B2 c1 G2 gnd P2 s2 vdd FA_for_CLA__FA
+XFA@3 A3 B3 c2 G3 gnd P3 s3 vdd FA_for_CLA__FA
+.ENDS FA_for_CLA__4bit_FA
+
+*** SUBCIRCUIT FA_for_CLA__4bit_FA_block FROM CELL FA_for_CLA:4bit_FA_block{lay}
+.SUBCKT FA_for_CLA__4bit_FA_block A0 A1 A2 A3 B0 B1 B2 B3 c-1 c0 c1 c2 G0 G1 G2 G3 gnd P0 P1 P2 P3 s0 s1 s2 s3 vdd
+X_4bit_FA@0 A0 A1 A2 A3 B0 B1 B2 B3 c-1 c0 c1 c2 G0 G1 G2 G3 gnd P0 P1 P2 P3 s0 s1 s2 s3 vdd FA_for_CLA__4bit_FA
+.ENDS FA_for_CLA__4bit_FA_block
+
+*** SUBCIRCUIT Repeater__Repeater FROM CELL Repeater:Repeater{lay}
+.SUBCKT Repeater__Repeater gnd in out vdd
+Mnmos@0 gnd in net@4 gnd N L=0.044U W=0.22U AS=0.031P AD=0.048P PS=0.726U PD=0.99U
+Mnmos@1 out net@4 gnd gnd N L=0.044U W=0.22U AS=0.048P AD=0.036P PS=0.99U PD=0.77U
+Mpmos@2 net@0 in net@4 vdd P L=0.044U W=0.22U AS=0.031P AD=0.015P PS=0.726U PD=0.352U
+Mpmos@3 vdd in net@0 vdd P L=0.044U W=0.22U AS=0.015P AD=0.044P PS=0.352U PD=0.946U
+Mpmos@4 net@3 net@4 vdd vdd P L=0.044U W=0.22U AS=0.044P AD=0.015P PS=0.946U PD=0.352U
+Mpmos@5 out net@4 net@3 vdd P L=0.044U W=0.22U AS=0.015P AD=0.036P PS=0.352U PD=0.77U
+.ENDS Repeater__Repeater
+
+*** TOP LEVEL CELL: carryblock{lay}
+X_4bit_FA_@0 A0 A1 A2 A3 B0 B1 B2 B3 c-1 net@8 net@6 net@4 net@188 net@240 net@250 net@290 gnd net@186 net@229 net@312 net@326 s0 s1 s2 s3 vdd FA_for_CLA__4bit_FA_block
+XRepeater@0 gnd net@14 c3 vdd Repeater__Repeater
+Mnmos@0 net@8 net@229 net@6 gnd N L=0.044U W=0.88U AS=0.065P AD=0.062P PS=1.182U PD=1.177U
+Mnmos@1 net@6 net@312 net@4 gnd N L=0.044U W=0.88U AS=0.065P AD=0.065P PS=1.182U PD=1.182U
+Mnmos@2 net@4 net@326 net@14 gnd N L=0.044U W=0.88U AS=0.087P AD=0.065P PS=1.584U PD=1.182U
+Mnmos@3 net@10 net@186 net@8 gnd N L=0.044U W=0.88U AS=0.062P AD=0.063P PS=1.177U PD=1.023U
+Mnmos@4 net@12 c-1 net@10 gnd N L=0.044U W=0.88U AS=0.063P AD=0.061P PS=1.023U PD=1.023U
+Mnmos@5 gnd net@0 net@12 gnd N L=0.044U W=0.22U AS=0.061P AD=0.068P PS=1.023U PD=1.606U
+Mnmos@6 net@12 net@240 net@6 gnd N L=0.044U W=0.88U AS=0.065P AD=0.061P PS=1.182U PD=1.023U
+Mnmos@7 net@4 net@250 net@12 gnd N L=0.044U W=0.88U AS=0.061P AD=0.065P PS=1.023U PD=1.182U
+Mnmos@8 net@12 net@290 net@14 gnd N L=0.044U W=0.88U AS=0.087P AD=0.061P PS=1.584U PD=1.023U
+Mnmos@9 net@8 net@188 net@12 gnd N L=0.044U W=0.88U AS=0.061P AD=0.062P PS=1.023U PD=1.177U
+Mpmos@2 vdd net@0 net@14 vdd P L=0.044U W=0.22U AS=0.087P AD=0.036P PS=1.584U PD=0.902U
+Mpmos@3 vdd net@0 net@4 vdd P L=0.044U W=0.22U AS=0.065P AD=0.036P PS=1.182U PD=0.902U
+Mpmos@4 vdd net@0 net@6 vdd P L=0.044U W=0.22U AS=0.065P AD=0.036P PS=1.182U PD=0.902U
+Mpmos@5 vdd net@0 net@8 vdd P L=0.044U W=0.22U AS=0.062P AD=0.036P PS=1.177U PD=0.902U
+
+* Spice Code nodes in cell cell 'carryblock{lay}'
+* 4-bit Carry Look-Ahead Adder Simulation
+* Power supply
+vdd vdd 0 DC 0.95
+cload c3 0 50fF
+cload0 s0 0 50fF
+cload1 s1 0 50fF
+cload2 s2 0 50fF
+cload3 s3 0 50fF
+* 4-bit input A
+va0 A0 0 PWL(0n 0 10n 0 12n 0.95 51n 0.95 53n 0 95n 0 97n 0.95 140n 0.95 142n 0 183n 0 185n 0.95)
+va1 A1 0 PWL(0n 0.95 10n 0.95 12n 0 51n 0 53n 0.95 95n 0.95 97n 0 140n 0 142n 0.95 183n 0.95 185n 0)
+va2 A2 0 PWL(0n 0 10n 0 12n 0.95 51n 0.95 53n 0 95n 0 97n 0.95 140n 0.95 142n 0 183n 0 185n 0.95)
+va3 A3 0 PWL(0n 0.95 10n 0.95 12n 0 51n 0 53n 0.95 95n 0.95 97n 0 140n 0 142n 0.95 183n 0.95 185n 0)
+* 4-bit input B
+vb0 B0 0 PWL(0n 0 95n 0 97n 0.95)
+vb1 B1 0 PWL(0n 0.95 95n 0.95 97n 0)
+vb2 B2 0 PWL(0n 0 95n 0 97n 0.95)
+vb3 B3 0 PWL(0n 0.95 95n 0.95 97n 0)
+* Initial carry-in C0
+vc-1 c-1 0 DC 0
+* Clock signal
+vclk clk 0 PWL(0n 0 20n 0 22n 0.95 42n 0.95 44n 0 64n 0 66n 0.95 86n 0.95 88n 0 108n 0 110n 0.95 130n 0.95 132n 0 152n 0 154n 0.95 174n 0.95 176n 0 196n 0 198n 0.95)
+* Transient analysis
+.tran 0 200n
+* Include model file
+.include D:\ICElectric\22nm.txt
+* End of Netlist
+.END
