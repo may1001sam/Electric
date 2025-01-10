@@ -17,7 +17,7 @@ Tbicmos|ScaleFORbicmos()D22.0
 Tmocmos|ScaleFORmocmos()D22.0
 
 # Cell 4bit_FA;1{lay}
-C4bit_FA;1{lay}||mocmos|1736261756719|1736539403405||DRC_last_good_drc_area_date()G1736539409427|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1736539409427
+C4bit_FA;1{lay}||mocmos|1736261756719|1736541082868||DRC_last_good_drc_area_date()G1736539409427|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1736541200622
 IFA;1{lay}|FA@0||-205|64|||D5G4;
 IFA;1{lay}|FA@1||63|64|||D5G4;
 IFA;1{lay}|FA@2||331|64|||D5G4;
@@ -33,12 +33,12 @@ NMetal-3-Metal-4-Con|contact@6||-378|156||||
 NMetal-3-Metal-4-Con|contact@7||-77|156||||
 NMetal-2-Metal-3-Con|contact@8||-77|156||||
 NMetal-1-Metal-2-Con|contact@9||-77|156||||
-NMetal-1-Metal-2-Con|contact@10||-377|51||||
-NMetal-2-Metal-3-Con|contact@11||-377|51||||
+NMetal-1-Metal-2-Con|contact@10||-377|55||||
+NMetal-2-Metal-3-Con|contact@11||-377|54||||
 NMetal-3-Metal-4-Con|contact@12||-377|55||||
 NMetal-3-Metal-4-Con|contact@13||-78|55||||
-NMetal-2-Metal-3-Con|contact@14||-78|51||||
-NMetal-1-Metal-2-Con|contact@15||-78|51||||
+NMetal-2-Metal-3-Con|contact@14||-78|55||||
+NMetal-1-Metal-2-Con|contact@15||-78|55||||
 NMetal-3-Metal-4-Con|contact@16||191|156||||
 NMetal-2-Metal-3-Con|contact@17||191|156||||
 NMetal-1-Metal-2-Con|contact@18||191|156||||
@@ -89,11 +89,11 @@ AMetal-3|net@116||1|S1800|contact@5||-378|156|contact@6||-378|156
 AMetal-3|net@118|||S|contact@7||-77|156|contact@8||-77|156
 AMetal-2|net@119|||S|contact@8||-77|156|contact@9||-77|156
 AMetal-1|net@121|||S|FA@1|vdd|-77|156|contact@9||-77|156
-AMetal-1|net@122||1|S900|FA@0|gnd|-377|51|contact@10||-377|51
-AMetal-3|net@125||1|S900|contact@12||-377|55|contact@11||-377|51
-AMetal-3|net@127|||S900|contact@13||-78|55|contact@14||-78|51
-AMetal-2|net@128|||S|contact@14||-78|51|contact@15||-78|51
-AMetal-1|net@130|||S|FA@1|gnd|-78|51|contact@15||-78|51
+AMetal-1|net@122||1|S2700|FA@0|gnd|-377|51|contact@10||-377|54
+AMetal-3|net@125||1|S900|contact@12||-377|55|contact@11||-377|54
+AMetal-3|net@127|||S900|contact@13||-78|55|contact@14||-78|55
+AMetal-2|net@128|||S2700|contact@14||-78|55|contact@15||-78|55
+AMetal-1|net@130|||S2700|FA@1|gnd|-78|51|contact@15||-78|55
 AMetal-3|net@133|||S|contact@16||191|156|contact@17||191|156
 AMetal-2|net@134|||S|contact@17||191|156|contact@18||191|156
 AMetal-1|net@136|||S|FA@2|vdd|191|156|contact@18||191|156
@@ -109,7 +109,7 @@ AMetal-1|net@160|||S|FA@3|gnd|459|51|contact@27||459|51
 AMetal-2|net@161||1|S|FA@0|G|-135|77|contact@0||-135|77
 AMetal-2|net@162||1|S|FA@2|G|401|77|contact@2||401|77
 AMetal-4|net@163||1|S1800|contact@6||-378|156|contact@7||-77|156
-AMetal-2|net@164||1|S|contact@10||-377|51|contact@11||-377|51
+AMetal-2|net@164||1|S2700|contact@10||-377|54|contact@11||-377|54
 AMetal-4|net@165||1|S1800|contact@12||-377|55|contact@13||-78|55
 AMetal-4|net@166||1|S1800|contact@7||-77|156|contact@16||191|156
 AMetal-4|net@167||1|S1800|contact@13||-78|55|contact@19||190|55
