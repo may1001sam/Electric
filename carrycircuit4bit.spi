@@ -1,7 +1,7 @@
 *** SPICE deck for cell carrycircuit4bit{lay} from library project-(1)
 *** Created on Fri Jan 10, 2025 19:33:30
-*** Last revised on Fri Jan 10, 2025 21:20:37
-*** Written on Fri Jan 10, 2025 21:20:52 by Electric VLSI Design System, version 9.07
+*** Last revised on Fri Jan 10, 2025 22:02:36
+*** Written on Fri Jan 10, 2025 22:04:03 by Electric VLSI Design System, version 9.07
 *** Layout tech: mocmos, foundry MOSIS
 *** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
 
@@ -63,8 +63,8 @@ Mpmos@3 vdd clk c0 vdd P L=0.044U W=0.22U AS=0.066P AD=0.044P PS=1.194U PD=1.001
 .ENDS project-_1___dynamic_part
 
 *** TOP LEVEL CELL: carrycircuit4bit{lay}
-X_4bit_FA@0 A0 A1 A2 A3 B0 B1 B2 B3 c-1 net@48 net@81 net@99 net@39 net@65 net@127 net@148 gnd net@26 net@58 net@111 net@152 _4bit_FA@0_s0 _4bit_FA@0_s1 _4bit_FA@0_s2 _4bit_FA@0_s3 vdd FA_for_CLA__4bit_FA
-Xdynamic_@0 c-1 net@48 net@81 net@99 dynamic_@0_c3 clk net@39 net@65 net@127 net@152 gnd net@26 net@58 net@111 net@148 vdd project-_1___dynamic_part
+X_4bit_FA@0 A0 A1 A2 A3 B0 B1 B2 B3 c-1 net@48 net@81 net@99 net@39 net@65 net@127 net@148 gnd net@26 net@58 net@111 net@160 _4bit_FA@0_s0 _4bit_FA@0_s1 _4bit_FA@0_s2 _4bit_FA@0_s3 vdd FA_for_CLA__4bit_FA
+Xdynamic_@0 c-1 net@48 net@81 net@99 c3 clk net@39 net@65 net@127 net@148 gnd net@26 net@58 net@111 net@160 vdd project-_1___dynamic_part
 
 * Spice Code nodes in cell cell 'carrycircuit4bit{lay}'
 * 4-bit Carry Look-Ahead Adder Simulation
