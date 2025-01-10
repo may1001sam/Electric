@@ -1,7 +1,7 @@
 *** SPICE deck for cell FA_sim{lay} from library FA_for_CLA
 *** Created on Fri Jan 03, 2025 00:26:33
-*** Last revised on Tue Jan 07, 2025 17:00:44
-*** Written on Tue Jan 07, 2025 17:00:57 by Electric VLSI Design System, version 9.07
+*** Last revised on Fri Jan 10, 2025 14:15:59
+*** Written on Fri Jan 10, 2025 14:16:06 by Electric VLSI Design System, version 9.07
 *** Layout tech: mocmos, foundry MOSIS
 *** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
 
@@ -31,9 +31,9 @@ Mpmos@1 out A vdd vdd P L=0.044U W=0.44U AS=0.106P AD=0.047P PS=1.969U PD=0.704U
 
 *** SUBCIRCUIT FA_for_CLA__FA FROM CELL FA_for_CLA:FA{lay}
 .SUBCKT FA_for_CLA__FA A B Cin G gnd P Sum vdd
-XXOR@0 A B gnd P vdd XOR__XOR
-XXOR@1 P Cin gnd Sum vdd XOR__XOR
-Xnand@0 A B gnd G vdd NAND__nand
+XXOR@0 a b gnd P vdd XOR__XOR
+XXOR@1 P cin gnd Sum vdd XOR__XOR
+Xnand@0 a b gnd G vdd NAND__nand
 .ENDS FA_for_CLA__FA
 
 *** TOP LEVEL CELL: FA_for_CLA:FA_sim{lay}
