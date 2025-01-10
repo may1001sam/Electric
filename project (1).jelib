@@ -17,7 +17,7 @@ Tbicmos|ScaleFORbicmos()D22.0
 Tmocmos|ScaleFORmocmos()D22.0
 
 # Cell carryblock;1{lay}
-Ccarryblock;1{lay}||mocmos|1736175506782|1736541459503||DRC_last_good_drc_area_date()G1736541468050|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1736541468050
+Ccarryblock;1{lay}||mocmos|1736175506782|1736541693313||DRC_last_good_drc_area_date()G1736541468050|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1736541468050
 IFA_for_CLA:4bit_FA_block;1{lay}|4bit_FA_@0||118|-310.5|||D5G4;
 IRepeater:Repeater;1{lay}|Repeater@0||220|-132.5|||D5G4;
 Ngeneric:Facet-Center|art@0||0|0||||AV
@@ -132,6 +132,7 @@ NMetal-1-Metal-2-Con|contact@189||-157|-181||||
 NMetal-2-Metal-3-Con|contact@190||-157|-181||||
 NMetal-2-Metal-3-Con|contact@191||-157|-341.5||||
 NMetal-1-Metal-2-Con|contact@192||-157|-341.5||||
+NMetal-1-Metal-2-Con|contact@193||-220|-237.5||||
 NN-Transistor|nmos@0||-45.5|-149|37||RRR||SIM_spice_model(D5G1;)SN
 NN-Transistor|nmos@1||-37.5|-149|37||RRR||SIM_spice_model(D5G1;)SN
 NN-Transistor|nmos@2||-29.5|-149|37||RRR||SIM_spice_model(D5G1;)SN
@@ -408,6 +409,8 @@ AMetal-3|net@643||1|S900|4bit_FA_@0|s3|560|-352.5|pin@198||560|-359
 AMetal-2|net@645|||S900|contact@191||-157|-341.5|contact@192||-157|-341.5
 AMetal-1|net@647||1|S0|4bit_FA_@0|gnd|-141|-341.5|contact@192||-157|-341.5
 AMetal-3|net@648||1|S900|contact@190||-157|-181|contact@191||-157|-341.5
+AMetal-1|net@649|||S1800|4bit_FA_@0|c-1|-221|-237.5|contact@193||-220|-237.5
+AMetal-2|net@650||1|S900|pin@174||-220|-188.5|contact@193||-220|-237.5
 EA0||D5G2;|pin@167||U
 EA1||D5G2;|pin@177||U
 EA2||D5G2;|pin@182||U
