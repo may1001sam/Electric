@@ -1,0 +1,23 @@
+*** SPICE deck for cell dynamic_part{lay} from library project-(1)
+*** Created on Fri Jan 10, 2025 17:01:25
+*** Last revised on Fri Jan 10, 2025 20:38:08
+*** Written on Fri Jan 10, 2025 20:38:24 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+*** TOP LEVEL CELL: dynamic_part{lay}
+Mnmos@0 c0 P1 c1 gnd N L=0.044U W=0.88U AS=0.066P AD=0.066P PS=1.194U PD=1.194U
+Mnmos@1 c1 P2 c2 gnd N L=0.044U W=0.88U AS=0.066P AD=0.066P PS=1.194U PD=1.194U
+Mnmos@2 c2 P3 c3 gnd N L=0.044U W=0.88U AS=0.058P AD=0.066P PS=0.931U PD=1.194U
+Mnmos@3 net@90 P0 c0 gnd N L=0.044U W=0.88U AS=0.066P AD=0.063P PS=1.194U PD=1.023U
+Mnmos@4 net@13 c-1 net@90 gnd N L=0.044U W=0.88U AS=0.063P AD=0.061P PS=1.023U PD=1.023U
+Mnmos@5 gnd clk net@13 gnd N L=0.044U W=0.22U AS=0.061P AD=0.044P PS=1.023U PD=1.166U
+Mnmos@6 net@13 G2 c2 gnd N L=0.044U W=0.88U AS=0.066P AD=0.061P PS=1.194U PD=1.023U
+Mnmos@7 c1 G1 net@13 gnd N L=0.044U W=0.88U AS=0.061P AD=0.066P PS=1.023U PD=1.194U
+Mnmos@8 net@13 G0 c0 gnd N L=0.044U W=0.88U AS=0.066P AD=0.061P PS=1.194U PD=1.023U
+Mnmos@9 c3 G3 net@13 gnd N L=0.044U W=0.88U AS=0.061P AD=0.058P PS=1.023U PD=0.931U
+Mpmos@0 vdd clk c3 vdd P L=0.044U W=0.22U AS=0.058P AD=0.044P PS=0.931U PD=1.001U
+Mpmos@1 vdd clk c2 vdd P L=0.044U W=0.22U AS=0.066P AD=0.044P PS=1.194U PD=1.001U
+Mpmos@2 vdd clk c1 vdd P L=0.044U W=0.22U AS=0.066P AD=0.044P PS=1.194U PD=1.001U
+Mpmos@3 vdd clk c0 vdd P L=0.044U W=0.22U AS=0.066P AD=0.044P PS=1.194U PD=1.001U
+.END
