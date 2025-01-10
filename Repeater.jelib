@@ -30,7 +30,7 @@ Eout||D5G2;|pin@2||U
 X
 
 # Cell Repeater;1{lay}
-CRepeater;1{lay}||mocmos|1736017712419|1736275061155||DRC_last_good_drc_area_date()G1736275068494|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1736275068494
+CRepeater;1{lay}||mocmos|1736017712419|1736537039165||DRC_last_good_drc_area_date()G1736275068494|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1736537439252
 Ngeneric:Facet-Center|art@0||0|0||||AV
 NMetal-1-P-Active-Con|contact@0||-109|12||5||
 NMetal-1-Polysilicon-1-Con|contact@1||-135|-1||||
@@ -50,7 +50,6 @@ NN-Transistor|nmos@0||-122|-13|7||R||SIM_spice_model(D5G1;)SN
 NN-Transistor|nmos@1||-110|-13|7||R||SIM_spice_model(D5G1;)SN
 NPolysilicon-1-Pin|pin@3||-122|-1||||
 NPolysilicon-1-Pin|pin@4||-104|-1||||
-NPolysilicon-1-Pin|pin@7||-112|-1||||
 NPolysilicon-1-Pin|pin@10||-110|-1||||
 NP-Transistor|pmos@2||-122|12|7||R||SIM_spice_model(D5G1;)SP
 NP-Transistor|pmos@3||-114|12|7||R||SIM_spice_model(D5G1;)SP
@@ -80,15 +79,14 @@ AMetal-1|net@38||1|S2700|contact@3||-127|-13|contact@8||-127|0
 AMetal-1|net@39||1|S2700|contact@8||-127|0|contact@2||-127|12
 AMetal-2|net@41||1|S0|contact@7||-112|-1|contact@8||-127|-1
 AMetal-1|net@42||1|S0|contact@7||-112|-1|contact@9||-112|-1
-APolysilicon-1|net@43|||S2700|pin@7||-112|-1|contact@9||-112|-1
 AMetal-1|net@44||1|S900|contact@6||-116|-13|substr@0||-116|-27
 AMetal-1|net@47||1|S900|contact@5||-90|12|contact@11||-90|-2
 APolysilicon-1|net@51|||S0|pin@4||-104|-1|pin@10||-110|-1
-APolysilicon-1|net@52|||S0|pin@10||-110|-1|pin@7||-112|-1
 APolysilicon-1|net@53|||S2700|nmos@1|poly-right|-110|-6|pin@10||-110|-1
 AMetal-2|net@54||1|S1800|contact@11||-90|-2|contact@10||-83|-2
 AMetal-1|net@55||1|S2700|contact@12||-90|-10|contact@11||-90|-2
 AMetal-2|net@58||1|S0|contact@12||-90|-11|contact@13||-104|-11
+APolysilicon-1|net@59|||S1800|contact@9||-112|-1|pin@10||-110|-1
 Egnd||D5G2;|substr@0||U
 Ein||D5G2;X-0.5;|contact@1||U
 Eout||D5G2;|contact@10||U

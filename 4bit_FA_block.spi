@@ -1,7 +1,7 @@
-*** SPICE deck for cell carrycircuit4bit{lay} from library project-(1)
-*** Created on Fri Jan 10, 2025 19:33:30
-*** Last revised on Fri Jan 10, 2025 21:20:37
-*** Written on Fri Jan 10, 2025 21:20:52 by Electric VLSI Design System, version 9.07
+*** SPICE deck for cell 4bit_FA_block{lay} from library FA_for_CLA
+*** Created on Tue Jan 07, 2025 17:49:34
+*** Last revised on Fri Jan 10, 2025 21:22:35
+*** Written on Fri Jan 10, 2025 21:22:40 by Electric VLSI Design System, version 9.07
 *** Layout tech: mocmos, foundry MOSIS
 *** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
 
@@ -44,33 +44,13 @@ XFA@2 A2 B2 c1 G2 gnd P2 s2 vdd FA_for_CLA__FA
 XFA@3 A3 B3 c2 G3 gnd P3 s3 vdd FA_for_CLA__FA
 .ENDS FA_for_CLA__4bit_FA
 
-*** SUBCIRCUIT project-_1___dynamic_part FROM CELL dynamic_part{lay}
-.SUBCKT project-_1___dynamic_part c-1 c0 c1 c2 c3 clk G0 G1 G2 G3 gnd P0 P1 P2 P3 vdd
-Mnmos@0 c0 P1 c1 gnd N L=0.044U W=0.88U AS=0.066P AD=0.066P PS=1.194U PD=1.194U
-Mnmos@1 c1 P2 c2 gnd N L=0.044U W=0.88U AS=0.066P AD=0.066P PS=1.194U PD=1.194U
-Mnmos@2 c2 P3 c3 gnd N L=0.044U W=0.88U AS=0.058P AD=0.066P PS=0.931U PD=1.194U
-Mnmos@3 net@90 P0 c0 gnd N L=0.044U W=0.88U AS=0.066P AD=0.063P PS=1.194U PD=1.023U
-Mnmos@4 net@13 c-1 net@90 gnd N L=0.044U W=0.88U AS=0.063P AD=0.061P PS=1.023U PD=1.023U
-Mnmos@5 gnd clk net@13 gnd N L=0.044U W=0.22U AS=0.061P AD=0.044P PS=1.023U PD=1.166U
-Mnmos@6 net@13 G2 c2 gnd N L=0.044U W=0.88U AS=0.066P AD=0.061P PS=1.194U PD=1.023U
-Mnmos@7 c1 G1 net@13 gnd N L=0.044U W=0.88U AS=0.061P AD=0.066P PS=1.023U PD=1.194U
-Mnmos@8 net@13 G0 c0 gnd N L=0.044U W=0.88U AS=0.066P AD=0.061P PS=1.194U PD=1.023U
-Mnmos@9 c3 G3 net@13 gnd N L=0.044U W=0.88U AS=0.061P AD=0.058P PS=1.023U PD=0.931U
-Mpmos@0 vdd clk c3 vdd P L=0.044U W=0.22U AS=0.058P AD=0.044P PS=0.931U PD=1.001U
-Mpmos@1 vdd clk c2 vdd P L=0.044U W=0.22U AS=0.066P AD=0.044P PS=1.194U PD=1.001U
-Mpmos@2 vdd clk c1 vdd P L=0.044U W=0.22U AS=0.066P AD=0.044P PS=1.194U PD=1.001U
-Mpmos@3 vdd clk c0 vdd P L=0.044U W=0.22U AS=0.066P AD=0.044P PS=1.194U PD=1.001U
-.ENDS project-_1___dynamic_part
+*** TOP LEVEL CELL: FA_for_CLA:4bit_FA_block{lay}
+X_4bit_FA@0 A0 A1 A2 A3 B0 B1 B2 B3 c-1 c0 c1 c2 G0 G1 G2 G3 gnd P0 P1 P2 P3 s0 s1 s2 s3 vdd FA_for_CLA__4bit_FA
 
-*** TOP LEVEL CELL: carrycircuit4bit{lay}
-X_4bit_FA@0 A0 A1 A2 A3 B0 B1 B2 B3 c-1 net@48 net@81 net@99 net@39 net@65 net@127 net@148 gnd net@26 net@58 net@111 net@152 _4bit_FA@0_s0 _4bit_FA@0_s1 _4bit_FA@0_s2 _4bit_FA@0_s3 vdd FA_for_CLA__4bit_FA
-Xdynamic_@0 c-1 net@48 net@81 net@99 dynamic_@0_c3 clk net@39 net@65 net@127 net@152 gnd net@26 net@58 net@111 net@148 vdd project-_1___dynamic_part
-
-* Spice Code nodes in cell cell 'carrycircuit4bit{lay}'
+* Spice Code nodes in cell cell 'FA_for_CLA:4bit_FA_block{lay}'
 * 4-bit Carry Look-Ahead Adder Simulation
 * Power supply
 vdd vdd 0 DC 0.95
-cload c3 0 50fF
 cload0 s0 0 50fF
 cload1 s1 0 50fF
 cload2 s2 0 50fF
@@ -86,7 +66,10 @@ vb1 B1 0 PWL(0n 0.95 95n 0.95 97n 0)
 vb2 B2 0 PWL(0n 0 95n 0 97n 0.95)
 vb3 B3 0 PWL(0n 0.95 95n 0.95 97n 0)
 * Initial carry-in C0
-vc-1 c-1 0 DC 0
+vc-1 c-1 0 DC 0.95
+vc0 c0 0 DC 0
+vc1 c1 0 DC 0
+vc2 c2 0 DC 0.95
 * Clock signal
 vclk clk 0 PWL(0n 0 20n 0 22n 0.95 42n 0.95 44n 0 64n 0 66n 0.95 86n 0.95 88n 0 108n 0 110n 0.95 130n 0.95 132n 0 152n 0 154n 0.95 174n 0.95 176n 0 196n 0 198n 0.95)
 * Transient analysis
