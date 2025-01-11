@@ -1,7 +1,7 @@
 *** SPICE deck for cell carryblock{lay} from library project-(1)
 *** Created on Mon Jan 06, 2025 16:58:26
-*** Last revised on Fri Jan 10, 2025 22:41:33
-*** Written on Fri Jan 10, 2025 22:41:45 by Electric VLSI Design System, version 9.07
+*** Last revised on Sat Jan 11, 2025 19:27:52
+*** Written on Sat Jan 11, 2025 19:27:58 by Electric VLSI Design System, version 9.07
 *** Layout tech: mocmos, foundry MOSIS
 *** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
 
@@ -62,20 +62,20 @@ Mpmos@5 out net@4 net@3 vdd P L=0.044U W=0.22U AS=0.015P AD=0.036P PS=0.352U PD=
 *** TOP LEVEL CELL: carryblock{lay}
 X_4bit_FA_@0 A0 A1 A2 A3 B0 B1 B2 B3 c-1 net@8 net@6 net@4 net@236 net@240 net@255 net@290 gnd net@186 net@508 net@312 net@326 s0 s1 s2 s3 vdd FA_for_CLA__4bit_FA_block
 XRepeater@0 gnd net@14 c3 vdd Repeater__Repeater
-Mnmos@0 net@8 net@508 net@6 gnd N L=0.044U W=0.88U AS=0.065P AD=0.062P PS=1.182U PD=1.177U
+Mnmos@0 net@8 net@508 net@6 gnd N L=0.044U W=0.88U AS=0.065P AD=0.063P PS=1.182U PD=1.182U
 Mnmos@1 net@6 net@312 net@4 gnd N L=0.044U W=0.88U AS=0.065P AD=0.065P PS=1.182U PD=1.182U
-Mnmos@2 net@4 net@326 net@14 gnd N L=0.044U W=0.88U AS=0.087P AD=0.065P PS=1.584U PD=1.182U
-Mnmos@3 net@10 net@186 net@8 gnd N L=0.044U W=0.88U AS=0.062P AD=0.063P PS=1.177U PD=1.023U
-Mnmos@4 net@12 c-1 net@10 gnd N L=0.044U W=0.88U AS=0.063P AD=0.061P PS=1.023U PD=1.023U
-Mnmos@5 gnd net@0 net@12 gnd N L=0.044U W=0.22U AS=0.061P AD=0.068P PS=1.023U PD=1.606U
-Mnmos@6 net@12 net@240 net@6 gnd N L=0.044U W=0.88U AS=0.065P AD=0.061P PS=1.182U PD=1.023U
-Mnmos@7 net@4 net@255 net@12 gnd N L=0.044U W=0.88U AS=0.061P AD=0.065P PS=1.023U PD=1.182U
-Mnmos@8 net@12 net@290 net@14 gnd N L=0.044U W=0.88U AS=0.087P AD=0.061P PS=1.584U PD=1.023U
-Mnmos@9 net@8 net@236 net@12 gnd N L=0.044U W=0.88U AS=0.061P AD=0.062P PS=1.023U PD=1.177U
-Mpmos@2 vdd net@0 net@14 vdd P L=0.044U W=0.22U AS=0.087P AD=0.036P PS=1.584U PD=0.902U
-Mpmos@3 vdd net@0 net@4 vdd P L=0.044U W=0.22U AS=0.065P AD=0.036P PS=1.182U PD=0.902U
-Mpmos@4 vdd net@0 net@6 vdd P L=0.044U W=0.22U AS=0.065P AD=0.036P PS=1.182U PD=0.902U
-Mpmos@5 vdd net@0 net@8 vdd P L=0.044U W=0.22U AS=0.062P AD=0.036P PS=1.177U PD=0.902U
+Mnmos@2 net@4 net@326 net@14 gnd N L=0.044U W=0.88U AS=0.088P AD=0.065P PS=1.591U PD=1.182U
+Mnmos@3 net@10 net@186 net@8 gnd N L=0.044U W=0.88U AS=0.063P AD=0.063P PS=1.182U PD=1.023U
+Mnmos@4 gnd c-1 net@10 gnd N L=0.044U W=0.88U AS=0.063P AD=0.062P PS=1.023U PD=1.106U
+Mnmos@5 gnd net@0 gnd gnd N L=0.044U W=0.22U AS=0.062P AD=0.062P PS=1.106U PD=1.106U
+Mnmos@6 gnd net@240 net@6 gnd N L=0.044U W=0.88U AS=0.065P AD=0.062P PS=1.182U PD=1.106U
+Mnmos@7 net@4 net@255 gnd gnd N L=0.044U W=0.88U AS=0.062P AD=0.065P PS=1.106U PD=1.182U
+Mnmos@8 gnd net@290 net@14 gnd N L=0.044U W=0.88U AS=0.088P AD=0.062P PS=1.591U PD=1.106U
+Mnmos@9 net@8 net@236 gnd gnd N L=0.044U W=0.88U AS=0.062P AD=0.063P PS=1.106U PD=1.182U
+Mpmos@2 vdd net@0 net@14 vdd P L=0.044U W=0.22U AS=0.088P AD=0.039P PS=1.591U PD=0.93U
+Mpmos@3 vdd net@0 net@4 vdd P L=0.044U W=0.22U AS=0.065P AD=0.039P PS=1.182U PD=0.93U
+Mpmos@4 vdd net@0 net@6 vdd P L=0.044U W=0.22U AS=0.065P AD=0.039P PS=1.182U PD=0.93U
+Mpmos@5 vdd net@0 net@8 vdd P L=0.044U W=0.22U AS=0.063P AD=0.039P PS=1.182U PD=0.93U
 
 * Spice Code nodes in cell cell 'carryblock{lay}'
 * 4-bit Carry Look-Ahead Adder Simulation

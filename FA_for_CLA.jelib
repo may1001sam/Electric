@@ -475,10 +475,9 @@ ESum||D5G2;X2;|conn@5|a|U
 X
 
 # Cell FA_icon;1{sch}
-CFA_icon;1{sch}||schematic|1734863903434|1735915795016|
+CFA_icon;1{sch}||schematic|1734863903434|1736598539071|
 IFA;1{ic}|FA@0||-9.5|9|||D5G4;
 Ngeneric:Facet-Center|art@0||0|0||||AV
-Ngeneric:Invisible-Pin|pin@6||-25.5|10.5|||||SIM_spice_card(D5G0.5;)S[vdd vdd 0 DC 0.95,va A 0 DC pwl 10n 0 20n 0.95 50n 0.95 60n 0 90n 0 100n 0.95 130n 0.95 140n 0 170n 0 180n 0.95,vb B 0 DC pwl 10n 0 20n 0.95 100n 0.95 110n 0,vc Cin 0 DC pwl 10n 0 20n 0.95 100n 0.95 110n 0,cload Sum 0 250fF,.measure tran tf trig v(out) val=4.5 fall=1 td=4ns targ v(out) val=0.5 fall=1,.measure tran tr trig v(out) val=0.5 rise=1 td=4ns targ v(out) val=4.5 rise=1,.tran 200n,".include D:\\ICelectric\\22nm.txt"]
 NWire_Pin|pin@8||-13.5|12||||
 NWire_Pin|pin@9||-13.5|9.5||||
 NWire_Pin|pin@10||-10.5|7.5||||
@@ -494,10 +493,9 @@ Awire|Sum|D5G1;||2700|FA@0|Sum|-10.5|7|pin@10||-10.5|7.5
 X
 
 # Cell FA_sim;1{lay}
-CFA_sim;1{lay}||mocmos|1735856793278|1736517487444||DRC_last_good_drc_area_date()G1736514477667|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1736514477667
+CFA_sim;1{lay}||mocmos|1735856793278|1736598544543||DRC_last_good_drc_area_date()G1736514477667|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1736514477667
 IFA;1{lay}|FA@0||79.5|-44|||D5G4;
 Ngeneric:Facet-Center|art@0||0|0||||AV
-Ngeneric:Invisible-Pin|pin@0||21.5|75|||||SIM_spice_card(D5G3;)S[vdd vdd 0 DC 0.95,va A 0 DC pwl 10n 0 20n 0.95 50n 0.95 60n 0 90n 0 100n 0.95 130n 0.95 140n 0 170n 0 180n 0.95,vb B 0 DC pwl 10n 0 20n 0.95 100n 0.95 110n 0,vc Cin 0 DC pwl 10n 0 20n 0.95 100n 0.95 110n 0,cload Sum 0 250fF,.measure tran tf trig v(out) val=4.5 fall=1 td=4ns targ v(out) val=0.5 fall=1,.measure tran tr trig v(out) val=0.5 rise=1 td=4ns targ v(out) val=4.5 rise=1,.tran 200n,".include C:\\Electric\\22nm.txt"]
 NMetal-1-Pin|pin@1||-105.5|51||||
 NMetal-1-Pin|pin@4||-105.5|-58.5||||
 NMetal-1-Pin|pin@5||127.5|39||||
@@ -506,6 +504,7 @@ NMetal-1-Pin|pin@7||127.5|48||||
 NMetal-2-Pin|pin@9||150|-31||||
 NMetal-3-Pin|pin@10||103.5|-66||||
 NMetal-2-Pin|pin@11||143|23||||
+Ngeneric:Invisible-Pin|pin@12||-91.5|64|||||SIM_spice_card(D5G0.5;)S[vdd vdd 0 DC 0.95,va A 0 DC pwl 10n 0 20n 0.95 50n 0.95 60n 0 90n 0 100n 0.95 130n 0.95 140n 0 170n 0 180n 0.95,vb B 0 DC pwl 10n 0 20n 0.95 100n 0.95 110n 0,vc Cin 0 DC pwl 10n 0 20n 0.95 100n 0.95 110n 0,cload Sum 0 250fF,.measure tran tf trig v(out) val=4.5 fall=1 td=4ns targ v(out) val=0.5 fall=1,.measure tran tr trig v(out) val=0.5 rise=1 td=4ns targ v(out) val=4.5 rise=1,.tran 200n,".include D:\\ICelectric\\22nm.txt"]
 AMetal-1|net@0||1|S0|FA@0|vdd|-60|51|pin@1||-105.5|51
 AMetal-1|net@3||1|S0|FA@0|gnd|-61|-58.5|pin@4||-105.5|-58.5
 AMetal-1|net@4|||S2700|FA@0|A|127.5|39|pin@5||127.5|39

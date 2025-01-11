@@ -294,14 +294,13 @@ Awire|out|D5G1;||1800|XOR@0|out|-41.5|3|pin@6||-41|3
 X
 
 # Cell XOR_sim;1{lay}
-CXOR_sim;1{lay}||mocmos|1731234345506|1736508900471||DRC_last_good_drc_area_date()G1736507864212|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1736507864212
+CXOR_sim;1{lay}||mocmos|1731234345506|1736598399328||DRC_last_good_drc_area_date()G1736507864212|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1736507864212
 IXOR;1{lay}|XOR@0||23|-2|||D5G4;
 Ngeneric:Facet-Center|art@0||0|0||||AV
 NMetal-1-Pin|pin@2||-17|-46||||
 NMetal-1-Pin|pin@3||71.5|63.5||||
 NMetal-1-Pin|pin@6||-24.5|-2||||
 NMetal-1-Pin|pin@8||80.5|2.5||||
-Ngeneric:Invisible-Pin|pin@9||-96|25.5|||||SIM_spice_card(D5G3;)S[vdd vdd 0 DC 0.95,va A 0 DC pwl 10n 0 20n 0.95 50n 0.95 60n 0 90n 0 100n 0.95 130n 0.95 140n 0 170n 0 180n 0.95,vb B 0 DC pwl 10n 0 20n 0.95 115n 0.95 120n 0,.tran 200n,".include C:\\Electric\\22nm.txt"]
 NMetal-1-Pin|pin@10||80|-34||||
 AMetal-1|net@2||1|S0|XOR@0|gnd|28.5|-46|pin@2||-17|-46
 AMetal-1|net@3||1|S1800|XOR@0|vdd|29|63.5|pin@3||71.5|63.5
