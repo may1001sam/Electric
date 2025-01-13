@@ -1,19 +1,17 @@
-*** SPICE deck for cell nand{sch} from library NAND
-*** Created on Sat Nov 09, 2024 14:22:29
-*** Last revised on Thu Jan 02, 2025 22:43:31
-*** Written on Thu Jan 02, 2025 22:43:34 by Electric VLSI Design System, version 9.07
+*** SPICE deck for cell nand{lay} from library NAND
+*** Created on Sat Nov 09, 2024 20:34:09
+*** Last revised on Mon Jan 13, 2025 16:53:44
+*** Written on Mon Jan 13, 2025 16:53:59 by Electric VLSI Design System, version 9.07
 *** Layout tech: mocmos, foundry MOSIS
 *** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
 
-.global gnd vdd
+*** TOP LEVEL CELL: NAND:nand{lay}
+Mnmos@0 gnd B net@45 gnd N L=0.044U W=0.22U AS=0.015P AD=0.106P PS=0.352U PD=2.288U
+Mnmos@1 net@45 A out gnd N L=0.044U W=0.22U AS=0.047P AD=0.015P PS=0.704U PD=0.352U
+Mpmos@0 vdd B out vdd P L=0.044U W=0.44U AS=0.047P AD=0.106P PS=0.704U PD=1.969U
+Mpmos@1 out A vdd vdd P L=0.044U W=0.44U AS=0.106P AD=0.047P PS=1.969U PD=0.704U
 
-*** TOP LEVEL CELL: NAND:nand{sch}
-Mnmos@0 out A net@11 gnd N L=0.044U W=0.22U
-Mnmos@1 net@11 B gnd gnd N L=0.044U W=0.33U
-Mpmos@1 vdd A out vdd P L=0.044U W=0.44U
-Mpmos@2 vdd B out vdd P L=0.044U W=0.44U
-
-* Spice Code nodes in cell cell 'NAND:nand{sch}'
+* Spice Code nodes in cell cell 'NAND:nand{lay}'
 vdd vdd 0 DC 0.95
 va A 0 DC pwl 10n 0 20n 0.95 50n 0.95 60n 0 90n 0 100n 0.95 130n 0.95 140n 0 170n 0 180n 0.95
 vb B 0 DC pwl 10n 0 20n 0.95 100n 0.95 110n 0

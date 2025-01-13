@@ -1,4 +1,4 @@
-Circuit: *** SPICE deck for cell XOR{lay} from library XOR-_new
+Circuit: *** SPICE deck for cell 2bit_FA{sch} from library 2bit_FA
 
 Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
 Starting Gmin stepping
@@ -21,20 +21,21 @@ Gmin = 0
 Gmin stepping succeeded in finding the operating point.
 
 
-Date: Mon Jan 13 19:00:41 2025
-Total elapsed time: 0.299 seconds.
+Date: Mon Jan 13 18:44:40 2025
+Total elapsed time: 0.620 seconds.
 
 tnom = 27
 temp = 27
 method = modified trap
-totiter = 3035
-traniter = 2659
-tranpoints = 1078
-accept = 1078
-rejected = 0
-matrix size = 60
-fillins = 0
+totiter = 3116
+traniter = 2723
+tranpoints = 1090
+accept = 1084
+rejected = 6
+matrix size = 266
+fillins = 4
 solver = Normal
-Matrix Compiler1: 7.81 KB object code size  6.8/1.2/[0.4]
-Matrix Compiler2: 7.42 KB object code size  1.2/0.9/[0.4]
+Thread vector: 194.4/134.2[5] 40.2/9.5[5] 10.8/5.7[5] 3.6/4.0[1]  2592/500
+Matrix Compiler1: 37.72 KB object code size  32.2/17.8/[5.1]
+Matrix Compiler2: 33.79 KB object code size  17.7/27.9/[4.5]
 

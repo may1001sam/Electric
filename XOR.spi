@@ -1,11 +1,11 @@
-*** SPICE deck for cell XOR{lay} from library XOR
+*** SPICE deck for cell XOR{lay} from library XOR-_new
 *** Created on Sat Nov 09, 2024 22:13:58
-*** Last revised on Sun Jan 05, 2025 17:52:33
-*** Written on Sun Jan 05, 2025 17:52:41 by Electric VLSI Design System, version 9.07
+*** Last revised on Mon Jan 13, 2025 19:00:28
+*** Written on Mon Jan 13, 2025 19:00:40 by Electric VLSI Design System, version 9.07
 *** Layout tech: mocmos, foundry MOSIS
 *** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
 
-*** TOP LEVEL CELL: XOR:XOR{lay}
+*** TOP LEVEL CELL: XOR{lay}
 Mnmos@0 net@3 A out gnd N L=0.044U W=0.44U AS=0.067P AD=0.047P PS=0.858U PD=0.875U
 Mnmos@1 out net@256 net@3 gnd N L=0.044U W=0.44U AS=0.047P AD=0.067P PS=0.875U PD=0.858U
 Mnmos@4 net@3 net@199 gnd gnd N L=0.044U W=0.44U AS=0.165P AD=0.047P PS=2.04U PD=0.875U
@@ -19,10 +19,10 @@ Mpmos@5 net@497 B vdd vdd P L=0.044U W=0.88U AS=0.238P AD=0.053P PS=3.196U PD=1.
 Mpmos@6 vdd A net@199 vdd P L=0.044U W=0.88U AS=0.087P AD=0.238P PS=1.584U PD=3.196U
 Mpmos@7 net@256 B vdd vdd P L=0.044U W=0.88U AS=0.238P AD=0.087P PS=3.196U PD=1.584U
 
-* Spice Code nodes in cell cell 'XOR:XOR{lay}'
+* Spice Code nodes in cell cell 'XOR{lay}'
 vdd vdd 0 DC 0.95
 va A 0 DC pwl 10n 0 20n 0.95 50n 0.95 60n 0 90n 0 100n 0.95 130n 0.95 140n 0 170n 0 180n 0.95
-vb B 0 DC pwl 10n 0 20n 0.95 100n 0.95 110n 0
+vb B 0 DC pwl 10n 0 20n 0.95 115n 0.95 120n 0
 .tran 200n
 .include C:\Electric\22nm.txt
 .END
