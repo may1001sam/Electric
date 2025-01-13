@@ -1,11 +1,12 @@
-*** SPICE deck for cell 2bit_FA{lay} from library 2bit_FA
-*** Created on Mon Jan 13, 2025 18:46:37
-*** Last revised on Mon Jan 13, 2025 21:31:40
-*** Written on Mon Jan 13, 2025 21:31:56 by Electric VLSI Design System, version 9.07
+*** SPICE deck for cell 2bit_FA_right_sim{lay} from library 2bit_FA
+*** Created on Mon Jan 13, 2025 21:37:24
+*** Last revised on Mon Jan 13, 2025 21:42:47
+*** Written on Mon Jan 13, 2025 21:42:50 by Electric VLSI Design System, version 9.07
 *** Layout tech: mocmos, foundry MOSIS
 *** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
 
-*** TOP LEVEL CELL: 2bit_FA:2bit_FA{lay}
+*** SUBCIRCUIT _2bit_FA__2bit_FA FROM CELL 2bit_FA:2bit_FA{lay}
+.SUBCKT _2bit_FA__2bit_FA A0 A1 B0 B1 c-1 c0 G0 G1 gnd P0 P1 s0 s1 vdd
 Mnmos@0 gnd b0 net@3 gnd N L=0.044U W=0.22U AS=0.015P AD=0.161P PS=0.352U PD=1.875U
 Mnmos@1 net@3 a0 G0 gnd N L=0.044U W=0.22U AS=0.045P AD=0.015P PS=0.689U PD=0.352U
 Mnmos@2 net@14 a0 P0 gnd N L=0.044U W=0.44U AS=0.067P AD=0.047P PS=0.858U PD=0.875U
@@ -62,8 +63,12 @@ Mpmos@24 s1 net@257 net@292 vdd P L=0.044U W=0.88U AS=0.053P AD=0.067P PS=1.001U
 Mpmos@25 net@292 c0 vdd vdd P L=0.044U W=0.88U AS=0.213P AD=0.053P PS=2.695U PD=1.001U
 Mpmos@26 vdd P1 net@257 vdd P L=0.044U W=0.88U AS=0.087P AD=0.213P PS=1.584U PD=2.695U
 Mpmos@27 net@263 c0 vdd vdd P L=0.044U W=0.88U AS=0.213P AD=0.087P PS=2.695U PD=1.584U
+.ENDS _2bit_FA__2bit_FA
 
-* Spice Code nodes in cell cell '2bit_FA:2bit_FA{lay}'
+*** TOP LEVEL CELL: 2bit_FA:2bit_FA_right_sim{lay}
+X_2bit_FA@0 A0 A1 B0 B1 c-1 c0 G0 G1 gnd Po P1 s0 s1 vdd _2bit_FA__2bit_FA
+
+* Spice Code nodes in cell cell '2bit_FA:2bit_FA_right_sim{lay}'
 vdd vdd 0 DC 0.95
 * 2-bit input A
 va0 A0 0 PWL(0n 0 10n 0 12n 0.95 51n 0.95 53n 0 95n 0 97n 0.95 140n 0.95 142n 0 183n 0 185n 0.95)
