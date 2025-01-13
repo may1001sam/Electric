@@ -1,46 +1,46 @@
 *** SPICE deck for cell FA_new_sim{lay} from library FA_new
 *** Created on Mon Jan 13, 2025 18:06:10
-*** Last revised on Mon Jan 13, 2025 18:30:42
-*** Written on Mon Jan 13, 2025 18:30:56 by Electric VLSI Design System, version 9.07
+*** Last revised on Mon Jan 13, 2025 21:01:26
+*** Written on Mon Jan 13, 2025 21:01:37 by Electric VLSI Design System, version 9.07
 *** Layout tech: mocmos, foundry MOSIS
 *** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
 
-*** SUBCIRCUIT FA_new__FA_new FROM CELL FA_new{lay}
+*** SUBCIRCUIT FA_new__FA_new FROM CELL FA_new:FA_new{lay}
 .SUBCKT FA_new__FA_new A B Cin G gnd P Sum vdd
-Mnmos@0 net@1 a P gnd N L=0.044U W=0.44U AS=0.067P AD=0.047P PS=0.858U PD=0.875U
-Mnmos@1 P net@9 net@1 gnd N L=0.044U W=0.44U AS=0.047P AD=0.067P PS=0.875U PD=0.858U
-Mnmos@2 net@1 net@2 gnd gnd N L=0.044U W=0.44U AS=0.161P AD=0.047P PS=1.875U PD=0.875U
-Mnmos@3 gnd b net@1 gnd N L=0.044U W=0.44U AS=0.047P AD=0.161P PS=0.875U PD=1.875U
-Mnmos@4 gnd a net@2 gnd N L=0.044U W=0.44U AS=0.087P AD=0.161P PS=1.584U PD=1.875U
-Mnmos@5 net@9 b gnd gnd N L=0.044U W=0.44U AS=0.161P AD=0.087P PS=1.875U PD=1.584U
-Mnmos@6 net@76 P Sum gnd N L=0.044U W=0.44U AS=0.067P AD=0.047P PS=0.858U PD=0.875U
-Mnmos@7 Sum net@84 net@76 gnd N L=0.044U W=0.44U AS=0.047P AD=0.067P PS=0.875U PD=0.858U
-Mnmos@8 net@76 net@77 gnd gnd N L=0.044U W=0.44U AS=0.161P AD=0.047P PS=1.875U PD=0.875U
-Mnmos@9 gnd cin net@76 gnd N L=0.044U W=0.44U AS=0.047P AD=0.161P PS=0.875U PD=1.875U
-Mnmos@10 gnd P net@77 gnd N L=0.044U W=0.44U AS=0.087P AD=0.161P PS=1.584U PD=1.875U
-Mnmos@11 net@84 cin gnd gnd N L=0.044U W=0.44U AS=0.161P AD=0.087P PS=1.875U PD=1.584U
-Mnmos@12 gnd b net@235 gnd N L=0.044U W=0.22U AS=0.015P AD=0.161P PS=0.352U PD=1.875U
-Mnmos@13 net@235 a G gnd N L=0.044U W=0.22U AS=0.047P AD=0.015P PS=0.704U PD=0.352U
-Mpmos@0 vdd a net@44 vdd P L=0.044U W=0.88U AS=0.053P AD=0.212P PS=1.001U PD=2.693U
-Mpmos@1 net@44 net@9 P vdd P L=0.044U W=0.88U AS=0.067P AD=0.053P PS=0.858U PD=1.001U
-Mpmos@2 P net@2 net@50 vdd P L=0.044U W=0.88U AS=0.053P AD=0.067P PS=1.001U PD=0.858U
-Mpmos@3 net@50 b vdd vdd P L=0.044U W=0.88U AS=0.212P AD=0.053P PS=2.693U PD=1.001U
-Mpmos@4 vdd a net@2 vdd P L=0.044U W=0.88U AS=0.087P AD=0.212P PS=1.584U PD=2.693U
-Mpmos@5 net@9 b vdd vdd P L=0.044U W=0.88U AS=0.212P AD=0.087P PS=2.693U PD=1.584U
-Mpmos@6 vdd P net@119 vdd P L=0.044U W=0.88U AS=0.053P AD=0.212P PS=1.001U PD=2.693U
-Mpmos@7 net@119 net@84 Sum vdd P L=0.044U W=0.88U AS=0.067P AD=0.053P PS=0.858U PD=1.001U
-Mpmos@8 Sum net@77 net@125 vdd P L=0.044U W=0.88U AS=0.053P AD=0.067P PS=1.001U PD=0.858U
-Mpmos@9 net@125 cin vdd vdd P L=0.044U W=0.88U AS=0.212P AD=0.053P PS=2.693U PD=1.001U
-Mpmos@10 vdd P net@77 vdd P L=0.044U W=0.88U AS=0.087P AD=0.212P PS=1.584U PD=2.693U
-Mpmos@11 net@84 cin vdd vdd P L=0.044U W=0.88U AS=0.212P AD=0.087P PS=2.693U PD=1.584U
-Mpmos@12 vdd b G vdd P L=0.044U W=0.44U AS=0.047P AD=0.212P PS=0.704U PD=2.693U
-Mpmos@13 G a vdd vdd P L=0.044U W=0.44U AS=0.212P AD=0.047P PS=2.693U PD=0.704U
+Mnmos@12 gnd b net@157 gnd N L=0.044U W=0.22U AS=0.015P AD=0.161P PS=0.352U PD=1.875U
+Mnmos@13 net@157 a G gnd N L=0.044U W=0.22U AS=0.045P AD=0.015P PS=0.689U PD=0.352U
+Mnmos@14 net@175 a P gnd N L=0.044U W=0.44U AS=0.067P AD=0.047P PS=0.858U PD=0.875U
+Mnmos@15 P net@183 net@175 gnd N L=0.044U W=0.44U AS=0.047P AD=0.067P PS=0.875U PD=0.858U
+Mnmos@16 net@175 net@176 gnd gnd N L=0.044U W=0.44U AS=0.161P AD=0.047P PS=1.875U PD=0.875U
+Mnmos@17 gnd b net@175 gnd N L=0.044U W=0.44U AS=0.047P AD=0.161P PS=0.875U PD=1.875U
+Mnmos@18 gnd a net@176 gnd N L=0.044U W=0.44U AS=0.087P AD=0.161P PS=1.584U PD=1.875U
+Mnmos@19 net@183 b gnd gnd N L=0.044U W=0.44U AS=0.161P AD=0.087P PS=1.875U PD=1.584U
+Mnmos@20 net@251 P Sum gnd N L=0.044U W=0.44U AS=0.067P AD=0.047P PS=0.858U PD=0.875U
+Mnmos@21 Sum net@259 net@251 gnd N L=0.044U W=0.44U AS=0.047P AD=0.067P PS=0.875U PD=0.858U
+Mnmos@22 net@251 net@252 gnd gnd N L=0.044U W=0.44U AS=0.161P AD=0.047P PS=1.875U PD=0.875U
+Mnmos@23 gnd cin net@251 gnd N L=0.044U W=0.44U AS=0.047P AD=0.161P PS=0.875U PD=1.875U
+Mnmos@24 gnd P net@252 gnd N L=0.044U W=0.44U AS=0.087P AD=0.161P PS=1.584U PD=1.875U
+Mnmos@25 net@259 cin gnd gnd N L=0.044U W=0.44U AS=0.161P AD=0.087P PS=1.875U PD=1.584U
+Mpmos@12 vdd b G vdd P L=0.044U W=0.44U AS=0.045P AD=0.213P PS=0.689U PD=2.695U
+Mpmos@13 G a vdd vdd P L=0.044U W=0.44U AS=0.213P AD=0.045P PS=2.695U PD=0.689U
+Mpmos@14 vdd a net@216 vdd P L=0.044U W=0.88U AS=0.053P AD=0.213P PS=1.001U PD=2.695U
+Mpmos@15 net@216 net@183 P vdd P L=0.044U W=0.88U AS=0.067P AD=0.053P PS=0.858U PD=1.001U
+Mpmos@16 P net@176 net@219 vdd P L=0.044U W=0.88U AS=0.053P AD=0.067P PS=1.001U PD=0.858U
+Mpmos@17 net@219 b vdd vdd P L=0.044U W=0.88U AS=0.213P AD=0.053P PS=2.695U PD=1.001U
+Mpmos@18 vdd a net@176 vdd P L=0.044U W=0.88U AS=0.087P AD=0.213P PS=1.584U PD=2.695U
+Mpmos@19 net@183 b vdd vdd P L=0.044U W=0.88U AS=0.213P AD=0.087P PS=2.695U PD=1.584U
+Mpmos@20 vdd P net@292 vdd P L=0.044U W=0.88U AS=0.053P AD=0.213P PS=1.001U PD=2.695U
+Mpmos@21 net@292 net@259 Sum vdd P L=0.044U W=0.88U AS=0.067P AD=0.053P PS=0.858U PD=1.001U
+Mpmos@22 Sum net@252 net@295 vdd P L=0.044U W=0.88U AS=0.053P AD=0.067P PS=1.001U PD=0.858U
+Mpmos@23 net@295 cin vdd vdd P L=0.044U W=0.88U AS=0.213P AD=0.053P PS=2.695U PD=1.001U
+Mpmos@24 vdd P net@252 vdd P L=0.044U W=0.88U AS=0.087P AD=0.213P PS=1.584U PD=2.695U
+Mpmos@25 net@259 cin vdd vdd P L=0.044U W=0.88U AS=0.213P AD=0.087P PS=2.695U PD=1.584U
 .ENDS FA_new__FA_new
 
-*** TOP LEVEL CELL: FA_new_sim{lay}
-XFA_new@1 A B Cin G gnd P Sum vdd FA_new__FA_new
+*** TOP LEVEL CELL: FA_new:FA_new_sim{lay}
+XFA_new@2 A B Cin G gnd P Sum vdd FA_new__FA_new
 
-* Spice Code nodes in cell cell 'FA_new_sim{lay}'
+* Spice Code nodes in cell cell 'FA_new:FA_new_sim{lay}'
 * 4-bit Carry Look-Ahead Adder Simulation
 * Power supply
 vdd vdd 0 DC 0.95

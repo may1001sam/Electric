@@ -48,7 +48,7 @@ ESum||D5G2;|pin@10||U
 X
 
 # Cell FA_new;1{lay}
-CFA_new;1{lay}||mocmos|1736780357886|1736794636916||DRC_last_good_drc_area_date()G1736794585085|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1736794585085
+CFA_new;1{lay}||mocmos|1736780357886|1736794636916||DRC_last_good_drc_area_date()G1736794585085|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1736794890478
 Ngeneric:Facet-Center|art@0||0|0||||AV
 NMetal-1-P-Active-Con|contact@60||-34.5|3.5||15||
 NMetal-1-P-Active-Con|contact@61||-10|3.5||15||
@@ -490,11 +490,32 @@ Awire|Sum|D5G1;||900|FA_new@0|Sum|-42|1|pin@6||-42|1
 X
 
 # Cell FA_new_sim;1{lay}
-CFA_new_sim;1{lay}||mocmos|1736784370851|1736794658442||DRC_last_good_drc_area_date()G1736785845592|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1736785845592
+CFA_new_sim;1{lay}||mocmos|1736784370851|1736794939278||DRC_last_good_drc_area_date()G1736794942365|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1736794942365
 IFA_new;1{lay}|FA_new@2||266.5|149.5|||D5G4;
 Ngeneric:Facet-Center|art@0||0|0||||AV
 Ngeneric:Invisible-Pin|pin@8||145.5|53.5|||||SIM_spice_card(D5G5;)S[* 4-bit Carry Look-Ahead Adder Simulation,* Power supply,vdd vdd 0 DC 0.95,va A 0 PWL(0n 0 10n 0 12n 0.95 51n 0.95 53n 0 95n 0 97n 0.95 140n 0.95 142n 0 183n 0 185n 0.95),vb B 0 PWL(0n 0 95n 0 97n 0.95),vcin Cin 0 DC 0.95,* Transient analysis,.tran 0 200n,* Include model file,".include C:\\Electric\\22nm.txt"]
-NMetal-1-Pin|pin@9||9|196||||
-AMetal-1|net@0||1|S0|FA_new@2|vdd|149|196|pin@9||9|196
-Evdd||D5G2;|pin@9||U
+NMetal-1-Pin|pin@9||148.5|196||||
+NMetal-1-Pin|pin@10||148.5|98||||
+NMetal-2-Pin|pin@11||237.5|185||||
+NMetal-2-Pin|pin@12||237|175.5||||
+NMetal-2-Pin|pin@13||238|167.5||||
+NMetal-1-Pin|pin@14||263|137||||
+NMetal-1-Pin|pin@15||261.5|114||||
+NMetal-3-Pin|pin@16||224|89.5||||
+AMetal-1|net@0||1|S0|FA_new@2|vdd|149|196|pin@9||148.5|196
+AMetal-1|net@1||1|S0|FA_new@2|gnd|148.5|98|pin@10||148.5|98
+AMetal-2|net@2|||S1800|FA_new@2|A|237.5|185|pin@11||237.5|185
+AMetal-2|net@3|||S1800|FA_new@2|B|237|175.5|pin@12||237|175.5
+AMetal-2|net@4|||S1800|FA_new@2|Cin|237.5|167.5|pin@13||238|167.5
+AMetal-1|net@5||1|S1800|FA_new@2|P|262.5|137|pin@14||263|137
+AMetal-1|net@6||1|S1800|FA_new@2|G|261.5|114|pin@15||261.5|114
+AMetal-3|net@7||1|S900|FA_new@2|Sum|224|89.5|pin@16||224|89.5
+EA||D5G5;|pin@11||U
+EB||D5G5;|pin@12||U
+ECin||D5G5;|pin@13||U
+EG||D5G5;|pin@15||U
+EP||D5G5;|pin@14||U
+ESum||D5G5;|pin@16||U
+Egnd||D5G5;|pin@10||U
+Evdd||D5G5;|pin@9||U
 X
