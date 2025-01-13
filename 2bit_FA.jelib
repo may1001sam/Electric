@@ -10,31 +10,13 @@ Vschematic|sch
 
 LFA_new|FA_new
 
-Lproject-(1)|project-(1)
-
 # Technologies:
 Tbicmos|ScaleFORbicmos()D22.0
 Tmocmos|ScaleFORmocmos()D22.0
 
 # Cell 2bit_FA;1{lay}
-C2bit_FA;1{lay}||mocmos|1736786797886|1736787180215|
+C2bit_FA;1{lay}||mocmos|1736786797886|1736787801881|
 Ngeneric:Facet-Center|art@0||0|0||||AV
-NMetal-2-Metal-3-Con|contact@55||-79|-29.5||||
-NMetal-2-Metal-3-Con|contact@57||-79.5|18||||
-NMetal-2-Metal-3-Con|contact@70||32|40||||
-Iproject-(1):dynamic_part;1{lay}|dynamic_@9||-119|-21.5|||D5G4;
-NMetal-3-Pin|pin@41||32.5|-52.5||||
-NMetal-2-Pin|pin@43||44.5|43.5||||
-NMetal-2-Pin|pin@44||56|43.5||||
-NMetal-2-Pin|pin@45||44.5|36||||
-NMetal-2-Pin|pin@46||55.5|36||||
-NMetal-2-Pin|pin@47||45|28||||
-NMetal-2-Pin|pin@48||55.5|28||||
-AMetal-3|net@24||1|S900|contact@70||32.5|40|pin@41||32.5|-52.5
-AMetal-3|net@178||1|S2700|contact@55||-79|-29.5|contact@57||-79|18
-AMetal-2|net@189|||S1800|pin@45||44.5|36|pin@46||55.5|36
-AMetal-2|net@190|||S1800|pin@43||44.5|43.5|pin@44||56|43.5
-AMetal-2|net@191|||S1800|pin@47||45|28|pin@48||55.5|28
 X
 
 # Cell 2bit_FA;1{sch}
