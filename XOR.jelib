@@ -294,7 +294,7 @@ Awire|out|D5G1;||1800|XOR@0|out|-41.5|3|pin@6||-41|3
 X
 
 # Cell XOR_sim;1{lay}
-CXOR_sim;1{lay}||mocmos|1731234345506|1736598399328||DRC_last_good_drc_area_date()G1736507864212|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1736507864212
+CXOR_sim;1{lay}||mocmos|1731234345506|1736775462627||DRC_last_good_drc_area_date()G1736507864212|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1736507864212
 IXOR;1{lay}|XOR@0||23|-2|||D5G4;
 Ngeneric:Facet-Center|art@0||0|0||||AV
 NMetal-1-Pin|pin@2||-17|-46||||
