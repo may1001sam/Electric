@@ -17,7 +17,7 @@ Tbicmos|ScaleFORbicmos()D22.0
 Tmocmos|ScaleFORmocmos()D22.0
 
 # Cell 4bit_FA;1{lay}
-C4bit_FA;1{lay}||mocmos|1736261756719|1736779868322||DRC_last_good_drc_area_date()G1736539409427|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1736541200622
+C4bit_FA;1{lay}||mocmos|1736261756719|1736779868322||DRC_last_good_drc_area_date()G1736539409427|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1737024206654
 IFA;1{lay}|FA@0||-205|64|||D5G4;
 IFA;1{lay}|FA@1||63|64|||D5G4;
 IFA;1{lay}|FA@2||331|64|||D5G4;
@@ -363,7 +363,7 @@ ESum||D5G2;|pin@10||U
 X
 
 # Cell FA;1{lay}
-CFA;1{lay}||mocmos|1735821794974|1736784458485||DRC_last_good_drc_area_date()G1736514451707|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1736537091182
+CFA;1{lay}||mocmos|1735821794974|1736784458485||DRC_last_good_drc_area_date()G1736514451707|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1737024206654
 IXOR:XOR;1{lay}|XOR@0||-144|28.5|||D5G4;
 IXOR:XOR;1{lay}|XOR@1||-34|29|||D5G4;
 Ngeneric:Facet-Center|art@0||0|0||||AV

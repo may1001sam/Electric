@@ -19,7 +19,7 @@ Tbicmos|ScaleFORbicmos()D22.0
 Tmocmos|ScaleFORmocmos()D22.0
 
 # Cell carryblock;1{lay}
-Ccarryblock;1{lay}||mocmos|1736175506782|1736616472523||DRC_last_good_drc_area_date()G1736616012105|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1736616012105
+Ccarryblock;1{lay}||mocmos|1736175506782|1736616472523||DRC_last_good_drc_area_date()G1736616012105|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1737024206654
 IFA_for_CLA:4bit_FA_block;1{lay}|4bit_FA_@0||118|-310.5|||D5G4;
 IRepeater:Repeater;1{lay}|Repeater@0||220|-136|||D5G4;
 Ngeneric:Facet-Center|art@0||0|0||||AV

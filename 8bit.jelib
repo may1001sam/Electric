@@ -1,0 +1,65 @@
+# header information:
+H8bit|9.07
+
+# Views:
+Vlayout|lay
+
+# External Libraries:
+
+Lproject-(1)|project-(1)
+
+# Technologies:
+Tbicmos|ScaleFORbicmos()D22.0
+Tmocmos|ScaleFORmocmos()D22.0
+
+# Cell 8bit;1{lay}
+C8bit;1{lay}||mocmos|1737023717100|1737025705201||DRC_last_good_drc_area_date()G1737025710920
+Ngeneric:Facet-Center|art@0||0|0||||AV
+Iproject-(1):carryblock;1{lay}|carryblo@0||510|-27|||D5G4;
+Iproject-(1):carryblock;1{lay}|carryblo@1||-581|-31|||D5G4;
+NMetal-1-Metal-2-Con|contact@0||34|-124||||
+NMetal-2-Metal-3-Con|contact@2||434|-231||||
+NMetal-1-Metal-2-Con|contact@3||434|-231||||
+NMetal-1-Metal-2-Con|contact@5||434|-231||||
+NMetal-3-Metal-4-Con|contact@6||435|-239||||
+NMetal-1-Metal-2-Con|contact@7||-657|-191||||
+NMetal-2-Metal-3-Con|contact@8||-657|-191||||
+NMetal-3-Metal-4-Con|contact@9||-607|-235||||
+NMetal-3-Metal-4-Con|contact@10||37|-235||||
+NMetal-2-Pin|pin@0||290|-169||||
+NMetal-1-Pin|pin@1||397|-124||||
+NMetal-1-Pin|pin@2||34|-126||||
+NMetal-1-Pin|pin@6||434|-193||||
+NMetal-3-Pin|pin@7||434|-239||||
+NMetal-1-Pin|pin@8||-657|-191||||
+NMetal-1-Pin|pin@9||-657|-191||||
+NMetal-3-Pin|pin@10||-657|-191||||
+NMetal-3-Pin|pin@11||-657|-235||||
+NMetal-4-Pin|pin@12||-607|-235||||
+NMetal-4-Pin|pin@13||37|-239||||
+AMetal-2|net@0||1|S1800|carryblo@1|c3|-431|-169|pin@0||290|-169
+AMetal-2|net@1||1|S2700|carryblo@0|c-1|290|-215.5|pin@0||290|-169
+AMetal-1|net@2||1|S900|carryblo@0|vdd|397|-122|pin@1||397|-124
+AMetal-1|net@3||1|S1800|contact@0||34|-124|pin@1||397|-124
+AMetal-1|net@4||1|S900|contact@0||34|-124|pin@2||34|-126
+AMetal-1|net@5||1|S1800|carryblo@1|vdd|-694|-126|pin@2||34|-126
+AMetal-2|net@6||1|S2700|contact@3||434|-231|contact@2||434|-231
+AMetal-1|net@10||1|S900|carryblo@0|gnd|434|-192|contact@5||434|-230
+AMetal-1|net@13||1|S900|carryblo@0|gnd|434|-192|pin@6||434|-193
+AMetal-1|net@14||1|S2700|contact@3||434|-230|pin@6||434|-193
+AMetal-3|net@15||1|S900|contact@2||434|-231|pin@7||434|-239
+AMetal-3|net@16||1|S0|contact@6||435|-239|pin@7||434|-239
+AMetal-1|net@17||1|S2700|carryblo@1|gnd|-657|-196|pin@8||-657|-191
+AMetal-1|net@18||1|S2700|contact@7||-657|-191|pin@9||-657|-191
+AMetal-1|net@19||1|S0|pin@8||-657|-191|pin@9||-657|-191
+AMetal-2|net@20||1|S0|contact@7||-657|-191|contact@8||-657|-191
+AMetal-3|net@21||1|S0|contact@8||-657|-191|pin@10||-657|-191
+AMetal-3|net@22||1|S900|pin@10||-657|-191|pin@11||-657|-235
+AMetal-3|net@23||1|S0|contact@9||-607|-235|pin@11||-657|-235
+AMetal-4|net@24||1|S900|contact@9||-607|-235|pin@12||-607|-235
+AMetal-4|net@25||1|S0|contact@10||37|-235|pin@12||-607|-235
+AMetal-4|net@26||1|S0|contact@6||435|-239|pin@13||37|-239
+AMetal-4|net@27||1|S900|contact@10||37|-235|pin@13||37|-239
+Egnd||D5G2;|carryblo@0|gnd|U
+Evdd||D5G2;|carryblo@0|vdd|U
+X
